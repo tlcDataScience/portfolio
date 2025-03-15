@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Portfolio - Bodhi Tan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Mermaid Library -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
     <style>
       body {
-        background-color: rgb(250,250,250);
+        background-color: rgb(250, 250, 250);
       }
       .container {
         max-width: 85%;
@@ -15,7 +23,7 @@
         padding-top: 30px;
       }
       .card-header {
-        background-color: rgb(11,57,11);
+        background-color: rgb(11, 57, 11);
         color: white;
       }
       pre {
@@ -23,6 +31,13 @@
         padding: 15px;
         border-radius: 5px;
         overflow-x: auto;
+      }
+      .mermaid {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -36,14 +51,23 @@
           Project 1: Time Breakdown (time_breakdown.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input the total number of minutes from the user.</li>
-            <li>Calculate days by floor dividing by (24 * 60).</li>
-            <li>Calculate remaining hours by taking the remainder then floor dividing by 60.</li>
-            <li>Calculate remaining minutes using modulo 60.</li>
-            <li>Display the result.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input total minutes]
+              B[Calculate days = total_minutes // (24*60)]
+              C[Calculate remaining hours = (total_minutes % (24*60)) // 60]
+              D[Calculate remaining minutes = total_minutes % 60]
+              E[Display the result]
+              A --> B
+              B --> C
+              C --> D
+              D --> E
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project uses <strong>arithmetic operations</strong> to break down a total number of minutes into days, hours, and minutes. The code leverages floor division and the modulo operator to perform integer division and capture remainders.
+          </p>
           <h3>Python Code</h3>
           <pre><code>total_minutes = int(input("Enter the total number of minutes: "))
 days = total_minutes // (24 * 60)
@@ -59,14 +83,29 @@ print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours
           Project 2: Currency Breakdown (currency_breakdown.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input a dollar amount from the user.</li>
-            <li>Calculate the number of twenties using floor division by 20.</li>
-            <li>Update the amount with the remainder (using modulo 20).</li>
-            <li>Repeat for tens, fives, and ones.</li>
-            <li>Display the breakdown.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input dollar amount]
+              B[Calculate twenties = amount // 20]
+              C[Update amount = amount % 20]
+              D[Calculate tens = amount // 10]
+              E[Update amount = amount % 10]
+              F[Calculate fives = amount // 5]
+              G[Calculate ones = amount % 5]
+              H[Display breakdown]
+              A --> B
+              B --> C
+              C --> D
+              D --> E
+              E --> F
+              F --> G
+              G --> H
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project demonstrates how to decompose a dollar amount into currency denominations using sequential arithmetic operations. It emphasizes the use of floor division and the modulo operator.
+          </p>
           <h3>Python Code</h3>
           <pre><code>amount = int(input("Enter the dollar amount: "))
 twenties = amount // 20
@@ -85,12 +124,19 @@ print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</cod
           Project 3: Weight Units Converter (weight_units_converter.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input weight in pounds from the user.</li>
-            <li>Convert pounds to kilograms using the conversion factor 0.453592.</li>
-            <li>Display the weight in kilograms (formatted to two decimal places).</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input weight in pounds]
+              B[Convert weight = pounds * 0.453592]
+              C[Display weight in kilograms]
+              A --> B
+              B --> C
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project highlights unit conversion using multiplication by a constant. It reinforces how arithmetic multiplication is used in Python to convert one unit of measurement (pounds) to another (kilograms).
+          </p>
           <h3>Python Code</h3>
           <pre><code>pounds = float(input("Enter the weight in pounds: "))
 kilograms = pounds * 0.453592
@@ -104,15 +150,25 @@ print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
           Project 4: Coffee Shop Inventory
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Initialize the initial number of coffee beans (for day 1) and the daily increase.</li>
-            <li>Loop through days 1 to 7.</li>
-            <li>For each day, update the number of beans and add to the total stock.</li>
-            <li>Display the beans on day 7 and the total after 7 days.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Initialize day 1 beans & daily increase]
+              B[Loop from day 1 to 7]
+              C[Update beans for each day]
+              D[Accumulate total beans]
+              E[Display day 7 beans and total beans]
+              A --> B
+              B --> C
+              C --> D
+              D --> E
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project uses a <strong>for loop</strong> to iterate through days and calculate an arithmetic progression. It demonstrates how to update variables over iterations and accumulate totals.
+          </p>
           <h3>Python Code</h3>
-          <pre><code>initial_coffee_beans = 50  # Day 1 beans
+          <pre><code>initial_coffee_beans = 50  # Initial beans on day 1
 daily_increase = 4          # Daily increase
 
 coffee_beans_on_day_7 = initial_coffee_beans
@@ -133,13 +189,23 @@ print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</co
           Project 5: Movie Theater Attendance
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Initialize the initial attendance and the daily increase.</li>
-            <li>Loop through days 1 to 12.</li>
-            <li>Calculate attendance on day 12 and add each day's attendance to the total.</li>
-            <li>Display the results.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Initialize day 1 attendance & daily increase]
+              B[Loop from day 1 to 12]
+              C[Update attendance each day]
+              D[Accumulate total attendance]
+              E[Display day 12 and total attendance]
+              A --> B
+              B --> C
+              C --> D
+              D --> E
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            Similar to the coffee shop inventory, this project uses a <strong>for loop</strong> to simulate an arithmetic progression for daily attendance. It reinforces loop iteration and arithmetic calculations.
+          </p>
           <h3>Python Code</h3>
           <pre><code>initial_attendance = 40  # Day 1 attendance
 daily_increase = 7         # Daily increase
@@ -162,13 +228,25 @@ print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code
           Project 6: Factorial Calculator (factorial_calculator.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input an integer from the user.</li>
-            <li>Check if the number is non-negative.</li>
-            <li>If non-negative, multiply numbers from 1 up to the input using a loop.</li>
-            <li>Display the factorial result.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input a number]
+              B[Check: Is number non-negative?]
+              C[Initialize factorial_result = 1]
+              D[Loop from 1 to number]
+              E[Multiply factorial_result by current number]
+              F[Display factorial_result]
+              A --> B
+              B -- Valid --> C
+              C --> D
+              D --> E
+              E --> F
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project demonstrates iterative multiplication to compute a factorial. It uses a <strong>for loop</strong> to multiply a running product and includes a condition to handle non-negative input.
+          </p>
           <h3>Python Code</h3>
           <pre><code>user_input = int(input("Enter a number: "))
 
@@ -188,13 +266,21 @@ else:
           Project 7: Right Triangle Checker (right_triangle_checker.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input three side lengths of a triangle.</li>
-            <li>Sort the sides in ascending order.</li>
-            <li>Check if the sum of the squares of the two shorter sides equals the square of the longest side.</li>
-            <li>Display whether the triangle is a right triangle.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input three side lengths]
+              B[Sort sides in ascending order]
+              C[Check: Does side1² + side2² equal side3²?]
+              D[Display if right triangle]
+              A --> B
+              B --> C
+              C --> D
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This program checks for a right triangle by applying the Pythagorean theorem. It showcases how to sort a list and use arithmetic comparisons in Python.
+          </p>
           <h3>Python Code</h3>
           <pre><code>side1 = float(input("Enter the length of side 1: "))
 side2 = float(input("Enter the length of side 2: "))
@@ -215,13 +301,25 @@ else:
           Project 8: Number Guessing Game (my_number_guessing_game.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Import the random module and generate a secret number between 1 and 100.</li>
-            <li>Use a while loop to prompt the user for guesses.</li>
-            <li>Provide hints if the guess is too high or too low.</li>
-            <li>Congratulate the user when the correct number is guessed.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Generate secret number (1-100)]
+              B[Loop: Prompt user for guess]
+              C[If guess > secret, display "Too high"]
+              D[If guess < secret, display "Too low"]
+              E[If guess == secret, exit loop]
+              F[Display congratulatory message]
+              A --> B
+              B --> C
+              B --> D
+              B --> E
+              E --> F
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This interactive game uses a <strong>while loop</strong> and conditional statements to provide hints for each guess. It also demonstrates random number generation and control flow.
+          </p>
           <h3>Python Code</h3>
           <pre><code>import random
 
@@ -245,14 +343,23 @@ print("Congratulations! You guessed the correct number.")</code></pre>
           Project 9: Palindrome Checker (my_palindrome_checker.py)
         </div>
         <div class="card-body">
-          <h3>Thought Process Flowchart</h3>
-          <ul>
-            <li>Input a word from the user.</li>
-            <li>Initialize an empty string for the reversed word.</li>
-            <li>Use a while loop to build the reversed word.</li>
-            <li>Compare the reversed word to the original.</li>
-            <li>Display whether the word is a palindrome.</li>
-          </ul>
+          <h3>Logic Flow Diagram</h3>
+          <div class="mermaid">
+            flowchart TD
+              A[Start: Input a word]
+              B[Initialize empty reversed_word]
+              C[Loop: Build reversed_word character by character]
+              D[Compare original word with reversed_word]
+              E[Display if palindrome]
+              A --> B
+              B --> C
+              C --> D
+              D --> E
+          </div>
+          <h3>Prose Description</h3>
+          <p>
+            This project checks whether a word is a palindrome by reversing the string using a loop and comparing it to the original. It highlights string manipulation and loop control in Python.
+          </p>
           <h3>Python Code</h3>
           <pre><code>word = input("Enter a word: ")
 reversed_word = ""

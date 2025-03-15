@@ -1,85 +1,272 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Student Portfolio - Bodhi Tan</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio - Bodhi Tan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: rgb(250,250,250);
+      }
+      .container {
+        max-width: 85%;
+        margin: auto;
+        padding-top: 30px;
+      }
+      .card-header {
+        background-color: rgb(11,57,11);
+        color: white;
+      }
+      pre {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center my-4">Bodhi Tan's Coding Projects</h1>
 
-        <style>
-            body {
-                background-color: rgb(250,250,250);
-            }
-
-            .container {
-                max-width: 85%;
-                margin: auto;
-                padding-top: 30px;
-            }
-
-            .card-header {
-                background-color: rgb(11,57,11);
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container py-5">
-
-            <!-- Student Name Header -->
-            <h1 class="text-center my-4">Bodhi Tan</h1>
-
-            <!-- Student Image Placeholder -->
-            <div class="text-center my-4">
-                <img src="[student-image-url.jpg]" alt="Student Image" class="img-fluid rounded-3" style="max-width:300px;">
-            </div>
-
-            <!-- Introduction Section -->
-            <div class="my-4">
-                <p class="lead">
-                    Hi! I'm <strong>[Student Name]</strong>. Welcome to my coding portfolio!
-                </p>
-                <p class="lead">
-                    I am learning how to code because [student's reason or short bio].
-                </p>
-            </div>
-
-            <!-- Project Card 1 -->
-            <div class="card shadow rounded-3 my-5">
-                <h2 class="card-header text-center">Project 1: Introduce Myself</h2>
-                <div class="card-body">
-                    <iframe src="[Insert Replit or Trinket URL here]?embed=true" width="100%" height="400"></iframe>
-                    <h3 class="mt-3">Instructions</h3>
-                    <p>Brief description or instructions about Project 1.</p>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="card shadow rounded-3 my-5">
-                <h2 class="card-header text-center rounded-top">Project 2: Color Picker</h2>
-                <div class="card-body">
-                    <iframe src="[Insert Replit or Trinket URL here]?embed=true" width="100%" height="400"></iframe>
-                    <h3 class="mt-3">Instructions</h3>
-                    <p>
-                        [Brief description of this coding activity or project]
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 3 Example -->
-            <div class="card my-5">
-                <div class="card-header text-center rounded-top">
-                    <h2>Project 3: Advanced Color Picker</h2>
-                </div>
-                <div class="card-body">
-                    <iframe src="[Insert Replit or Trinket URL here]?embed=true" width="100%" height="400"></iframe>
-                    <h3 class="mt-3">Instructions</h3>
-                    <p>
-                        Brief instructions or project details go here.
-                    </p>
-                </div>
-            </div>
-
+      <!-- Project 1: Time Breakdown -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 1: Time Breakdown (time_breakdown.py)
         </div>
-    </body>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input the total number of minutes from the user.</li>
+            <li>Calculate days by floor dividing by (24 * 60).</li>
+            <li>Calculate remaining hours by taking the remainder then floor dividing by 60.</li>
+            <li>Calculate remaining minutes using modulo 60.</li>
+            <li>Display the result.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>total_minutes = int(input("Enter the total number of minutes: "))
+days = total_minutes // (24 * 60)
+remaining_hours = (total_minutes % (24 * 60)) // 60
+remaining_minutes = total_minutes % 60
+print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours, and {remaining_minutes} minutes.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 2: Currency Breakdown -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 2: Currency Breakdown (currency_breakdown.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input a dollar amount from the user.</li>
+            <li>Calculate the number of twenties using floor division by 20.</li>
+            <li>Update the amount with the remainder (using modulo 20).</li>
+            <li>Repeat for tens, fives, and ones.</li>
+            <li>Display the breakdown.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>amount = int(input("Enter the dollar amount: "))
+twenties = amount // 20
+amount %= 20
+tens = amount // 10
+amount %= 10
+fives = amount // 5
+ones = amount % 5
+print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 3: Weight Units Converter -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 3: Weight Units Converter (weight_units_converter.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input weight in pounds from the user.</li>
+            <li>Convert pounds to kilograms using the conversion factor 0.453592.</li>
+            <li>Display the weight in kilograms (formatted to two decimal places).</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>pounds = float(input("Enter the weight in pounds: "))
+kilograms = pounds * 0.453592
+print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 4: Coffee Shop Inventory -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 4: Coffee Shop Inventory
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Initialize the initial number of coffee beans (for day 1) and the daily increase.</li>
+            <li>Loop through days 1 to 7.</li>
+            <li>For each day, update the number of beans and add to the total stock.</li>
+            <li>Display the beans on day 7 and the total after 7 days.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>initial_coffee_beans = 50  # Day 1 beans
+daily_increase = 4          # Daily increase
+
+coffee_beans_on_day_7 = initial_coffee_beans
+total_coffee_beans_after_7_days = 0
+
+for day in range(1, 8):
+    coffee_beans_on_day_7 += daily_increase
+    total_coffee_beans_after_7_days += initial_coffee_beans + (day - 1) * daily_increase
+
+print(f"Coffee beans on day 7: {coffee_beans_on_day_7}")
+print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 5: Movie Theater Attendance -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 5: Movie Theater Attendance
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Initialize the initial attendance and the daily increase.</li>
+            <li>Loop through days 1 to 12.</li>
+            <li>Calculate attendance on day 12 and add each day's attendance to the total.</li>
+            <li>Display the results.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>initial_attendance = 40  # Day 1 attendance
+daily_increase = 7         # Daily increase
+
+moviegoers_on_day_12 = initial_attendance
+total_moviegoers_after_12_days = 0
+
+for day in range(1, 13):
+    moviegoers_on_day_12 += daily_increase
+    total_moviegoers_after_12_days += initial_attendance + (day - 1) * daily_increase
+
+print(f"Moviegoers on day 12: {moviegoers_on_day_12}")
+print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 6: Factorial Calculator -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 6: Factorial Calculator (factorial_calculator.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input an integer from the user.</li>
+            <li>Check if the number is non-negative.</li>
+            <li>If non-negative, multiply numbers from 1 up to the input using a loop.</li>
+            <li>Display the factorial result.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>user_input = int(input("Enter a number: "))
+
+if user_input < 0:
+    print("Please enter a non-negative integer.")
+else:
+    factorial_result = 1
+    for i in range(1, user_input + 1):
+        factorial_result *= i
+    print(f"The factorial of {user_input} is {factorial_result}.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 7: Right Triangle Checker -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 7: Right Triangle Checker (right_triangle_checker.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input three side lengths of a triangle.</li>
+            <li>Sort the sides in ascending order.</li>
+            <li>Check if the sum of the squares of the two shorter sides equals the square of the longest side.</li>
+            <li>Display whether the triangle is a right triangle.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>side1 = float(input("Enter the length of side 1: "))
+side2 = float(input("Enter the length of side 2: "))
+side3 = float(input("Enter the length of side 3: "))
+sides = [side1, side2, side3]
+sides.sort()
+
+if sides[0]**2 + sides[1]**2 == sides[2]**2:
+    print("The triangle is a Right Triangle!")
+else:
+    print("The triangle is not a Right Triangle.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 8: Number Guessing Game -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 8: Number Guessing Game (my_number_guessing_game.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Import the random module and generate a secret number between 1 and 100.</li>
+            <li>Use a while loop to prompt the user for guesses.</li>
+            <li>Provide hints if the guess is too high or too low.</li>
+            <li>Congratulate the user when the correct number is guessed.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>import random
+
+secret_number = random.randint(1, 100)
+guess = 0
+
+while guess != secret_number:
+    guess = int(input("Guess the number (between 1 and 100): "))
+    if guess > secret_number:
+        print("Too high! Try again.")
+    elif guess < secret_number:
+        print("Too low! Try again.")
+
+print("Congratulations! You guessed the correct number.")</code></pre>
+        </div>
+      </div>
+
+      <!-- Project 9: Palindrome Checker -->
+      <div class="card shadow rounded-3 my-5">
+        <div class="card-header text-center">
+          Project 9: Palindrome Checker (my_palindrome_checker.py)
+        </div>
+        <div class="card-body">
+          <h3>Thought Process Flowchart</h3>
+          <ul>
+            <li>Input a word from the user.</li>
+            <li>Initialize an empty string for the reversed word.</li>
+            <li>Use a while loop to build the reversed word.</li>
+            <li>Compare the reversed word to the original.</li>
+            <li>Display whether the word is a palindrome.</li>
+          </ul>
+          <h3>Python Code</h3>
+          <pre><code>word = input("Enter a word: ")
+reversed_word = ""
+
+while len(reversed_word) < len(word):
+    reversed_word = word[len(reversed_word)] + reversed_word
+
+if word == reversed_word:
+    print(f"{word} is a Palindrome!")
+else:
+    print(f"{word} is not a Palindrome.")</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>

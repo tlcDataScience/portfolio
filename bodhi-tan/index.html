@@ -20,7 +20,7 @@
       
       /* Container */
       .container {
-        max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
+        max-width: 800px; /* === CONTAINER MAX WIDTH === */
         margin: 0 auto;
         padding: 2rem 1rem;
       }
@@ -46,7 +46,7 @@
         margin-bottom: 2rem;
       }
       .portrait img {
-        width: 150px; /* === PORTRAIT SIZE: Change if needed === */
+        width: 150px; /* === PORTRAIT SIZE === */
         height: 150px;
         border-radius: 50%;
         border: 2px solid #ddd;
@@ -116,7 +116,7 @@
       /* Trinket Iframes */
       iframe {
         width: 100%;
-        height: 500px; /* === IFRAME HEIGHT: Change if needed === */
+        height: 500px; /* === IFRAME HEIGHT === */
         border: none;
         margin-top: 1rem;
         border-radius: 5px;
@@ -131,13 +131,13 @@
   </head>
   <body>
     <div class="container py-5">
-      <!-- === MAIN NAME: Replace "Bodhi Tan" with your name if needed === -->
+      <!-- === MAIN NAME: Replace "Bodhi Tan" if needed === -->
       <h1>Bodhi Tan's Coding Projects</h1>
       
-      <!-- === GENERIC INTRO SECTION: Replace the intro text as needed === -->
+      <!-- === GENERIC INTRO SECTION: Update this text as needed === -->
       <div class="intro">
         <p>
-          Hi, I am Bodhi Tan, and I love coding because it lets me create fun projects and solve cool problems. Coding helps me understand the world by using math and logic in creative ways!
+          Hi, I am Bodhi Tan, and I love coding because it helps me solve fun problems and create cool projects. I enjoy using math, loops, and if-else decisions to make my programs work just right!
         </p>
       </div>
       
@@ -149,7 +149,7 @@
       <!-- === START OF ACCORDION: Grouping Projects by Concept === -->
       <div class="accordion" id="accordionProjects">
         
-        <!-- === Math Concepts (Projects 1, 2, 3) === -->
+        <!-- === Math Concepts (Projects 1 & 2) === -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingMath">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
@@ -158,7 +158,7 @@
           </h2>
           <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
             <div class="accordion-body">
-              <!-- === PROJECT 1: Divisible by 3 and 5 === -->
+              <!-- === PROJECT 1: Divisible by 3 & 5 === -->
               <div class="card">
                 <div class="card-header">
                   Project 1: Divisible by 3 &amp; 5 (divisible_checker.py)
@@ -166,7 +166,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I wrote a program that asks for a number and checks if it is divisible by both 3 and 5. I used the modulo operator (%) to find the remainder. This is important because it helps me learn how to check for special number rules, which is a basic math skill.
+                    In this project, I wrote a program that asks for a number and checks if it is divisible by both 3 and 5 using the modulo operator. This is important because it teaches me how to test numbers and use simple math to make decisions.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -187,7 +187,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned how to calculate the digital root of a number using the formula (number - 1) % 9 + 1. This shows me how math can simplify big numbers into a single digit, which is a fun way to see patterns in numbers.
+                    In this project, I calculated the digital root of a number using the formula (number - 1) % 9 + 1. This helps me see how math can simplify big numbers into a single digit, which is a fun way to look for patterns.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -199,8 +199,20 @@
                   <iframe src="https://trinket.io/embed/python3/7f755eb741f8" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-              
-              <!-- === PROJECT 3: Blooming Flowers Arithmetic Progression === -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- === For Loops (Projects 3 & 4) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingForLoops">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+              For Loops
+            </button>
+          </h2>
+          <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- === PROJECT 3: Blooming Flowers === -->
               <div class="card">
                 <div class="card-header">
                   Project 3: Blooming Flowers (garden_progression.py)
@@ -208,7 +220,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I helped my friend manage a garden by calculating the number of blooming flowers. I used a for loop to add the daily increase in flowers. This is important because it teaches me how math can show us patterns in nature, like how things grow over time.
+                    In this project, I helped manage a garden by calculating how many flowers bloom each day using a for loop. This is important because it shows me how repeating the same calculation can track growth over time.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -220,20 +232,8 @@
                   <iframe src="https://trinket.io/embed/python3/4cbf4b783695" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- === For Loops (Projects 4, 5) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingForLoops">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
-              For Loops
-            </button>
-          </h2>
-          <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
-              <!-- === PROJECT 4: Store Inventory Arithmetic Progression === -->
+              
+              <!-- === PROJECT 4: Store Inventory === -->
               <div class="card">
                 <div class="card-header">
                   Project 4: Store Inventory (inventory_progression.py)
@@ -241,7 +241,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I managed a store's inventory that increased each day following an arithmetic progression. I used a for loop to calculate both the number of items on day 15 and the total over 15 days. This is important because for loops help us repeat the same calculation many times easily.
+                    In this project, I managed a store's inventory that increased every day using a for loop. I calculated both the inventory on day 15 and the total over 15 days. This shows how for loops make repetitive tasks quick and easy.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -253,7 +253,19 @@
                   <iframe src="https://trinket.io/embed/python3/59fef5f4d9fc" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === If Else (Projects 5 & 6) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingIfElse">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
+              If Else
+            </button>
+          </h2>
+          <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
               <!-- === PROJECT 5: Even/Odd Guesser === -->
               <div class="card">
                 <div class="card-header">
@@ -262,7 +274,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I designed a game where you guess whether a number is even or odd. I used a for loop along with if statements to check the number. This is important because it teaches me how to combine loops and conditions to make interactive programs.
+                    In this project, I made a game where the program checks if a number is even or odd. Using if-else statements, my code decides the outcome. This is important because it shows how decisions in code help us create interactive games.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -274,19 +286,7 @@
                   <iframe src="https://trinket.io/embed/python3/87827502128b" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- === If Else (Projects 6, 7) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingIfElse">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
-              If Else
-            </button>
-          </h2>
-          <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
+              
               <!-- === PROJECT 6: Cube Number Checker === -->
               <div class="card">
                 <div class="card-header">
@@ -295,7 +295,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I wrote a program that checks if a number is a perfect cube. I calculated the cube root, rounded it, and then used an if-else statement to see if cubing that result gives back the original number. This is important because it shows how if-else helps my code make decisions based on the math.
+                    In this project, I wrote a program to check if a number is a perfect cube. I calculated the cube root and used if-else statements to compare the result with the original number. This shows how making choices in code helps us solve math puzzles.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -307,7 +307,19 @@
                   <iframe src="https://trinket.io/embed/python3/ade2f44d8cc3" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === While Loops (Projects 7 & 8) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingWhile">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
+              While Loops
+            </button>
+          </h2>
+          <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
               <!-- === PROJECT 7: Countdown Timer === -->
               <div class="card">
                 <div class="card-header">
@@ -316,7 +328,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I made a countdown timer that starts at a number and counts down to 1 using a while loop with if-else logic. This is important because it shows me how conditions help control loops and how we can create interactive timers.
+                    In this project, I made a countdown timer that uses a while loop to count down from a number until it reaches 1. This is important because while loops let the program repeat an action until a condition is met.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -328,19 +340,7 @@
                   <iframe src="https://trinket.io/embed/python3/20bf93492cf8" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- === While Loops (Project 8) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingWhile">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
-              While Loops
-            </button>
-          </h2>
-          <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
+              
               <!-- === PROJECT 8: Password Checker === -->
               <div class="card">
                 <div class="card-header">
@@ -349,7 +349,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I created a program that keeps asking for a password until the correct one is entered using a while loop. This is important because it shows how while loops let the program repeat an action until a condition is met, ensuring only the correct password grants access.
+                    In this project, I created a program that keeps asking for a password until the right one is entered. Using a while loop, my code repeats until the condition is met. This shows why while loops are great for tasks that need to repeat until something is finished.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -357,8 +357,8 @@
                     <img src="project8.png" alt="Diagram for Password Checker">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 8 === -->
-                  <iframe src="https://trinket.io/embed/python3/7f755eb741f8" scrolling="no" allowfullscreen></iframe>
+                  <!-- === TRINKET URL: Project 8 === -->
+                  <iframe src="https://trinket.io/embed/python3/eca8f3bfc735" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>

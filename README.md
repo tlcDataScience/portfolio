@@ -1,1 +1,1 @@
-https://tlcdatascience.github.io
+https://tlcdatascience.github.io/portfolio/

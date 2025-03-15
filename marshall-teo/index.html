@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Student Portfolio - Marshall Teo</title>
+    <!-- === Bootstrap CSS === -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <!-- Bootstrap Bundle with Popper for Accordion functionality -->
+    <!-- === Bootstrap Bundle with Popper for Accordion functionality === -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
       /* Global Styles */
@@ -14,6 +15,7 @@
         color: #333;
         margin: 0;
         padding: 0;
+        /* Using default browser font */
       }
       
       /* Container */
@@ -23,11 +25,19 @@
         padding: 2rem 1rem;
       }
       
-      /* Headings */
+      /* Main Heading */
       h1 {
         font-weight: normal;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         text-align: center;
+      }
+      
+      /* Generic Intro Paragraph (replace this text as needed) */
+      .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
       }
       
       /* Card Styles */
@@ -39,7 +49,7 @@
         margin-bottom: 1.5rem;
       }
       .card-header {
-        background-color: rgb(11, 57, 11); /* green */
+        background-color: rgb(11, 57, 11); /* old green color */
         color: #fff;
         font-size: 1.2rem;
         text-align: center;
@@ -49,7 +59,8 @@
       }
       .card-body {
         padding: 1.5rem;
-        text-align: center;
+        /* Justify text for the descriptions */
+        text-align: justify;
       }
       
       /* Section Titles */
@@ -60,28 +71,28 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #555;
+        text-align: left;  /* Make section headings left-aligned */
       }
       
-      /* Paragraphs (Justified) */
+      /* Paragraphs */
       .card-body p {
         font-size: 0.95rem;
         line-height: 1.5;
         margin-bottom: 1rem;
-        text-align: justify;
       }
       
-      /* Diagram Container */
+      /* Diagram Container - restrict image display area */
       .diagram-container {
         width: 100%;
-        max-width: 500px;  /* Restrict maximum width */
-        height: 300px;     /* Fixed height for the container */
+        max-width: 500px;  /* === IMAGE MAX WIDTH: Replace if needed === */
+        height: 300px;     /* === IMAGE CONTAINER HEIGHT: Replace if needed === */
         margin: 1rem auto;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #ddd;
         border-radius: 5px;
-        background-color: #F1EDDD;
+        background-color: #F1EDDD; /* === BACKGROUND COLOR for diagrams === */
       }
       
       /* Diagram Images */
@@ -94,14 +105,14 @@
       /* Trinket Iframes */
       iframe {
         width: 100%;
-        height: 500px;
+        height: 500px; /* === IFRAME HEIGHT: Replace if needed === */
         border: none;
         margin-top: 1rem;
         border-radius: 5px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
       
-      /* Accordion Styles (override center alignment) */
+      /* Accordion Button: Left-align text */
       .accordion-button {
         text-align: left;
       }
@@ -109,11 +120,18 @@
   </head>
   <body>
     <div class="container py-5">
+      <!-- === MAIN NAME: Replace "Marshall Teo" with your name if needed === -->
       <h1>Marshall Teo's Coding Projects</h1>
       
-      <!-- Accordion for Project Groups -->
+      <!-- === GENERIC INTRO SECTION: Replace the intro text as needed === -->
+      <div class="intro">
+        <p>Hi, I am Marshall Teo, and I love coding because it lets me create fun projects and solve interesting problems. I enjoy learning new ways to use math and loops to make my programs smart and exciting!</p>
+      </div>
+      
+      <!-- === START OF ACCORDION: Grouping Projects by Concept === -->
       <div class="accordion" id="accordionProjects">
-        <!-- Math Concepts (Projects 1,2,3) -->
+        
+        <!-- Math Concepts (Projects 1, 2, 3) -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingMath">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="true" aria-controls="collapseMath">
@@ -122,7 +140,7 @@
           </h2>
           <div id="collapseMath" class="accordion-collapse collapse show" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
             <div class="accordion-body">
-              <!-- Project 1: Time Breakdown -->
+              <!-- === PROJECT 1: Time Breakdown === -->
               <div class="card">
                 <div class="card-header">
                   Project 1: Time Breakdown (time_breakdown.py)
@@ -130,18 +148,20 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used math to change a huge number of minutes into days, hours, and minutes. I used division and remainders so I could see how many full days there were and what was left. This is important because it shows me how math can help us understand time and make it easier to read.
+                    In this project, I used math to change a huge number of minutes into days, hours, and minutes. I used division and remainders to see how many full days there were and what was left over. This is important because it helps me understand time in a simple way.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project1.png === -->
                     <img src="project1.png" alt="Diagram for Time Breakdown">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 1 === -->
                   <iframe src="https://trinket.io/embed/python3/a96474ca3c75" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
               
-              <!-- Project 2: Currency Breakdown -->
+              <!-- === PROJECT 2: Currency Breakdown === -->
               <div class="card">
                 <div class="card-header">
                   Project 2: Currency Breakdown (currency_breakdown.py)
@@ -149,18 +169,20 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned to use division and remainders to split a dollar into bills. I figured out how many twenties, tens, fives, and ones make up the total. This is important because it shows me how math can help with money and making change in real life.
+                    In this project, I learned to use division and remainders to split a dollar into different bills. I figured out how many twenties, tens, fives, and ones make up the total. This is important because it shows how math helps us handle money and make change.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project2.png === -->
                     <img src="project2.png" alt="Diagram for Currency Breakdown">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 2 === -->
                   <iframe src="https://trinket.io/embed/python3/c5a82bdef60a" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
               
-              <!-- Project 3: Weight Units Converter -->
+              <!-- === PROJECT 3: Weight Units Converter === -->
               <div class="card">
                 <div class="card-header">
                   Project 3: Weight Units Converter (weight_units_converter.py)
@@ -168,13 +190,15 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned how to convert weight from pounds to kilograms by multiplying by a conversion factor. This math is important because it helps us change numbers from one measurement to another so we can understand and compare different units.
+                    In this project, I learned how to convert weight from pounds to kilograms by multiplying by a conversion factor. This is important because it helps us compare measurements and understand different units of weight.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project3.png === -->
                     <img src="project3.png" alt="Diagram for Weight Units Converter">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 3 === -->
                   <iframe src="https://trinket.io/embed/python3/dc162086f26d" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -182,7 +206,7 @@
           </div>
         </div>
         
-        <!-- For Loops (Projects 4,5) -->
+        <!-- For Loops (Projects 4, 5) -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingForLoops">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
@@ -191,7 +215,7 @@
           </h2>
           <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
             <div class="accordion-body">
-              <!-- Project 4: Coffee Shop Inventory -->
+              <!-- === PROJECT 4: Coffee Shop Inventory === -->
               <div class="card">
                 <div class="card-header">
                   Project 4: Coffee Shop Inventory
@@ -199,18 +223,20 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I pretended to run a coffee shop. I used a for loop to add a set number of coffee beans each day for 7 days. The loop made it easy to do the same math repeatedly. This is important because for loops help us repeat tasks without having to write the same code many times.
+                    In this project, I pretended to run a coffee shop and used a for loop to add a set number of coffee beans each day for 7 days. This shows why for loops are important because they help us do the same work many times without writing extra code.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project4.png === -->
                     <img src="project4.png" alt="Diagram for Coffee Shop Inventory">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 4 === -->
                   <iframe src="https://trinket.io/embed/python3/c8f5acff1e5a" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
               
-              <!-- Project 5: Movie Theater Attendance -->
+              <!-- === PROJECT 5: Movie Theater Attendance === -->
               <div class="card">
                 <div class="card-header">
                   Project 5: Movie Theater Attendance
@@ -218,13 +244,15 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used a for loop to count how many people went to the movies each day for 12 days. I started with a base number and added more every day. This shows why for loops are important – they let us do the same calculation again and again, which is great when we have lots of days to count.
+                    In this project, I used a for loop to count how many people went to the movies each day for 12 days. I started with a base number and added more every day. This is important because for loops make it easy to repeat calculations over many days.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project5.png === -->
                     <img src="project5.png" alt="Diagram for Movie Theater Attendance">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 5 === -->
                   <iframe src="https://trinket.io/embed/python3/464d7cc64209" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -232,7 +260,7 @@
           </div>
         </div>
         
-        <!-- If Else (Projects 6,7) -->
+        <!-- If Else (Projects 6, 7) -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingIfElse">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
@@ -241,7 +269,7 @@
           </h2>
           <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
             <div class="accordion-body">
-              <!-- Project 6: Factorial Calculator -->
+              <!-- === PROJECT 6: Factorial Calculator === -->
               <div class="card">
                 <div class="card-header">
                   Project 6: Factorial Calculator (factorial_calculator.py)
@@ -249,18 +277,20 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used if-else statements to decide what to do before calculating a factorial. I first checked if the number was not negative, then I used a loop to multiply all numbers from 1 to that number. This is important because if-else helps my program make choices, so it can show an error when something is wrong.
+                    In this project, I used if-else statements to decide what to do before calculating a factorial. I first checked if the number was negative, and if not, I used a loop to multiply the numbers from 1 up to the number. This is important because if-else lets my program choose the right action, like showing an error if needed.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project6.png === -->
                     <img src="project6.png" alt="Diagram for Factorial Calculator">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 6 === -->
                   <iframe src="https://trinket.io/embed/python3/875de9f62602" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
               
-              <!-- Project 7: Right Triangle Checker -->
+              <!-- === PROJECT 7: Right Triangle Checker === -->
               <div class="card">
                 <div class="card-header">
                   Project 7: Right Triangle Checker (right_triangle_checker.py)
@@ -268,13 +298,15 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used if-else statements to check if a triangle is right-angled. I asked for three sides, sorted them, and then used the Pythagorean theorem to decide if the triangle was right. This is important because if-else lets my code choose different actions based on the input, making my program smart.
+                    In this project, I used if-else statements to check if a triangle is right-angled. I asked for three sides, sorted them, and then used the Pythagorean theorem to decide if the triangle was right. This is important because if-else helps my code make choices based on the input.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project7.png === -->
                     <img src="project7.png" alt="Diagram for Right Triangle Checker">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 7 === -->
                   <iframe src="https://trinket.io/embed/python3/42b174fae46d" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -282,7 +314,7 @@
           </div>
         </div>
         
-        <!-- While Loops (Projects 8,9) -->
+        <!-- While Loops (Projects 8, 9) -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingWhile">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
@@ -291,7 +323,7 @@
           </h2>
           <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
             <div class="accordion-body">
-              <!-- Project 8: Number Guessing Game -->
+              <!-- === PROJECT 8: Number Guessing Game === -->
               <div class="card">
                 <div class="card-header">
                   Project 8: Number Guessing Game (my_number_guessing_game.py)
@@ -299,18 +331,20 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I built a guessing game where a while loop kept asking for a number until I got it right. The game tells me if my guess is too high or too low. This is important because while loops help us keep doing something until a condition is met, which is perfect for games.
+                    In this project, I built a guessing game using a while loop that keeps asking for a guess until the answer is right. The game tells me if my guess is too high or too low. This is important because while loops let me repeat actions until a condition is met, which is perfect for games.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project8.png === -->
                     <img src="project8.png" alt="Diagram for Number Guessing Game">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 8 === -->
                   <iframe src="https://trinket.io/embed/python3/9c96ee924049" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
               
-              <!-- Project 9: Palindrome Checker -->
+              <!-- === PROJECT 9: Palindrome Checker === -->
               <div class="card">
                 <div class="card-header">
                   Project 9: Palindrome Checker (my_palindrome_checker.py)
@@ -318,13 +352,15 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used a while loop to reverse a word and check if it is a palindrome. The loop helps me go through every letter until the word is fully reversed. This is important because while loops let me repeat an action until it's finished, which is very useful for checking words.
+                    In this project, I used a while loop to reverse a word and check if it is a palindrome. The loop goes through every letter until the word is reversed. This is important because while loops let me keep doing something until it's done, which is useful for checking words.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
+                    <!-- === IMAGE FILE: project9.png === -->
                     <img src="project9.png" alt="Diagram for Palindrome Checker">
                   </div>
                   <h3>Trinket:</h3>
+                  <!-- === TRINKET URL: Replace with your actual URL for Project 9 === -->
                   <iframe src="https://trinket.io/embed/python3/3e78ba93022e" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>

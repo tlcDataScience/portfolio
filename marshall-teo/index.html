@@ -20,7 +20,7 @@
       
       /* Container */
       .container {
-        max-width: 800px;
+        max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
         margin: 0 auto;
         padding: 2rem 1rem;
       }
@@ -32,7 +32,7 @@
         text-align: center;
       }
       
-      /* Generic Intro Paragraph (replace this text as needed) */
+      /* Generic Intro Section */
       .intro {
         text-align: center;
         margin-bottom: 2rem;
@@ -49,7 +49,7 @@
         margin-bottom: 1.5rem;
       }
       .card-header {
-        background-color: rgb(11, 57, 11); /* old green color */
+        background-color: rgb(11, 57, 11); /* === OLD GREEN COLOR === */
         color: #fff;
         font-size: 1.2rem;
         text-align: center;
@@ -59,11 +59,10 @@
       }
       .card-body {
         padding: 1.5rem;
-        /* Justify text for the descriptions */
-        text-align: justify;
+        text-align: justify;  /* Justify descriptions */
       }
       
-      /* Section Titles */
+      /* Section Titles inside Card Body */
       .card-body h3 {
         font-size: 0.95rem;
         margin-top: 1rem;
@@ -71,7 +70,7 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #555;
-        text-align: left;  /* Make section headings left-aligned */
+        text-align: left;  /* Left-align section headings */
       }
       
       /* Paragraphs */
@@ -81,18 +80,18 @@
         margin-bottom: 1rem;
       }
       
-      /* Diagram Container - restrict image display area */
+      /* Diagram Container: restrict image display area */
       .diagram-container {
         width: 100%;
-        max-width: 500px;  /* === IMAGE MAX WIDTH: Replace if needed === */
-        height: 300px;     /* === IMAGE CONTAINER HEIGHT: Replace if needed === */
+        max-width: 500px;  /* === IMAGE MAX WIDTH === */
+        height: 300px;     /* === IMAGE CONTAINER HEIGHT === */
         margin: 1rem auto;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #ddd;
         border-radius: 5px;
-        background-color: #F1EDDD; /* === BACKGROUND COLOR for diagrams === */
+        background-color: #F1EDDD; /* === DIAGRAM BG COLOR === */
       }
       
       /* Diagram Images */
@@ -105,7 +104,7 @@
       /* Trinket Iframes */
       iframe {
         width: 100%;
-        height: 500px; /* === IFRAME HEIGHT: Replace if needed === */
+        height: 500px; /* === IFRAME HEIGHT: Change if needed === */
         border: none;
         margin-top: 1rem;
         border-radius: 5px;
@@ -125,16 +124,19 @@
       
       <!-- === GENERIC INTRO SECTION: Replace the intro text as needed === -->
       <div class="intro">
-        <p>Hi, I am Marshall Teo, and I love coding because it lets me create fun projects and solve interesting problems. I enjoy learning new ways to use math and loops to make my programs smart and exciting!</p>
+        <p>
+          Hi, I am Marshall Teo, and I love coding because it lets me create fun projects and solve interesting problems. I enjoy learning new ways to use math and loops to make my programs smart and exciting!
+        </p>
       </div>
       
       <!-- === START OF ACCORDION: Grouping Projects by Concept === -->
       <div class="accordion" id="accordionProjects">
         
-        <!-- Math Concepts (Projects 1, 2, 3) -->
+        <!-- === Math Concepts (Projects 1, 2, 3) === -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingMath">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+            <!-- Add the "collapsed" class and set aria-expanded="false" for closed state -->
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
               Math Concepts
             </button>
           </h2>
@@ -148,7 +150,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used math to change a huge number of minutes into days, hours, and minutes. I used division and remainders to see how many full days there were and what was left over. This is important because it helps me understand time in a simple way.
+                    In this project, I used math to change a huge number of minutes into days, hours, and minutes. I used division and remainders to see how many full days there were and what was left over. This is important because it shows how math can help us understand time by breaking it down into parts we can read.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -169,7 +171,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned to use division and remainders to split a dollar into different bills. I figured out how many twenties, tens, fives, and ones make up the total. This is important because it shows how math helps us handle money and make change.
+                    In this project, I learned to use division and remainders to split a dollar into different bills. I figured out how many twenties, tens, fives, and ones make up the total. This is important because it shows how math helps us handle money and make change easily.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -190,7 +192,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned how to convert weight from pounds to kilograms by multiplying by a conversion factor. This is important because it helps us compare measurements and understand different units of weight.
+                    In this project, I learned how to convert weight from pounds to kilograms by multiplying by a conversion factor. This is important because it teaches us how to change one unit of measurement to another so we can compare different types of data.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -206,7 +208,7 @@
           </div>
         </div>
         
-        <!-- For Loops (Projects 4, 5) -->
+        <!-- === For Loops (Projects 4, 5) === -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingForLoops">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
@@ -223,7 +225,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I pretended to run a coffee shop and used a for loop to add a set number of coffee beans each day for 7 days. This shows why for loops are important because they help us do the same work many times without writing extra code.
+                    In this project, I pretended to run a coffee shop and used a for loop to add a set number of coffee beans each day for 7 days. This is important because for loops help us repeat a task without writing the same code many times.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -244,7 +246,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used a for loop to count how many people went to the movies each day for 12 days. I started with a base number and added more every day. This is important because for loops make it easy to repeat calculations over many days.
+                    In this project, I used a for loop to count how many people went to the movies each day for 12 days. I started with a base number and added more every day. This is important because for loops let us do the same calculation over and over quickly.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -260,7 +262,7 @@
           </div>
         </div>
         
-        <!-- If Else (Projects 6, 7) -->
+        <!-- === If Else (Projects 6, 7) === -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingIfElse">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
@@ -277,7 +279,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used if-else statements to decide what to do before calculating a factorial. I first checked if the number was negative, and if not, I used a loop to multiply the numbers from 1 up to the number. This is important because if-else lets my program choose the right action, like showing an error if needed.
+                    In this project, I used if-else statements to decide what to do before calculating a factorial. I first checked if the number was negative; if it wasn’t, I multiplied the numbers from 1 up to the number. This is important because if-else helps the program make choices and show errors when needed.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -298,7 +300,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used if-else statements to check if a triangle is right-angled. I asked for three sides, sorted them, and then used the Pythagorean theorem to decide if the triangle was right. This is important because if-else helps my code make choices based on the input.
+                    In this project, I used if-else statements to check if a triangle is right-angled. I asked for three sides, sorted them, and used the Pythagorean theorem to decide if the triangle was right. This is important because if-else lets the program choose different actions based on the input.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
@@ -314,7 +316,7 @@
           </div>
         </div>
         
-        <!-- While Loops (Projects 8, 9) -->
+        <!-- === While Loops (Projects 8, 9) === -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingWhile">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
@@ -352,7 +354,7 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I used a while loop to reverse a word and check if it is a palindrome. The loop goes through every letter until the word is reversed. This is important because while loops let me keep doing something until it's done, which is useful for checking words.
+                    In this project, I used a while loop to reverse a word and check if it is a palindrome. The loop goes through every letter until the word is reversed. This is important because while loops let me repeat actions until they’re done, which is useful for checking words.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">

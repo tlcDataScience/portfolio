@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Student Portfolio - Bodhi Tan</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Mermaid Library -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-      mermaid.initialize({ startOnLoad: true });
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
       body {
-        background-color: rgb(250, 250, 250);
+        background-color: rgb(250,250,250);
       }
       .container {
         max-width: 85%;
@@ -23,28 +15,22 @@
         padding-top: 30px;
       }
       .card-header {
-        background-color: rgb(11, 57, 11);
+        background-color: rgb(11,57,11);
         color: white;
       }
-      pre {
-        background-color: #f8f9fa;
-        padding: 15px;
-        border-radius: 5px;
-        overflow-x: auto;
-      }
-      .mermaid {
-        background-color: #fff;
-        padding: 10px;
+      iframe {
         border: 1px solid #ddd;
         border-radius: 5px;
-        margin-bottom: 15px;
+      }
+      .img-placeholder {
+        max-width: 100%;
       }
     </style>
   </head>
   <body>
     <div class="container py-5">
       <h1 class="text-center my-4">Bodhi Tan's Coding Projects</h1>
-
+      
       <!-- Project 1: Time Breakdown -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -56,35 +42,20 @@
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project uses <strong>arithmetic operations</strong> to convert a total number of minutes into days, hours, and minutes. It leverages floor division and the modulo operator to break down the input into the proper time units.
+                In this project, the user inputs a total number of minutes, which the program then converts into days, hours, and minutes. This is achieved by using arithmetic operations such as floor division and modulo to split the total minutes into meaningful time units. The project helps build an understanding of how basic math operations in Python can be applied to real-world problems and reinforces the concept of breaking down a problem into sequential steps.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter total minutes]
-                  B[Calculate days = minutes // (24*60)]
-                  C[Calculate remaining hours = (minutes % (24*60)) // 60]
-                  D[Calculate remaining minutes = minutes % 60]
-                  E[Output result]
-                  A --> B
-                  B --> C
-                  C --> D
-                  D --> E
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Time Breakdown" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>total_minutes = int(input("Enter the total number of minutes: "))
-days = total_minutes // (24 * 60)
-remaining_hours = (total_minutes % (24 * 60)) // 60
-remaining_minutes = total_minutes % 60
-print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours, and {remaining_minutes} minutes.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 1 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 2: Currency Breakdown -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -96,44 +67,20 @@ print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project demonstrates how to decompose a dollar amount into currency denominations. It uses sequential arithmetic operations—floor division and modulo—to determine the number of twenties, tens, fives, and ones.
+                This project converts a user-input dollar amount into various currency denominations. By sequentially applying floor division and the modulo operator, the code determines how many twenties, tens, fives, and ones make up the total amount. It offers a practical demonstration of using arithmetic operations for decomposing a numerical value into parts, which is an essential skill in programming.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter dollar amount]
-                  B[Calculate twenties = amount // 20]
-                  C[Update amount = amount % 20]
-                  D[Calculate tens = amount // 10]
-                  E[Update amount = amount % 10]
-                  F[Calculate fives = amount // 5]
-                  G[Calculate ones = amount % 5]
-                  H[Output breakdown]
-                  A --> B
-                  B --> C
-                  C --> D
-                  D --> E
-                  E --> F
-                  F --> G
-                  G --> H
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Currency Breakdown" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>amount = int(input("Enter the dollar amount: "))
-twenties = amount // 20
-amount %= 20
-tens = amount // 10
-amount %= 10
-fives = amount // 5
-ones = amount % 5
-print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 2 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 3: Weight Units Converter -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -145,29 +92,20 @@ print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</cod
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project converts a weight in pounds to kilograms. By multiplying the input weight by a constant (0.453592), it demonstrates how arithmetic multiplication can be used for unit conversion.
+                In this project, the program converts a weight entered in pounds to its equivalent in kilograms. Using a constant conversion factor, it multiplies the input to achieve the conversion and then formats the output to display two decimal places. This project is a straightforward illustration of applying multiplication in Python for practical unit conversions.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter weight in pounds]
-                  B[Convert to kg = pounds * 0.453592]
-                  C[Output weight in kg (2 d.p.)]
-                  A --> B
-                  B --> C
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Weight Units Converter" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>pounds = float(input("Enter the weight in pounds: "))
-kilograms = pounds * 0.453592
-print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 3 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 4: Coffee Shop Inventory -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -179,42 +117,20 @@ print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project simulates a coffee shop's bean inventory using an arithmetic progression. A for loop iterates over 7 days to update the stock and accumulate the total, demonstrating loop control and incremental arithmetic.
+                This project models the inventory of coffee beans at a coffee shop over the span of one week. It starts with an initial stock and increases the number of beans daily by a fixed amount, simulating an arithmetic progression. The code uses a for loop to both update the stock for each day and accumulate the total, demonstrating loop control and incremental arithmetic in a practical setting.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Initialize beans = 50, daily increase = 4]
-                  B[For day from 1 to 7]
-                  C[Calculate day's beans: beans + (day-1)*increase]
-                  D[Accumulate total beans]
-                  E[Output beans on day 7 and total beans]
-                  A --> B
-                  B --> C
-                  C --> D
-                  D --> E
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Coffee Shop Inventory" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>initial_coffee_beans = 50  # Initial beans on day 1
-daily_increase = 4          # Daily increase
-
-coffee_beans_on_day_7 = initial_coffee_beans
-total_coffee_beans_after_7_days = 0
-
-for day in range(1, 8):
-    coffee_beans_on_day_7 += daily_increase
-    total_coffee_beans_after_7_days += initial_coffee_beans + (day - 1) * daily_increase
-
-print(f"Coffee beans on day 7: {coffee_beans_on_day_7}")
-print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 4 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 5: Movie Theater Attendance -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -226,42 +142,20 @@ print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</co
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project models movie theater attendance with an arithmetic progression. Using a for loop, it updates the attendance for each day and accumulates a total over 12 days.
+                In this project, the daily attendance at a movie theater is calculated using an arithmetic progression. By setting an initial attendance and a daily increase, the program uses a for loop to determine the attendance on a specific day as well as the total attendance over a period of days. This exercise strengthens one’s grasp of loops and sequential arithmetic operations in Python.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Initialize attendance = 40, daily increase = 7]
-                  B[For day from 1 to 12]
-                  C[Calculate day's attendance: attendance + (day-1)*increase]
-                  D[Accumulate total attendance]
-                  E[Output day 12 and total attendance]
-                  A --> B
-                  B --> C
-                  C --> D
-                  D --> E
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Movie Theater Attendance" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>initial_attendance = 40  # Day 1 attendance
-daily_increase = 7         # Daily increase
-
-moviegoers_on_day_12 = initial_attendance
-total_moviegoers_after_12_days = 0
-
-for day in range(1, 13):
-    moviegoers_on_day_12 += daily_increase
-    total_moviegoers_after_12_days += initial_attendance + (day - 1) * daily_increase
-
-print(f"Moviegoers on day 12: {moviegoers_on_day_12}")
-print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 5 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 6: Factorial Calculator -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -273,43 +167,20 @@ print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project computes the factorial of a non-negative integer using iterative multiplication. It checks for valid input, then uses a for loop to multiply a running product.
+                This project calculates the factorial of a non-negative integer. After validating the input, the program uses a for loop to multiply numbers in sequence, thereby computing the factorial. This project is an excellent way to learn about iterative processes and handling mathematical operations in Python, and it lays the foundation for understanding more complex recursive techniques.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter a number]
-                  B{Is number < 0?}
-                  C[Output error: non-negative required]
-                  D[Initialize factorial = 1]
-                  E[For i from 1 to number]
-                  F[Multiply factorial by i]
-                  G[Output factorial result]
-                  A --> B
-                  B -- Yes --> C
-                  B -- No --> D
-                  D --> E
-                  E --> F
-                  F --> G
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Factorial Calculator" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>user_input = int(input("Enter a number: "))
-
-if user_input < 0:
-    print("Please enter a non-negative integer.")
-else:
-    factorial_result = 1
-    for i in range(1, user_input + 1):
-        factorial_result *= i
-    print(f"The factorial of {user_input} is {factorial_result}.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 6 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 7: Right Triangle Checker -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -321,38 +192,20 @@ else:
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This program determines if a triangle is right-angled by sorting three side lengths and applying the Pythagorean theorem. It demonstrates list sorting and arithmetic comparisons.
+                This project determines whether a triangle is right-angled by applying the Pythagorean theorem. After accepting three side lengths as input, the program sorts these values and checks if the sum of the squares of the two shorter sides equals the square of the longest side. This example highlights list manipulation, conditional statements, and arithmetic comparisons in Python.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter three side lengths]
-                  B[Sort sides in ascending order]
-                  C[Check if side1² + side2² equals side3²]
-                  D[Output: Right triangle if true; otherwise, not]
-                  A --> B
-                  B --> C
-                  C --> D
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Right Triangle Checker" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>side1 = float(input("Enter the length of side 1: "))
-side2 = float(input("Enter the length of side 2: "))
-side3 = float(input("Enter the length of side 3: "))
-sides = [side1, side2, side3]
-sides.sort()
-
-if sides[0]**2 + sides[1]**2 == sides[2]**2:
-    print("The triangle is a Right Triangle!")
-else:
-    print("The triangle is not a Right Triangle.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 7 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 8: Number Guessing Game -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -364,55 +217,20 @@ else:
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                In this interactive game, a random secret number is generated between 1 and 100. A while loop with conditional checks provides hints (too high/too low) until the correct number is guessed.
+                This interactive game generates a random secret number between 1 and 100 and challenges the user to guess it. With each guess, the program provides feedback—informing the user if their guess is too high or too low—until the correct number is found. This project reinforces concepts of while loops, conditionals, and random number generation in a fun and engaging manner.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Generate random secret number (1-100)]
-                  B[Initialize guess = 0]
-                  C{Is guess ≠ secret?}
-                  D[Prompt user for guess]
-                  E{Is guess > secret?}
-                  F[Output "Too high"]
-                  G{Is guess < secret?}
-                  H[Output "Too low"]
-                  I[Exit loop when guess equals secret]
-                  J[Output congratulatory message]
-                  A --> B
-                  B --> C
-                  C -- Yes --> D
-                  D --> E
-                  E -- Yes --> F
-                  E -- No --> G
-                  G -- Yes --> H
-                  G -- No --> I
-                  F --> C
-                  H --> C
-                  C -- No --> J
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Number Guessing Game" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>import random
-
-secret_number = random.randint(1, 100)
-guess = 0
-
-while guess != secret_number:
-    guess = int(input("Guess the number (between 1 and 100): "))
-    if guess > secret_number:
-        print("Too high! Try again.")
-    elif guess < secret_number:
-        print("Too low! Try again.")
-
-print("Congratulations! You guessed the correct number.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 8 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
-
+      
       <!-- Project 9: Palindrome Checker -->
       <div class="card shadow rounded-3 my-5">
         <div class="card-header text-center">
@@ -424,39 +242,17 @@ print("Congratulations! You guessed the correct number.")</code></pre>
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project checks if a word is a palindrome by reversing the word through iterative concatenation and then comparing it with the original. It highlights string manipulation and loop control.
+                In this project, the program checks if the word provided by the user is a palindrome. By reversing the string iteratively and comparing it with the original, the program determines if the word reads the same forwards and backwards. This exercise is an effective demonstration of string manipulation, loop control, and conditional logic in Python.
               </p>
             </div>
             <!-- Diagram Column -->
             <div class="col-md-6">
-              <h3>Logic Flow Diagram</h3>
-              <div class="mermaid">
-                flowchart TD
-                  A[Enter a word]
-                  B[Initialize reversed_word = ""]
-                  C[While length(reversed_word) < length(word)]
-                  D[Add next character from word to beginning of reversed_word]
-                  E[Compare word and reversed_word]
-                  F[Output: Palindrome if equal; otherwise, not]
-                  A --> B
-                  B --> C
-                  C --> D
-                  D --> E
-                  E --> F
-              </div>
+              <h3>Diagram</h3>
+              <img src="[diagram-placeholder.png]" alt="Diagram placeholder for Palindrome Checker" class="img-placeholder">
             </div>
           </div>
-          <h3>Python Code</h3>
-          <pre><code>word = input("Enter a word: ")
-reversed_word = ""
-
-while len(reversed_word) < len(word):
-    reversed_word = word[len(reversed_word)] + reversed_word
-
-if word == reversed_word:
-    print(f"{word} is a Palindrome!")
-else:
-    print(f"{word} is not a Palindrome.")</code></pre>
+          <h3>Try It Yourself</h3>
+          <iframe src="[Insert Trinket URL for Project 9 here]" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
         </div>
       </div>
       

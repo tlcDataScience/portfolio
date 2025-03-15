@@ -56,7 +56,7 @@
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project uses <strong>arithmetic operations</strong> to break down a total number of minutes into days, hours, and minutes. It demonstrates the use of floor division and the modulo operator to handle integer division and remainders.
+                This project uses <strong>arithmetic operations</strong> to convert a total number of minutes into days, hours, and minutes. It leverages floor division and the modulo operator to break down the input into the proper time units.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -64,11 +64,11 @@
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input total minutes]
-                  B[Calculate days = total_minutes divided by (24*60) using floor division]
-                  C[Calculate remaining hours = (total_minutes mod (24*60)) divided by 60 using floor division]
-                  D[Calculate remaining minutes = total_minutes mod 60]
-                  E[Display the result]
+                  A[Enter total minutes]
+                  B[Calculate days = minutes // (24*60)]
+                  C[Calculate remaining hours = (minutes % (24*60)) // 60]
+                  D[Calculate remaining minutes = minutes % 60]
+                  E[Output result]
                   A --> B
                   B --> C
                   C --> D
@@ -96,7 +96,7 @@ print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project demonstrates how to decompose a dollar amount into currency denominations. It uses sequential arithmetic operations—floor division and modulo—to determine the number of twenties, tens, fives, and ones needed.
+                This project demonstrates how to decompose a dollar amount into currency denominations. It uses sequential arithmetic operations—floor division and modulo—to determine the number of twenties, tens, fives, and ones.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -104,14 +104,14 @@ print(f"{total_minutes} minutes is equal to {days} days, {remaining_hours} hours
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input dollar amount]
-                  B[Calculate twenties = amount divided by 20]
-                  C[Update amount = amount mod 20]
-                  D[Calculate tens = updated amount divided by 10]
-                  E[Update amount = updated amount mod 10]
-                  F[Calculate fives = updated amount divided by 5]
-                  G[Calculate ones = updated amount mod 5]
-                  H[Display breakdown]
+                  A[Enter dollar amount]
+                  B[Calculate twenties = amount // 20]
+                  C[Update amount = amount % 20]
+                  D[Calculate tens = amount // 10]
+                  E[Update amount = amount % 10]
+                  F[Calculate fives = amount // 5]
+                  G[Calculate ones = amount % 5]
+                  H[Output breakdown]
                   A --> B
                   B --> C
                   C --> D
@@ -145,7 +145,7 @@ print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</cod
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project converts a weight in pounds to kilograms. By multiplying the input by a constant conversion factor (0.453592), the program demonstrates how arithmetic multiplication is used for unit conversion.
+                This project converts a weight in pounds to kilograms. By multiplying the input weight by a constant (0.453592), it demonstrates how arithmetic multiplication can be used for unit conversion.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -153,9 +153,9 @@ print(f"{twenties} twenties, {tens} tens, {fives} fives, and {ones} ones.")</cod
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input weight in pounds]
-                  B[Convert weight = pounds * 0.453592]
-                  C[Display weight in kilograms]
+                  A[Enter weight in pounds]
+                  B[Convert to kg = pounds * 0.453592]
+                  C[Output weight in kg (2 d.p.)]
                   A --> B
                   B --> C
               </div>
@@ -179,7 +179,7 @@ print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project simulates an arithmetic progression for a coffee shop's daily bean inventory. A for loop is used to update and accumulate the stock over 7 days.
+                This project simulates a coffee shop's bean inventory using an arithmetic progression. A for loop iterates over 7 days to update the stock and accumulate the total, demonstrating loop control and incremental arithmetic.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -187,11 +187,11 @@ print(f"{pounds} pounds is equal to {kilograms:.2f} kilograms.")</code></pre>
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Initialize day 1 beans & daily increase]
-                  B[Loop from day 1 to 7]
-                  C[Update beans for each day]
+                  A[Initialize beans = 50, daily increase = 4]
+                  B[For day from 1 to 7]
+                  C[Calculate day's beans: beans + (day-1)*increase]
                   D[Accumulate total beans]
-                  E[Display day 7 beans and total beans]
+                  E[Output beans on day 7 and total beans]
                   A --> B
                   B --> C
                   C --> D
@@ -226,7 +226,7 @@ print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</co
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project models movie theater attendance using a for loop to simulate an arithmetic progression. It calculates both the attendance on a specific day and the total attendance over 12 days.
+                This project models movie theater attendance with an arithmetic progression. Using a for loop, it updates the attendance for each day and accumulates a total over 12 days.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -234,11 +234,11 @@ print(f"Total coffee beans after 7 days: {total_coffee_beans_after_7_days}")</co
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Initialize day 1 attendance & daily increase]
-                  B[Loop from day 1 to 12]
-                  C[Update attendance each day]
+                  A[Initialize attendance = 40, daily increase = 7]
+                  B[For day from 1 to 12]
+                  C[Calculate day's attendance: attendance + (day-1)*increase]
                   D[Accumulate total attendance]
-                  E[Display day 12 and total attendance]
+                  E[Output day 12 and total attendance]
                   A --> B
                   B --> C
                   C --> D
@@ -273,7 +273,7 @@ print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project computes the factorial of a number using iterative multiplication. A for loop multiplies a running product, and input validation ensures only non-negative integers are processed.
+                This project computes the factorial of a non-negative integer using iterative multiplication. It checks for valid input, then uses a for loop to multiply a running product.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -281,17 +281,19 @@ print(f"Total moviegoers after 12 days: {total_moviegoers_after_12_days}")</code
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input a number]
-                  B[Check: Is number non-negative?]
-                  C[Initialize factorial_result = 1]
-                  D[Loop from 1 to number]
-                  E[Multiply factorial_result by current number]
-                  F[Display factorial_result]
+                  A[Enter a number]
+                  B{Is number < 0?}
+                  C[Output error: non-negative required]
+                  D[Initialize factorial = 1]
+                  E[For i from 1 to number]
+                  F[Multiply factorial by i]
+                  G[Output factorial result]
                   A --> B
-                  B -- Valid --> C
-                  C --> D
+                  B -- Yes --> C
+                  B -- No --> D
                   D --> E
                   E --> F
+                  F --> G
               </div>
             </div>
           </div>
@@ -319,7 +321,7 @@ else:
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This program verifies if a triangle is right-angled by sorting its sides and using the Pythagorean theorem. It demonstrates list manipulation and arithmetic comparison in Python.
+                This program determines if a triangle is right-angled by sorting three side lengths and applying the Pythagorean theorem. It demonstrates list sorting and arithmetic comparisons.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -327,10 +329,10 @@ else:
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input three side lengths]
+                  A[Enter three side lengths]
                   B[Sort sides in ascending order]
-                  C[Check: Does side1² + side2² equal side3²?]
-                  D[Display if right triangle]
+                  C[Check if side1² + side2² equals side3²]
+                  D[Output: Right triangle if true; otherwise, not]
                   A --> B
                   B --> C
                   C --> D
@@ -362,7 +364,7 @@ else:
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                In this interactive game, a random secret number is generated. A while loop with conditional checks provides hints—indicating whether the guess is too high or too low—until the correct number is guessed.
+                In this interactive game, a random secret number is generated between 1 and 100. A while loop with conditional checks provides hints (too high/too low) until the correct number is guessed.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -370,19 +372,27 @@ else:
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Generate secret number (1-100)]
-                  B[Loop: Prompt user for guess]
-                  C[If guess > secret then display: Too high]
-                  D[If guess < secret then display: Too low]
-                  E[If guess equals secret then exit loop]
-                  F[Display congratulatory message]
+                  A[Generate random secret number (1-100)]
+                  B[Initialize guess = 0]
+                  C{Is guess ≠ secret?}
+                  D[Prompt user for guess]
+                  E{Is guess > secret?}
+                  F[Output "Too high"]
+                  G{Is guess < secret?}
+                  H[Output "Too low"]
+                  I[Exit loop when guess equals secret]
+                  J[Output congratulatory message]
                   A --> B
                   B --> C
-                  B --> D
-                  B --> E
-                  C --> B
-                  D --> B
-                  E --> F
+                  C -- Yes --> D
+                  D --> E
+                  E -- Yes --> F
+                  E -- No --> G
+                  G -- Yes --> H
+                  G -- No --> I
+                  F --> C
+                  H --> C
+                  C -- No --> J
               </div>
             </div>
           </div>
@@ -414,7 +424,7 @@ print("Congratulations! You guessed the correct number.")</code></pre>
             <div class="col-md-6">
               <h3>Prose Description</h3>
               <p>
-                This project checks whether a word is a palindrome. It reverses the input word using a loop and then compares it to the original, showcasing string manipulation and control flow.
+                This project checks if a word is a palindrome by reversing the word through iterative concatenation and then comparing it with the original. It highlights string manipulation and loop control.
               </p>
             </div>
             <!-- Diagram Column -->
@@ -422,15 +432,17 @@ print("Congratulations! You guessed the correct number.")</code></pre>
               <h3>Logic Flow Diagram</h3>
               <div class="mermaid">
                 flowchart TD
-                  A[Start: Input a word]
-                  B[Initialize empty reversed_word]
-                  C[Loop: Build reversed_word character by character]
-                  D[Compare original word with reversed_word]
-                  E[Display if palindrome]
+                  A[Enter a word]
+                  B[Initialize reversed_word = ""]
+                  C[While length(reversed_word) < length(word)]
+                  D[Add next character from word to beginning of reversed_word]
+                  E[Compare word and reversed_word]
+                  F[Output: Palindrome if equal; otherwise, not]
                   A --> B
                   B --> C
                   C --> D
                   D --> E
+                  E --> F
               </div>
             </div>
           </div>
@@ -447,7 +459,7 @@ else:
     print(f"{word} is not a Palindrome.")</code></pre>
         </div>
       </div>
-
+      
     </div>
   </body>
 </html>

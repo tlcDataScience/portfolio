@@ -39,7 +39,7 @@
         font-size: 1rem;
         line-height: 1.5;
       }
-      
+
       /* Portrait Section */
       .portrait {
         text-align: center;
@@ -71,7 +71,7 @@
       }
       .card-body {
         padding: 1.5rem;
-        text-align: justify;  /* Justified descriptions */
+        text-align: justify;  /* Justify descriptions */
       }
       
       /* Section Titles inside Card Body */
@@ -131,7 +131,7 @@
   </head>
   <body>
     <div class="container py-5">
-      <!-- === MAIN NAME: Replace "Bodhi Tan" if needed === -->
+      <!-- === MAIN NAME: Bodhi Tan's Coding Projects === -->
       <h1>Bodhi Tan's Coding Projects</h1>
       
       <!-- === GENERIC INTRO SECTION: Update this text as needed === -->
@@ -141,13 +141,47 @@
         </p>
       </div>
       
-      <!-- === PORTRAIT SECTION: Replace "portrait.png" with your actual portrait image === -->
+      <!-- === PORTRAIT SECTION: Replace "bodhi.jpeg" with your actual portrait image if needed === -->
       <div class="portrait">
         <img src="bodhi.jpeg" alt="Portrait of Bodhi Tan" />
       </div>
       
       <!-- === START OF ACCORDION: Grouping Projects by Concept === -->
       <div class="accordion" id="accordionProjects">
+        
+        <!-- === Pygame Project (FIRST ACCORDION) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPygame">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePygame" aria-expanded="false" aria-controls="collapsePygame">
+              Pygame Project
+            </button>
+          </h2>
+          <div id="collapsePygame" class="accordion-collapse collapse" aria-labelledby="headingPygame" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Pygame Project (pygame_project.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this project, I used Pygame to create an interactive game with different screens and animations. I learned a lot about <strong>object-oriented programming (OOP)</strong> by designing separate classes for the game, the scoreboard, and the instructions. This made my code easier to manage and understand, like organizing a big box of LEGOs into smaller sets!
+                    <br><br>
+                    I also learned about <strong>designing user interfaces</strong> and how to handle key presses and events, so the game responds when I press Y or N. The project was really fun because it combined coding with creativity—like making your own mini video game!
+                    <br><br>
+                    Overall, Pygame helped me understand how programs work together as a team, and it was super exciting to see my ideas come to life on the screen.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="pygame_diagram.png" alt="Diagram for Pygame Project">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/pygame/61c0dc63892f" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
         <!-- === Math Concepts (Projects 1 & 2) === -->
         <div class="accordion-item">
@@ -166,15 +200,13 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I learned how to take two integers and use the modulo operator (%) to find the remainder when the first number is divided by the second. This is important because it teaches me how to split numbers into parts, which is useful in many math puzzles.
+                    In this project, I learned how to take two integers and use the modulo operator (%) to find the remainder when the first number is divided by the second. This helps us see how numbers can be split into parts, which is useful in many math puzzles.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project1.png === -->
                     <img src="project1.png" alt="Diagram for Divisibility Tester">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 1 === -->
                   <iframe src="https://trinket.io/embed/python3/4cff77f9cef6" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -187,15 +219,13 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I wrote a program that takes an integer and calculates its digital root using the formula (number - 1) % 9 + 1. This is important because it shows how math can reduce a big number to a single digit, helping us discover hidden patterns.
+                    This project calculates the digital root of a number using a neat formula. It shows how math can simplify big numbers into one digit and reveal hidden patterns!
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project2.png === -->
                     <img src="project2.png" alt="Diagram for Digital Root Calculator">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 2 === -->
                   <iframe src="https://trinket.io/embed/python3/d7efa5efad41" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -224,11 +254,9 @@
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project3.png === -->
                     <img src="project3.png" alt="Diagram for Flower Garden Management">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 3 === -->
                   <iframe src="https://trinket.io/embed/python3/6c47208fd225" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -245,11 +273,9 @@
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project4.png === -->
                     <img src="project4.png" alt="Diagram for Store Inventory Management">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 4 === -->
                   <iframe src="https://trinket.io/embed/python3/d56aae77b696" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -278,11 +304,9 @@
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project5.png === -->
                     <img src="project5.png" alt="Diagram for Even-Odd Guesser Game">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 5 === -->
                   <iframe src="https://trinket.io/embed/python3/541c60f0c6f1" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -295,15 +319,13 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I wrote a program that checks if a number is a perfect cube by calculating its cube root and comparing it to the original number using if-else statements. This is important because it shows me how making decisions in code helps solve math puzzles.
+                    In this project, I wrote a program that checks if a number is a perfect cube by calculating its cube root and comparing it to the original number using if-else statements. This shows how decisions in code help solve math puzzles.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project6.png === -->
                     <img src="project6.png" alt="Diagram for Cube Number Puzzle Challenge">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 6 === -->
                   <iframe src="https://trinket.io/embed/python3/ade2f44d8cc3" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -332,11 +354,9 @@
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project7.png === -->
                     <img src="project7.png" alt="Diagram for Countdown Timer">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Replace with your actual URL for Project 7 === -->
                   <iframe src="https://trinket.io/embed/python3/20bf93492cf8" scrolling="no" allowfullscreen></iframe>
                 </div>
               </div>
@@ -349,15 +369,13 @@
                 <div class="card-body">
                   <h3>Description:</h3>
                   <p>
-                    In this project, I created a program that keeps asking for a password until the correct one is entered using a while loop. This is important because it shows how while loops can make sure an action is repeated until the right condition is reached.
+                    In this project, I created a program that keeps asking for a password until the correct one is entered using a while loop. This shows how while loops can ensure an action is repeated until the right condition is reached.
                   </p>
                   <h3>Diagram:</h3>
                   <div class="diagram-container">
-                    <!-- === IMAGE FILE: project8.png === -->
                     <img src="project8.png" alt="Diagram for Password Security Checker">
                   </div>
                   <h3>Trinket:</h3>
-                  <!-- === TRINKET URL: Project 8 has been updated as requested === -->
                   <iframe src="https://trinket.io/embed/python3/eca8f3bfc735" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 </div>
               </div>
@@ -365,18 +383,15 @@
           </div>
         </div>
         
-      </div><!-- End accordion --> 
+      </div><!-- End accordion -->
     </div>
-  </body>
-</html>
-
+    
     <!-- === Script to scroll accordion header into view when opened === -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
         accordionCollapseElements.forEach(function(collapseEl) {
           collapseEl.addEventListener('shown.bs.collapse', function() {
-            // Scroll the associated header into view smoothly
             var header = this.previousElementSibling;
             if (header) {
               header.scrollIntoView({ behavior: 'smooth', block: 'start' });

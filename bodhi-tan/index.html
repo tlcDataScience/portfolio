@@ -369,3 +369,21 @@
     </div>
   </body>
 </html>
+
+    <!-- === Script to scroll accordion header into view when opened === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+        accordionCollapseElements.forEach(function(collapseEl) {
+          collapseEl.addEventListener('shown.bs.collapse', function() {
+            // Scroll the associated header into view smoothly
+            var header = this.previousElementSibling;
+            if (header) {
+              header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Portfolio - Zimo Liu</title>
+    <!-- === Bootstrap CSS === -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- === Bootstrap Bundle with Popper for Accordion functionality === -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Global Styles */
+      body {
+        background-color: rgb(250, 250, 250);
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Container */
+      .container {
+        max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      /* Main Heading */
+      h1 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      /* Generic Intro Section */
+      .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      
+      /* Portrait Section */
+      .portrait {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .portrait img {
+        width: 300px; /* === PORTRAIT SIZE: Change if needed === */
+        height: 300px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+      }
+      
+      /* Card Styles */
+      .card {
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+      }
+      .card-header {
+        background-color: rgb(11, 57, 11);
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 1rem;
+      }
+      .card-body {
+        padding: 1.5rem;
+        text-align: justify;
+      }
+      
+      /* Section Titles inside Card Body */
+      .card-body h3 {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #555;
+        text-align: left;
+      }
+      
+      /* Paragraphs */
+      .card-body p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+      
+      /* Diagram Container: restrict image display area */
+      .diagram-container {
+        width: 100%;
+        max-width: 500px; /* === IMAGE MAX WIDTH === */
+        height: 300px;    /* === IMAGE CONTAINER HEIGHT === */
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #F1EDDD;
+      }
+      
+      /* Diagram Images */
+      .diagram-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      /* Trinket Iframes */
+      iframe {
+        width: 100%;
+        height: 500px; /* === IFRAME HEIGHT: Change if needed === */
+        border: none;
+        margin-top: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Accordion Button */
+      .accordion-button {
+        text-align: left;
+      }
+      
+      /* Custom Robotics Project Layout */
+      .robotics-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .robotics-col {
+        flex: 1;
+        padding: 0.5rem;
+      }
+      .robotics-img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- MAIN HEADING -->
+      <h1>Zimo Liu's Coding Projects</h1>
+      
+      <!-- INTRO SECTION -->
+      <div class="intro">
+        <p>
+          Hi, I am Zimo Liu, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+        </p>
+      </div>
+      
+      <!-- PORTRAIT SECTION -->
+      <div class="portrait">
+        <img src="zimo.jpeg" alt="Portrait of Zimo Liu" />
+      </div>
+      
+      <!-- START OF ACCORDION -->
+      <div class="accordion" id="accordionProjects">
+        
+        <!-- === Robotics Accordion (NEW, at the top) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingRobotics">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+              Robotics
+            </button>
+          </h2>
+          <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project 1: LEGO Robotics Catapult -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 1: LEGO Robotics Catapult
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- Left column: Project Title and short info -->
+                    <div class="robotics-col">
+                      <h4>LEGO Robotics Catapult</h4>
+                      <!-- Reference: Image file "robotics_project1.png" is used below -->
+                    </div>
+                    <!-- Right column: Project image -->
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="robotics_project1.png" alt="Image: robotics_project1.png" />
+                    </div>
+                  </div>
+                  <p>
+                    I learnt how to use LEGO Technic parts to create different designs. Using the coding concept of conditionals (if-else) together with various sensors, I programmed my robot designs to perform specific actions only when certain conditions were met. In one of my favorite projects, I built a catapult that launches when the touch sensor is activated!
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Project 2: Automated Shopping Center Door -->
+              <div class="card">
+                <div class="card-header">
+                  Project 2: Automated Shopping Center Door
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- For Project 2, reverse the order: Left column has image -->
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="robotics_project2.png" alt="Image: robotics_project2.png" />
+                    </div>
+                    <!-- Right column has text -->
+                    <div class="robotics-col">
+                      <h4>Automated Shopping Center Door</h4>
+                      <p>
+                        Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically when someone is detected nearby. This project combined block‑based coding with robotics to solve real-world problems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Python Math Concept: Simple Division === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSimpleDivision">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSimpleDivision" aria-expanded="false" aria-controls="collapseSimpleDivision">
+              Python Math Concept: Simple Division
+            </button>
+          </h2>
+          <div id="collapseSimpleDivision" class="accordion-collapse collapse" aria-labelledby="headingSimpleDivision" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Simple Division (simple_division.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this project, I wrote a simple Python program to calculate the remainder when one number is divided by another. It taught me how to use basic arithmetic operations and the modulo operator (%) to solve everyday math problems.
+                  </p>
+                  <h3>Code:</h3>
+                  <pre>
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+remainder = num1 % num2
+print(f"The remainder when {num1} is divided by {num2} is {remainder}.")
+                  </pre>
+                  <!-- Reference: Image file "simple_division.png" -->
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="simple_division.png" alt="Image: simple_division.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/your_simple_division_trinket" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Python If Else: Leap Year Checker === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLeapYear">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeapYear" aria-expanded="false" aria-controls="collapseLeapYear">
+              Python If Else: Leap Year Checker
+            </button>
+          </h2>
+          <div id="collapseLeapYear" class="accordion-collapse collapse" aria-labelledby="headingLeapYear" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Leap Year Checker (leap_year.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this project, I built a program that checks if a given year is a leap year using if-else statements. The program determines whether the year is divisible by 4, and handles exceptions like centuries correctly. This helped me understand how to control the flow of decisions in code.
+                  </p>
+                  <h3>Code:</h3>
+                  <pre>
+year = int(input("Enter a year: "))
+if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+                  </pre>
+                  <!-- Reference: Image file "leap_year.png" -->
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="leap_year.png" alt="Image: leap_year.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/your_leap_year_trinket" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Python For Loop: Calculator Factory Production Tracker === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFactory">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFactory" aria-expanded="false" aria-controls="collapseFactory">
+              Python For Loop: Calculator Factory Production Tracker
+            </button>
+          </h2>
+          <div id="collapseFactory" class="accordion-collapse collapse" aria-labelledby="headingFactory" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Calculator Factory Production Tracker (factory_tracker.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    I helped track the production rate of a calculator factory using a for loop. The production increases daily following an arithmetic progression. I calculated both the number of calculators produced on day 30 and the total production after 30 days. This project taught me how loops can solve real-world production problems!
+                  </p>
+                  <h3>Code:</h3>
+                  <pre>
+initial_calculators = 50  # Day 1 production
+common_difference = 3     # Daily increase
+day_30_calculators = initial_calculators
+total_calculators = 0
+for day in range(1, 31):
+    day_30_calculators += common_difference
+    total_calculators += initial_calculators + (day - 1) * common_difference
+print(f"Day 30: {day_30_calculators}")
+print(f"Total after 30 days: {total_calculators}")
+                  </pre>
+                  <!-- Reference: Image file "factory_tracker.png" -->
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="factory_tracker.png" alt="Image: factory_tracker.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/your_factory_tracker_trinket" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Python If Else: Prime Number Guesser Game === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPrime">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrime" aria-expanded="false" aria-controls="collapsePrime">
+              Python If Else: Prime Number Guesser Game
+            </button>
+          </h2>
+          <div id="collapsePrime" class="accordion-collapse collapse" aria-labelledby="headingPrime" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Prime Number Guesser Game (prime_number_game.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this game, I wrote a program that uses if-else statements to help guess whether a number is prime. The game tests your logic by asking you to decide if a number is prime, reinforcing your understanding of numbers and divisibility.
+                  </p>
+                  <!-- Reference: Image file "prime_number_game.png" -->
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="prime_number_game.png" alt="Image: prime_number_game.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/your_prime_game_trinket" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Python If Else: Simple Login System for Website === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLogin">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLogin" aria-expanded="false" aria-controls="collapseLogin">
+              Python If Else: Simple Login System for Website
+            </button>
+          </h2>
+          <div id="collapseLogin" class="accordion-collapse collapse" aria-labelledby="headingLogin" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <div class="card">
+                <div class="card-header">
+                  Simple Login System (login_system.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    I built a simple login system for a website. The program prompts the user to enter a username and password and checks them against preset values. If the credentials match, a success message is shown; otherwise, it prompts you to try again. This project demonstrates how if-else statements control program flow based on user input.
+                  </p>
+                  <!-- Reference: Image file "login_system.png" -->
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="login_system.png" alt="Image: login_system.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/your_login_system_trinket" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div><!-- End accordion -->
+    </div>
+    
+    <!-- === Script to scroll accordion header into view when opened === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+        accordionCollapseElements.forEach(function(collapseEl) {
+          collapseEl.addEventListener('shown.bs.collapse', function() {
+            var header = this.previousElementSibling;
+            if (header) {
+              header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

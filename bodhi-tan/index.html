@@ -46,9 +46,10 @@
         margin-bottom: 2rem;
       }
       .portrait img {
-        width: 300px;      /* === PORTRAIT SIZE: Change if needed === */
-        height: 300px;     /* === PORTRAIT SIZE: Change if needed === */
-        border-radius: 50%;  /* Makes the image circular */
+        width: 300px;
+        height: 300px;
+        object-fit: cover;  /* Maintains aspect ratio but fills container */
+        border-radius: 50%; /* Makes it a perfect circle */
         border: 2px solid #ddd;
       }
       

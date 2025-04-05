@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Portfolio - Wee Jia Jun</title>
+    <!-- === Bootstrap CSS === -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- === Bootstrap Bundle with Popper for Accordion functionality === -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Global Styles */
+      body {
+        background-color: rgb(250, 250, 250);
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Container */
+      .container {
+        max-width: 800px; /* Change if needed */
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      /* Main Heading */
+      h1 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      /* Intro Section */
+      .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      
+      /* Portrait Section */
+      .portrait {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .portrait img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+      }
+      
+      /* Card Styles */
+      .card {
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+      }
+      .card-header {
+        background-color: rgb(11, 57, 11);
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 1rem;
+      }
+      .card-body {
+        padding: 1.5rem;
+        text-align: justify;
+      }
+      
+      /* Section Titles inside Card Body */
+      .card-body h3 {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #555;
+        text-align: left;
+      }
+      
+      /* Paragraphs */
+      .card-body p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+      
+      /* Diagram Container */
+      .diagram-container {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #F1EDDD;
+      }
+      .diagram-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      /* Trinket Iframes */
+      iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+        margin-top: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Accordion Button */
+      .accordion-button {
+        text-align: left;
+      }
+      
+      /* Robotics Project Layout */
+      .robotics-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .robotics-col {
+        flex: 1;
+        padding: 0.5rem;
+      }
+      .robotics-img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- MAIN HEADING -->
+      <h1>Wee Jia Jun's Coding Projects</h1>
+      
+      <!-- INTRO SECTION -->
+      <div class="intro">
+        <p>
+          Hi, I am Wee Jia Jun. I love exploring robotics and creative coding projects. My work ranges from building robots with LEGO parts to solving math puzzles using loops and conditionals. Enjoy exploring my projects!
+        </p>
+      </div>
+      
+      <!-- PORTRAIT SECTION -->
+      <div class="portrait">
+        <!-- Replace "weejiajun.jpg" with the actual portrait image -->
+        <img src="weejiajun.jpg" alt="Portrait of Wee Jia Jun" />
+      </div>
+      
+      <!-- ACCORDION: Projects Grouped by Category -->
+      <div class="accordion" id="accordionProjects">
+        
+        <!-- === Robotics (6 Projects) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingRobotics">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+              Robotics
+            </button>
+          </h2>
+          <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project 1: LEGO Robotics Arm (Text left, Image right) -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 1: LEGO Robotics Arm
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <h4>LEGO Robotics Arm</h4>
+                      <p>
+                        I built a robotic arm using LEGO Technic parts that can grab and move objects when a sensor is activated. This project taught me about mechanics and sensor integration.
+                      </p>
+                    </div>
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="robotics_arm.png" alt="LEGO Robotics Arm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 2: Automated Plant Watering System (Image left, Text right) -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 2: Automated Plant Watering System
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="plant_watering.png" alt="Automated Plant Watering System">
+                    </div>
+                    <div class="robotics-col">
+                      <h4>Automated Plant Watering System</h4>
+                      <p>
+                        I designed a system using moisture sensors that automatically waters plants when they get dry. It combines sensor data with motor control to keep plants healthy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 3: Mobile Robot Navigator (Text left, Image right) -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 3: Mobile Robot Navigator
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <h4>Mobile Robot Navigator</h4>
+                      <p>
+                        I programmed a small robot to navigate through obstacles using ultrasonic sensors. This project enhanced my skills in real‑time sensor integration and path planning.
+                      </p>
+                    </div>
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="mobile_navigator.png" alt="Mobile Robot Navigator">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 4: Smart Conveyor Belt (Image left, Text right) -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 4: Smart Conveyor Belt
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="smart_conveyor.png" alt="Smart Conveyor Belt">
+                    </div>
+                    <div class="robotics-col">
+                      <h4>Smart Conveyor Belt</h4>
+                      <p>
+                        I built a small conveyor belt model that sorts objects based on color using sensors. This project taught me about automation and real‑world applications of robotics.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 5: Line Following Robot (Text left, Image right) -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 5: Line Following Robot
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <h4>Line Following Robot</h4>
+                      <p>
+                        I programmed a robot to follow a line on the floor using infrared sensors. This project helped me understand feedback loops and sensor calibration.
+                      </p>
+                    </div>
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="line_follower.png" alt="Line Following Robot">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 6: Voice Activated Robot (Image left, Text right) -->
+              <div class="card">
+                <div class="card-header">
+                  Project 6: Voice Activated Robot
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <div class="robotics-col">
+                      <img class="robotics-img" src="voice_robot.png" alt="Voice Activated Robot">
+                    </div>
+                    <div class="robotics-col">
+                      <h4>Voice Activated Robot</h4>
+                      <p>
+                        I integrated a microphone module to create a robot that responds to voice commands. This project introduced me to voice recognition and real‑time command processing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Math Concepts (Simple Division & Leap Year Checker) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMath">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+              Math Concepts
+            </button>
+          </h2>
+          <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project 1: Simple Division -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 1: Simple Division (simple_division.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project calculates the remainder when one number is divided by another. It reinforces the concepts of division and the modulo operator, helping to break down numbers into understandable parts.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="simple_division.png" alt="Diagram for Simple Division">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/4cff77f9cef6" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+              <!-- Project 2: Leap Year Checker (Modified) -->
+              <div class="card">
+                <div class="card-header">
+                  Project 2: Leap Year Checker (leap_year.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project determines whether a given year is a leap year by checking divisibility rules. I modified the logic to provide user-friendly messages, demonstrating how conditional statements can manage multiple criteria in a math problem.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="leap_year_checker.png" alt="Diagram for Leap Year Checker">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/5e2bc9e4808e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === For Loops (Calculator Factory & Library Inventory) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingForLoops">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+              For Loops
+            </button>
+          </h2>
+          <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project 1: Calculator Factory Production Tracker -->
+              <div class="card">
+                <div class="card-header">
+                  Project 1: Calculator Factory Production Tracker (factory_tracker.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project simulates a calculator factory’s production. Using a for loop, it calculates the number of calculators produced on a given day and totals production over a month.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="calculator_factory.png" alt="Diagram for Calculator Factory">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/d66e16a00381" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+              <!-- Project 2: Library Inventory -->
+              <div class="card mt-4">
+                <div class="card-header">
+                  Project 2: Library Inventory (inventory_progression.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this project, a for loop is used to simulate daily book additions to a library’s collection. It calculates the number of books added on a specific day and the total inventory over time.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="library_inventory.png" alt="Diagram for Library Inventory">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/d56aae77b696" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === If Else (Prime Number Guesser & Login System) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingIfElse">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
+              If Else
+            </button>
+          </h2>
+          <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project 1: Prime Number Guesser Game -->
+              <div class="card">
+                <div class="card-header">
+                  Project 1: Prime Number Guesser Game (prime_number_game.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this interactive game, the program challenges you to guess if a number is prime. It uses if-else statements to check your answer and provides instant feedback.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="prime_number_game.png" alt="Diagram for Prime Number Guesser Game">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/807e27b65c54" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+              <!-- Project 2: Simple Login System -->
+              <div class="card mt-4">
+                <div class="card-header">
+                  Project 2: Simple Login System (login_system.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project implements a basic login system. The program checks whether the entered username and password match preset credentials and responds accordingly, demonstrating practical use of conditional statements.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="login_system.png" alt="Diagram for Simple Login System">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/ba5f1563a936" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- === While Loops (Countdown Timer) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingWhile">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
+              While Loops
+            </button>
+          </h2>
+          <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              <!-- Project: Countdown Timer -->
+              <div class="card">
+                <div class="card-header">
+                  Project: Countdown Timer (my_countdown_timer.py)
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project features a countdown timer that repeatedly decreases until it reaches zero. It demonstrates how while loops can control repetitive actions based on a condition.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <img src="countdown_timer.png" alt="Diagram for Countdown Timer">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <iframe src="https://trinket.io/embed/python3/20bf93492cf8" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div><!-- End accordion -->
+    </div>
+    
+    <!-- === Script to scroll accordion header into view when opened === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+        accordionCollapseElements.forEach(function(collapseEl) {
+          collapseEl.addEventListener('shown.bs.collapse', function() {
+            var header = this.previousElementSibling;
+            if (header) {
+              header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

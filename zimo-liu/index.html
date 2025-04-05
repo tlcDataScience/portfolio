@@ -45,12 +45,12 @@
         margin-bottom: 2rem;
       }
       .portrait img {
-        width: 300px; /* Portrait size can be changed if needed */
-        height: auto; /* Automatically adjust height to preserve aspect ratio */
-        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;  /* Maintains aspect ratio but fills container */
+        border-radius: 50%; /* Makes it a perfect circle */
         border: 2px solid #ddd;
       }
-
       /* Card Styles */
       .card {
         background: #fff;

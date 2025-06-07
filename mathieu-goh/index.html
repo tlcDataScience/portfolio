@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Portfolio - Josh Ng</title>
+    <!-- === Bootstrap CSS === -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- === Bootstrap Bundle with Popper for Accordion functionality === -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Global Styles */
+      body {
+        background-color: rgb(250, 250, 250);
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Container */
+      .container {
+        max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      /* Main Heading */
+      h1 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      /* Intro Section */
+      .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      
+      /* Portrait Section */
+      .portrait {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .portrait img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;  /* Maintains aspect ratio but fills container */
+        border-radius: 50%; /* Makes it a perfect circle */
+        border: 2px solid #ddd;
+      }
+      /* Card Styles */
+      .card {
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+      }
+      .card-header {
+        background-color: rgb(11, 57, 11);
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 1rem;
+      }
+      .card-body {
+        padding: 1.5rem;
+        text-align: justify;
+      }
+      
+      /* Section Titles inside Card Body */
+      .card-body h3 {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #555;
+        text-align: left;
+      }
+      
+      /* Paragraphs */
+      .card-body p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+      
+      /* Diagram Container */
+      .diagram-container {
+        width: 100%;
+        max-width: 500px; /* Max width for images */
+        height: 300px;    /* Container height for images */
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #F1EDDD;
+      }
+      .diagram-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      /* Trinket Iframes */
+      iframe {
+        width: 100%;
+        height: 500px; /* Change height if needed */
+        border: none;
+        margin-top: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Accordion Button */
+      .accordion-button {
+        text-align: left;
+      }
+      
+      /* Robotics Project Layout */
+      .robotics-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .robotics-col {
+        flex: 1;
+        padding: 0.5rem;
+      }
+      .robotics-img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- MAIN HEADING -->
+      <h1>Mathieu Goh's Coding Projects</h1>
+      
+      <!-- INTRO SECTION -->
+      <div class="intro">
+        <p>
+          Hello there, my name is Mathieu Goh and I am 12 years old this year. I started learning robotics with Lego Mindstorms when I was in Primary 2.  I enjoy working on different structures especially on moving car robots. Through designing and coding, I have created many projects that I am proud of and I would like to share them with you. 
+        </p>
+      </div>
+      
+      <!-- PORTRAIT SECTION -->
+      <div class="portrait">
+        <!-- Replace "josh.jpeg" with the actual portrait image for Josh -->
+        <img src="josh.jpg" alt="Portrait of Mathieu Goh" />
+      </div>
+      
+      <!-- ACCORDION START -->
+      <div class="accordion" id="accordionProjects">
+        
+        <!-- === Robotics (First Accordion) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingRobotics">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+              Robotics
+            </button>
+          </h2>
+          <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              
+              <!-- Project 1 -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 1: Bumper Track Car
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- Left: Text -->
+                    <div class="robotics-col">
+                      <h4>Bumper Track Car</h4>
+                      <p>
+                        Using the coding concept of conditional statements (if-else) and touch sensor, I coded my bumper car to reverses when the touch sensor at the front of the car hits the wall.
+                      </p>
+                    </div>
+                    <!-- Right: Image -->
+                    <div class="robotics-col">
+                      <!-- Image file: "robotics_project1.png" -->
+                      <img class="robotics-img" src="robotics_project1.jpg" alt="robotics_project1.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Project 2-->
+              <div class="card">
+                <div class="card-header">
+                  Project 2: Tractor with ultrasonic sensor
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- Left: Image -->
+                    <div class="robotics-col">
+                      <!-- Image file: "robotics_project2.png" -->
+                      <img class="robotics-img" src="robotics_project2.jpg" alt="robotics_project2.jpg">
+                    </div>
+                    <!-- Right: Text -->
+                    <div class="robotics-col">
+                      <h4>Tractor with ultrasonic sensor</h4>
+                      <p>
+                      I built a semi autonomous tractor equipped with ultrasonic sensor to detect and avoid obstacles, helping farms operate machinery safely and efficiently in varied terrain.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3-->
+              <div class="card mb-4">
+                <div class="card-header">
+                    Project 3: 
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- Left: Text -->
+                    <div class="robotics-col">
+                      <h4>Touch and ultrasonic sensor geared car</h4>
+                      <p>
+                        Having played at the arcade frequently, I designed a coin dispensing mechanism that releases coins only when 2 sensors are triggered simultaneously. This ensures that the mechanism releases coins only when both conditions are met, preventing accidental dispensing.
+                      </p>
+                    </div>
+                    <!-- Right: Image -->
+                    <div class="robotics-col">
+                      <!-- Image file: "robotics_project3.jpg" -->
+                      <img class="robotics-img" src="robotics_project3.jpg" alt="robotics_project3.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Project 4-->
+              <div class="card">
+                <div class="card-header">
+                  Project 4: Smart driving vehicle with touch and ultrasonic sensors
+                </div>
+                <div class="card-body">
+                  <div class="robotics-row">
+                    <!-- Left: Image -->
+                    <div class="robotics-col">
+                      <!-- Image file: "robotics_project4.jpg" -->
+                      <img class="robotics-img" src="robotics_project4.jpg" alt="robotics_project4.jpg">
+                    </div>
+                    <!-- Right: Text -->
+                    <div class="robotics-col">
+                      <h4>Smart driving vehicle with touch and ultrasonic sensors</h4>
+                      <p>
+                        I designed a smart geared car equipped with sensors to model an autonomous driving vehicle. When the touch sensor is triggered, the car moves, mimicking the “start” command in autonomous vehicles. It stops when the ultrasonic sensor detects obstacles, like the radar system in real autonomous cars and reverses to its original starting position, all without any human guidance beyond the initial touch. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === Pygame Project === -->
+        
+        <!-- === Math Concepts (2 Projects) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMath">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+              Math Concepts
+            </button>
+          </h2>
+          <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              
+              <!-- Project: Simple Division -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  Project 1: Simple Division
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    This project shows how to calculate the remainder when one number is divided by another. It’s a great way to practice using arithmetic and the modulo operator (%).
+                  </p>
+
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <!-- Image file: "simple_division.png" -->
+                    <img src="simple_division.png" alt="simple_division.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <!-- Replace with your actual Trinket link for Simple Division -->
+                  <iframe src="https://trinket.io/embed/python3/4cff77f9cef6" scrolling="no" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === For Loops (2 Projects) === -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingForLoops">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+              For Loops
+            </button>
+          </h2>
+          <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+            <div class="accordion-body">
+              
+              <!-- Project: Calculator Factory Production Tracker -->
+              <div class="card">
+                <div class="card-header">
+                  Calculator Factory Production Tracker
+                </div>
+                <div class="card-body">
+                  <h3>Description:</h3>
+                  <p>
+                    In this project, I tracked the production rate of a calculator factory that follows an arithmetic progression. I calculated the number of calculators produced on day 30 and the total after 30 days. This shows how loops can handle repeated calculations for real-world scenarios.
+                  </p>
+                  <h3>Diagram:</h3>
+                  <div class="diagram-container">
+                    <!-- Image file: "factory_tracker.png" -->
+                    <img src="factory_tracker.png" alt="factory_tracker.png">
+                  </div>
+                  <h3>Trinket:</h3>
+                  <!-- Replace with your actual Trinket link for the factory tracker -->
+                  <iframe src="https://trinket.io/embed/python3/d66e16a00381" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- === If Else (2 Projects) === -->
+        
+        <!-- === While Loops (2 Projects) === -->
+        
+        
+        <!-- === Other Achievements === -->
+        
+      </div><!-- End of accordion -->
+    </div>
+    
+    <!-- === Script to scroll accordion header into view when opened === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+        accordionCollapseElements.forEach(function(collapseEl) {
+          collapseEl.addEventListener('shown.bs.collapse', function() {
+            var header = this.previousElementSibling;
+            if (header) {
+              header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

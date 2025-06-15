@@ -1,0 +1,158 @@
+
+/* Global Styles */
+body {
+background-color: rgb(250, 250, 250);
+color: #333;
+margin: 0;
+padding: 0;
+}
+
+/* Container */
+.container {
+max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
+margin: 0 auto;
+padding: 2rem 1rem;
+}
+
+/* Main Heading */
+h1 {
+font-weight: normal;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+/* Intro Section */
+.intro {
+text-align: center;
+margin-bottom: 2rem;
+font-size: 1rem;
+line-height: 1.5;
+}
+
+/* Portrait Section */
+.portrait {
+text-align: center;
+margin-bottom: 2rem;
+}
+.portrait img {
+width: 300px;
+height: 300px;
+object-fit: cover;  /* Maintains aspect ratio but fills container */
+border-radius: 50%; /* Makes it a perfect circle */
+border: 2px solid #ddd;
+}
+/* Card Styles */
+.card {
+background: #fff;
+border: none;
+border-radius: 10px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 1.5rem;
+}
+.card-header {
+background-color: rgb(11, 57, 11);
+color: #fff;
+font-size: 1.2rem;
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+padding: 1rem;
+}
+.card-body {
+padding: 1.5rem;
+text-align: justify;
+}
+
+/* Section Titles inside Card Body */
+.card-body h3 {
+font-size: 0.95rem;
+margin-top: 1rem;
+margin-bottom: 0.5rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+color: #555;
+text-align: left;
+}
+
+/* Paragraphs */
+.card-body p {
+font-size: 0.95rem;
+line-height: 1.5;
+margin-bottom: 1rem;
+}
+
+/* Diagram Container */
+.diagram-container {
+width: 100%;
+max-width: 500px; /* Max width for images */
+height: 300px;    /* Container height for images */
+margin: 1rem auto;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #F1EDDD;
+}
+.diagram-container img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
+
+/* Trinket Iframes */
+iframe {
+width: 100%;
+height: 500px; /* Change height if needed */
+border: none;
+margin-top: 1rem;
+border-radius: 5px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Button */
+.accordion-button {
+text-align: left;
+}
+
+/* Robotics Project Layout */
+.robotics-row {
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 1rem;
+}
+.robotics-col {
+flex: 1;
+padding: 0.5rem;
+}
+.robotics-img {
+max-width: 100%;
+height: auto;
+}
+
+/* Robotics Project Layout */
+.robotics-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+  margin-bottom: 1rem;
+  align-items: center; /* Vertically align content in the middle */
+}
+.robotics-col {
+  flex: 1; /* Each column takes equal space */
+  padding: 0.5rem;
+}
+.robotics-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: For small screens, make columns stack vertically */
+@media (max-width: 768px) {
+  .robotics-row {
+    flex-direction: column;
+  }
+  /* If you want the image to always be on top on small screens, regardless of odd/even */
+  .robotics-row.reverse-order {
+    flex-direction: column; /* Force column order */
+  }
+}

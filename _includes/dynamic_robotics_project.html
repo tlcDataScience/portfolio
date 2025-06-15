@@ -1,0 +1,40 @@
+<div class="card mb-4">
+  <div class="card-header">
+    {{ include.project.title }}
+  </div>
+  <div class="card-body">
+    {% assign is_even = include.index | modulo: 2 %}
+    {% comment %}
+      If index is 0, 2, 4... (even), it will be 0 after modulo 2.
+      If index is 1, 3, 5... (odd), it will be 1 after modulo 2.
+      We want text-left, image-right for 0 (1st project), 2 (3rd project), etc. (which are even indices).
+      We want image-left, text-right for 1 (2nd project), 3 (4th project), etc. (which are odd indices).
+    {% endcomment %}
+
+    {% if is_even == 0 %} {# Even index: Text on left, Image on right #}
+      <div class="robotics-row">
+        <div class="robotics-col">
+          <h4>{{ include.project.heading | default: include.project.title }}</h4>
+          <p>{{ include.project.description }}</p>
+        </div>
+        <div class="robotics-col">
+          {% if include.project.image %}
+            <img class="robotics-img" src="{{ include.project.image | relative_url }}" alt="{{ include.project.title | default: 'Robotics Project Image' }}">
+          {% endif %}
+        </div>
+      </div>
+    {% else %} {# Odd index: Image on left, Text on right #}
+      <div class="robotics-row">
+        <div class="robotics-col">
+          {% if include.project.image %}
+            <img class="robotics-img" src="{{ include.project.image | relative_url }}" alt="{{ include.project.title | default: 'Robotics Project Image' }}">
+          {% endif %}
+        </div>
+        <div class="robotics-col">
+          <h4>{{ include.project.heading | default: include.project.title }}</h4>
+          <p>{{ include.project.description }}</p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

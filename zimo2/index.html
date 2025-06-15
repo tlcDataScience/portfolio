@@ -1,28 +1,30 @@
 ---
 layout: student_portfolio
-title: (Student Name)'s Portfolio'
-student_name: Student Name
-portrait_image: /template/student.png
+title: Zimo Liu's Portfolio
+student_name: Zimo Liu
+portrait_image: /zimo2/zimo.jpg
+
 robotics_projects:
   - title: "Project 1: LEGO Robotics Catapult"
     heading: LEGO Robotics Catapult
     description: I learnt how to use LEGO Technic parts to create different designs. Using the coding concept of conditionals (if-else) together with various sensors, I coded my designs to do certain actions only if a specific condition is met. One of my favorite builds was a catapult that launches if the touch sensor is activated!
-    image: /template/student.png
+    image: /zimo2/zimo-robot-1.png
+
   - title: "Project 2: Automated Shopping Center Door"
     heading: Automated Shopping Center Door
     description: Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically when someone stands within range. This project combined block‑based coding with robotics to solve real-world problems!
-    image: /template/student.png
+    image: /zimo2/zimo-robot-2.png
 other_achievements:
   - title: "Coding Olympics 2024"
     description: I participated in the 2024 Coding Olympics by Science Centre Singapore from 30 July to 4 August 2024 and achieved a Top 20 finish in Category B. I met so many new friends and learnt a lot about coding!
-    image: /template/student.png
+    image: /zimo2/zimo-coding-olympics-2024.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
   <p>
-    Content 1
+    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
   </p>
 </div>
 
@@ -54,15 +56,12 @@ other_achievements:
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingPygame">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePygame" aria-expanded="false" aria-controls="collapsePygame">
-        Accordion Name 1 (E.g Pygame)
+        Pygame Project
       </button>
     </h2>
     <div id="collapsePygame" class="accordion-collapse collapse" aria-labelledby="headingPygame" data-bs-parent="#accordionProjects">
       <div class="accordion-body">
         {% include pygame_whatanimal.html %}
-
-        <h1> Can include more </h1>
-
       </div>
     </div>
   </div>
@@ -70,16 +69,13 @@ other_achievements:
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
-          Accordion Name 2 (E.g Math Concepts)
+          Math Concepts
         </button>
       </h2>
       <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
         <div class="accordion-body">
           {% include python_mathdivision.html %}
           {% include python_leapyear.html %}
-
-          <h1> Can include more </h1>
-          
         </div>
       </div>
   </div>
@@ -87,16 +83,13 @@ other_achievements:
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingIfElse">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
-          Accordion Name 3 (E.g If Else)
+          If Else
         </button>
       </h2>
       <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
         <div class="accordion-body">
           {% include python_primeguesser.html %}
           {% include python_loginsystem.html %}
-
-          <h1> Can include more </h1>
-
         </div>
       </div>
   </div>
@@ -104,16 +97,13 @@ other_achievements:
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingForLoops">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
-          Accordion Name 4 (E.g For Loops)
+          For Loops
         </button>
       </h2>
       <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
         <div class="accordion-body">
           {% include python_factorychecker.html %}
           {% include python_libraryinventory.html %}
-
-          <h1> Can include more </h1>
-
         </div>
       </div>
   </div>
@@ -121,16 +111,13 @@ other_achievements:
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingWhile">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
-          Accordion Name 5 (E.g While Loops)
+          While Loops
         </button>
       </h2>
       <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
         <div class="accordion-body">
           {% include python_palindromechecker.html %}
           {% include python_countdowntimer.html %}
-
-          <h1> Can include more </h1>
-
         </div>
       </div>
   </div>
@@ -157,4 +144,16 @@ other_achievements:
     </div>
   </div>
 
-</div>
+</div><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+    accordionCollapseElements.forEach(function(collapseEl) {
+      collapseEl.addEventListener('shown.bs.collapse', function() {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>

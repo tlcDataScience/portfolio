@@ -12,6 +12,10 @@ robotics_projects:
     heading: Automated Shopping Center Door
     description: Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically when someone stands within range. This project combined block‑based coding with robotics to solve real-world problems!
     image: /template/student.png
+other_achievements:
+  - title: "Coding Olympics 2024"
+    description: I participated in the 2024 Coding Olympics by Science Centre Singapore from 30 July to 4 August 2024 and achieved a Top 20 finish in Category B. I met so many new friends and learnt a lot about coding!
+    image: /template/student.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -129,6 +133,28 @@ robotics_projects:
 
         </div>
       </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAchievements">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAchievements" aria-expanded="false" aria-controls="collapseAchievements">
+        Other Achievements
+      </button>
+    </h2>
+    <div id="collapseAchievements" class="accordion-collapse collapse" aria-labelledby="headingAchievements" data-bs-parent="#accordionProjects">
+      <div class="accordion-body">
+        {% if page.other_achievements %}
+          {% for achievement in page.other_achievements %}
+            {% include dynamic_achievements.html
+               title=achievement.title
+               description=achievement.description
+               image=achievement.image %}
+          {% endfor %}
+        {% else %}
+          <p>No other achievements listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 
 </div>

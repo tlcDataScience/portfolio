@@ -1,0 +1,16 @@
+<!-- portfolio/_includes/dynamic_achievements.html -->
+<div class="card mb-4">
+  <div class="card-header">
+    {{ include.title }}
+  </div>
+  <div class="card-body">
+    <p>{{ include.description }}</p>
+    <div class="diagram-container">
+      {% if include.image %}
+        <img src="{{ include.image | relative_url }}" alt="{{ include.title | default:'Achievement Image' }}">
+      {% else %}
+        <img src="{{ '/assets/images/star.png' | relative_url }}" alt="Achievement Placeholder Star">
+      {% endif %}
+    </div>
+  </div>
+</div>

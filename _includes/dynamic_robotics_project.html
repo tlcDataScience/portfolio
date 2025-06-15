@@ -11,7 +11,7 @@
       We want image-left, text-right for 1 (2nd project), 3 (4th project), etc. (which are odd indices).
     {% endcomment %}
 
-    {% if is_even == 0 %} {# Even index: Text on left, Image on right #}
+    {% if is_even == 0 %}
       <div class="robotics-row">
         <div class="robotics-col">
           <h4>{{ include.project.heading | default: include.project.title }}</h4>
@@ -23,7 +23,7 @@
           {% endif %}
         </div>
       </div>
-    {% else %} {# Odd index: Image on left, Text on right #}
+    {% else %}
       <div class="robotics-row">
         <div class="robotics-col">
           {% if include.project.image %}

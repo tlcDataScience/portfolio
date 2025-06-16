@@ -1,507 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Student Portfolio - Thaddeus Tan</title>
-    <!-- === Bootstrap CSS === -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <!-- === Bootstrap Bundle with Popper for Accordion functionality === -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      /* Global Styles */
-      body {
-        background-color: rgb(250, 250, 250);
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
-      
-      /* Container */
-      .container {
-        max-width: 800px; /* === CONTAINER MAX WIDTH: Change if needed === */
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-      
-      /* Main Heading */
-      h1 {
-        font-weight: normal;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-      
-      /* Intro Section */
-      .intro {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-      
-      /* Portrait Section */
-      .portrait {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-      .portrait img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;  /* Maintains aspect ratio but fills container */
-        border-radius: 50%; /* Makes it a perfect circle */
-        border: 2px solid #ddd;
-      }
-      /* Card Styles */
-      .card {
-        background: #fff;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1.5rem;
-      }
-      .card-header {
-        background-color: rgb(11, 57, 11);
-        color: #fff;
-        font-size: 1.2rem;
-        text-align: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        padding: 1rem;
-      }
-      .card-body {
-        padding: 1.5rem;
-        text-align: justify;
-      }
-      
-      /* Section Titles inside Card Body */
-      .card-body h3 {
-        font-size: 0.95rem;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #555;
-        text-align: left;
-      }
-      
-      /* Paragraphs */
-      .card-body p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 1rem;
-      }
-      
-      /* Diagram Container */
-      .diagram-container {
-        width: 100%;
-        max-width: 500px; /* Max width for images */
-        height: 300px;    /* Container height for images */
-        margin: 1rem auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #F1EDDD;
-      }
-      .diagram-container img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-      }
-      
-      /* Trinket Iframes */
-      iframe {
-        width: 100%;
-        height: 500px; /* Change height if needed */
-        border: none;
-        margin-top: 1rem;
-        border-radius: 5px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      }
-      
-      /* Accordion Button */
-      .accordion-button {
-        text-align: left;
-      }
-      
-      /* Robotics Project Layout */
-      .robotics-row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-      }
-      .robotics-col {
-        flex: 1;
-        padding: 0.5rem;
-      }
-      .robotics-img {
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container py-5">
-      <!-- MAIN HEADING -->
-      <h1>Thaddeus Tan's Coding Projects</h1>
-      
-      <!-- INTRO SECTION -->
-      <div class="intro">
-        <p>
-          Hello there, my name is Thaddeus Tan and I am 12 years old this year. I started learning robotics with Lego Mindstorms when I was in Primary 2.  I enjoy working on different structures especially on moving car robots. Through designing and coding, I have created many projects that I am proud of and I would like to share them with you. 
-        </p>
+---
+layout: student_portfolio
+title: Thaddeus' Portfolio
+student_name: Thaddeus
+portrait_image: /thaddeus-tan/thaddeus.png
+
+robotics_projects:
+  - title: "Project 1: Touch-Activated Catapult"
+    heading: Touch-Activated Catapult
+    description: Using conditional statements (if-else) and touch sensor, I coded my catapult to launch an object when the touch sensor is pressed.
+    image: /thaddeus-tan/robot1.jpg
+  - title: "Project 2: Ultrasonic sensor activated Door"
+    heading: Ultrasonic sensor activated Door
+    description: Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically whenever it detects a person within a specific distance from the door.
+    image: /thaddeus-tan/robot2.jpg
+  - title: "Project 3: Touch Activated Gripper"
+    heading: Touch Activated Gripper
+    description: Having played at the arcade frequently, I designed a gripper that is activated to open and close only when touch sensor is activated. This mimics the mechanism of a claw machine found in arcades.
+    image: /thaddeus-tan/robot3.jpg
+  - title: "Project 4: Automated Globe"
+    heading: Automated Globe
+    description: My younger siblings love to play with the globe model. I designed an automated globe that spins indefinitely when the program starts. It will stop when the touch sensor is pressed and return to its original position.
+    image: /thaddeus-tan/robot4.jpg
+  - title: "Project 5: Touch & Ultrasonic Activated Zombie Head"
+    heading: Touch & Ultrasonic Activated Zombie Head
+    description: Halloween is gaining popularity, hence I designed a sensor-controlled zombie head and coded it to move whenever it is activated by a touch sensor. The direction which it spins can be controlled using an ultrasonic sensor when it detects an object within a specific distance. If the ultrasonic sensor detects something near it, the head would spin clockwise, else, it spins anti-clockwise.
+    image: /thaddeus-tan/robot5.jpg
+  - title: "Project 6: Geared Tea Cup Ride"
+    heading: Geared Tea Cup Ride
+    description: I love going to the amusement park and taking the tea cup ride. I designed a similar ride where the speed it spins is controlled by a touch sensor. To do that, I used the coding concept of variables and conditional statements. The ride will start by moving slowly at a speed of 5. The ride increases in speed each time I press the touch sensor.
+    image: /thaddeus-tan/robot6.jpg
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>
+    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+  </p>
+</div>
+
+<div class="portrait">
+  <img src="{{ page.portrait_image | relative_url }}" alt="Portrait of {{ page.student_name }}" />
+</div>
+
+<div class="accordion" id="accordionProjects">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+        Robotics Projects
+      </button>
+    </h2>
+    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+      <div class="accordion-body">
+        {% if page.robotics_projects %}
+          {% for project in page.robotics_projects %}
+            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
+          {% endfor %}
+        {% else %}
+          <p>No robotics projects listed yet.</p>
+        {% endif %}
       </div>
-      
-      <!-- PORTRAIT SECTION -->
-      <div class="portrait">
-        <!-- Replace "josh.jpeg" with the actual portrait image for Josh -->
-        <img src="josh.jpg" alt="Portrait of Thaddeus" />
-      </div>
-      
-      <!-- ACCORDION START -->
-      <div class="accordion" id="accordionProjects">
-        
-        <!-- === Robotics (First Accordion) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingRobotics">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
-              Robotics
-            </button>
-          </h2>
-          <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
-              
-              <!-- Project 1 -->
-              <div class="card mb-4">
-                <div class="card-header">
-                  Project 1: Touch activated Catapult
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Text -->
-                    <div class="robotics-col">
-                      <h4>Touch activated Catapult</h4>
-                      <p>
-                        Using conditional statements (if-else) and touch sensor, I coded my catapult to launch an object when the touch sensor is pressed.
-                      </p>
-                    </div>
-                    <!-- Right: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project1.png" -->
-                      <img class="robotics-img" src="robotics_project1.jpg" alt="robotics_project1.jpg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Project 2-->
-              <div class="card">
-                <div class="card-header">
-                  Project 2: Ultrasonic sensor activated Door
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project2.png" -->
-                      <img class="robotics-img" src="robotics_project2.jpg" alt="robotics_project2.png">
-                    </div>
-                    <!-- Right: Text -->
-                    <div class="robotics-col">
-                      <h4>Ultrasonic sensor activated Door</h4>
-                      <p>
-                        Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically whenever it detects a person within a specific distance from the door. 
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Project 3-->
-              <div class="card mb-4">
-                <div class="card-header">
-                    Project 3: Touch activated gripper
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Text -->
-                    <div class="robotics-col">
-                      <h4>Touch activated gripper</h4>
-                      <p>
-                        Having played at the arcade frequently, I designed a gripper that is activated to open and close only when touch sensor is activated. This mimics the mechanism of a claw machine found in arcades.
-                      </p>
-                    </div>
-                    <!-- Right: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project3.jpg" -->
-                      <img class="robotics-img" src="robotics_project3.jpg" alt="robotics_project3.jpg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project 4-->
-              <div class="card">
-                <div class="card-header">
-                  Project 4: Automated Globe
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project4.jpg" -->
-                      <img class="robotics-img" src="robotics_project4.jpg" alt="robotics_project4.jpg">
-                    </div>
-                    <!-- Right: Text -->
-                    <div class="robotics-col">
-                      <h4>Automated Globe</h4>
-                      <p>
-                        My younger siblings love to play with the globe model. I designed an automated globe that spins indefinitely when the program starts. It will stop when the touch sensor is pressed and return to its original position. 
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project 5-->
-              <div class="card mb-4">
-                <div class="card-header">
-                    Project 5: Touch and ultrasonic activated zombie head
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Text -->
-                    <div class="robotics-col">
-                      <h4>Touch and ultrasonic activated zombie head</h4>
-                      <p>
-                        Halloween is gaining popularity, hence I designed a sensor-controlled zombie head and coded it to move whenever it is activated by a touch sensor. The direction which it spins can be controlled using an ultrasonic sensor when it detects an object within a specific distance. If the ultrasonic sensor detects something near it, the head would spin clockwise, else, it spins anti-clockwise.
-                      </p>
-                    </div>
-                    <!-- Right: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project5.jpg" -->
-                      <img class="robotics-img" src="robotics_project5.jpg" alt="robotics_project5.jpg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Project 6-->
-              <div class="card">
-                <div class="card-header">
-                  Project 6: Geared Tea Cup Ride
-                </div>
-                <div class="card-body">
-                  <div class="robotics-row">
-                    <!-- Left: Image -->
-                    <div class="robotics-col">
-                      <!-- Image file: "robotics_project6.jpg" -->
-                      <img class="robotics-img" src="robotics_project6.jpg" alt="robotics_project6.jpg">
-                    </div>
-                    <!-- Right: Text -->
-                    <div class="robotics-col">
-                      <h4>Geared Tea Cup Ride</h4>
-                      <p>
-                        I love going to the amusement park and taking the tea cup ride. I designed a similar ride where the speed it spins is controlled by a touch sensor. To do that, I used the coding concept of variables and conditional statements. The ride will start by moving slowly at a speed of 5. The ride increases in speed each time I press the touch sensor. 
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
-            </div>
-          </div>
-        </div>
-        
-        <!-- === Pygame Project === -->
-        
-        <!-- === Math Concepts (2 Projects) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingMath">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
-              Math Concepts
-            </button>
-          </h2>
-          <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
-              
-              <!-- Project: Divisibility Tester -->
-              <div class="card mb-4">
-                <div class="card-header">
-                  Project 1: Temperature Converter
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    I have built a Python program that converts temperature in farenheit to temperature in degree celsius using a defined formula.
-                  </p>
-
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <!-- Image file: "temperature_converter.png" -->
-                    <img src="temperature_converter.png" alt="temperature_converter.png">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <!-- Replace with your actual Trinket link for Simple Division -->
-                  <iframe src="https://trinket.io/embed/python3/8793341a0ec4" scrolling="no" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-              <!-- Project: Leap Year Checker -->
-              <div class="card">
-                <div class="card-header">
-                  Project 2: Leap Year Checker
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    This program checks if a given year is a leap year by using if-else statements to handle divisibility by 4, 100, and 400. It demonstrates how to make decisions in code based on multiple conditions.
-                  </p>
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <!-- Image file: "leap_year.png" -->
-                    <img src="leap_year.png" alt="leap_year.png">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <!-- Replace with your actual Trinket link for Leap Year Checker -->
-                  <iframe src="https://trinket.io/embed/python3/5e2bc9e4808e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        
-        <!-- === For Loops (2 Projects) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingForLoops">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
-              For Loops
-            </button>
-          </h2>
-          <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
-              
-              <!-- Project: Count Vowels and Consonants in a String-->
-              <div class="card">
-                <div class="card-header">
-                    Library Inventory Management System
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    In this project, I was entrusted with managing a library where the number of books added each day follows an Arithmetic Progression. There are initially 20 books in the library, and everyday 5 books are added to the inventory. I developed a Python code to answer what was the total number of books in the library after 10 days. I used a for loop to iterate through the days and calculate the total number of books.
-                    
-                  </p>
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <!-- Image file: "libary_system.png" -->
-                    <img src="library_system.png" alt="library_system.png">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <!-- Replace with your actual Trinket link for the library inventory tracker -->
-                  <iframe src="https://trinket.io/embed/python3/16187046a481"  width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                </div>
-              </div>
-
-              <!-- Project: Number Pyramid -->
-              <div class="card">
-                <div class="card-header">
-                  Number Pyramid
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    In this project, I created a number pyramid using nested for loops. The outer loop controls the number of rows, while the inner loop prints the numbers in each row. This project demonstrates how to use loops to create patterns and shapes in Python.
-                  </p>
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <img src="number_pyramid.png" alt="Diagram for Number Pyramid">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <iframe src="https://trinket.io/embed/python3/8c35af5d52df" scrolling="no" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        
-        <!-- === If Else (2 Projects) === -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingIfElse">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
-              If Else
-            </button>
-          </h2>
-          <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
-            <div class="accordion-body">
-              
-              <!-- Project: Movie Theatre Ticketing System -->
-              <div class="card mb-4">
-                <div class="card-header">
-                  Factorial Calculation for Math Competition
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    I organized a math competition among my friends, and one of the challenges involved calculating the factorial of a given number. I created a Python script that took a user input and calculated the factorial of the given number
-                  </p>
-                  <!-- Image file: "movie_theatre ticketing.png" -->
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <img src="factorial.png" alt="factorial.png">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <!-- Replace with your actual Trinket link for ticketing -->
-                  <iframe src="https://trinket.io/embed/python3/6a03db872fa6" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-              <!-- Project: Temperature Classification System -->
-              <div class="card">
-                <div class="card-header">
-                  Simple Login System for Website
-                </div>
-                <div class="card-body">
-                  <h3>Description:</h3>
-                  <p>
-                    I built a simple login program for a website. The program prompts the user to enter their username and password. I checked if the entered credentials matched the expected values. If successful, I displayed a message indicating a successful login; otherwise, I prompted the user to try again with a message stating "Invalid username or password."
-                  </p>
-                  <!-- Image file: "login_system.png" -->
-                  <h3>Diagram:</h3>
-                  <div class="diagram-container">
-                    <img src="login_system.png" alt="login_system.png">
-                  </div>
-                  <h3>Trinket:</h3>
-                  <iframe src="https://trinket.io/embed/python3/d235447a2520" scrolling="no" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        
-        <!-- === While Loops (2 Projects) === -->
-        
-        
-        <!-- === Other Achievements === -->
-        
-      </div><!-- End of accordion -->
     </div>
-    
-    <!-- === Script to scroll accordion header into view when opened === -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
-        accordionCollapseElements.forEach(function(collapseEl) {
-          collapseEl.addEventListener('shown.bs.collapse', function() {
-            var header = this.previousElementSibling;
-            if (header) {
-              header.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-        });
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+          Math Concepts
+        </button>
+      </h2>
+      <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_temperatureconverter.html %}
+          {% include python_leapyear.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
+          If Else
+        </button>
+      </h2>
+      <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_factorial.html %}
+          {% include python_loginsystem.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+          For Loops
+        </button>
+      </h2>
+      <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_libraryinventory.html %}
+          {% include python_numberpyramid.html %}
+        </div>
+      </div>
+  </div>
+
+</div><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+    accordionCollapseElements.forEach(function(collapseEl) {
+      collapseEl.addEventListener('shown.bs.collapse', function() {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
-    </script>
-  </body>
-</html>
+    });
+  });
+</script>

@@ -5,30 +5,30 @@ student_name: Elijah Phoon
 portrait_image: /elijah-phoon/elijah.png
 
 robotics_projects:
-  - title: "Project 1: Touch Activated Flags on a Tower"
-    heading: Touch Activated Flags on a Tower
-    description: "I learnt how to use the LEGO technic parts to design and build mechanical structures. Integrating coding concepts such as conditionals (if-else) to control behavior based on sensor input., I created interactive models that respond to real-world stimuli. Among many other projects, I created a tower with four flags that spins only if the touch sensor is activated, demonstrating how automation and conditional logic are used in real-world systems to enhance safety and efficiency."
-    image: /elly-wong/robot1.png
-  - title: "Project 2: Ultrasonic Activated Door Mechanism"
-    heading: Ultrasonic Activated Door Mechanism
-    description: "I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and using an ultrasonic sensor, I built a rack-and-pinion door mechanism that automatically opens when it detects someone approaching. I set a threshold distance to reliably identify when a person is close enough to trigger the door. This project simulates real-world automatic door systems commonly found in malls, offices, and public transport, where proximity sensors ensure convenient and hands-free access while enhancing safety and energy efficiency."
-    image: /elly-wong/robot2.png
+  - title: "Project 1: Touch Activated Bumper Car"
+    heading: Touch Activated Bumper Car
+    description: "I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation."
+    image: /elijah-phoon/robot1.png
+  - title: "Project 2: Color Sensor Sushi Conveyor Belt System"
+    heading: Color Sensor Sushi Conveyor Belt System
+    description: "I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I built a sushi conveyor belt system that automatically stops when a specific color is detected. This mimics the function of an emergency stop button, commonly found in industrial automation and manufacturing environments, where color or visual sensors are used to trigger safety protocols or halt operations in response to potential hazards."
+    image: /elijah-phoon/robot2.png
   - title: "Project 3: Ultrasonic Activated Coin Dispenser"
     heading: Ultrasonic Activated Coin Dispenser
     description: "Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. When both sensors are triggered in order, the mechanism opens to release coins. This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines."
-    image: /elly-wong/robot3.png
-  - title: "Project 4: Ultrasonic Activated Spinning Rabbit Head"
-    heading: Ultrasonic Activated Spinning Rabbit Head
-    description: "My younger siblings loved playing with their toy rabbit head, which spins when the wind hits it. They used to manually spin and stop it, which was fun but limited. To make it more interactive and engaging, I decided to create an automated version of the toy. In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position."
-    image: /elly-wong/robot4.png
+    image: /elijah-phoon/robot3.png
+  - title: "Project 4: Touch and Ultrasonic Activated Car"
+    heading: Touch and Ultrasonic Activated Car
+    description: "I decided to create an automated car using LEGO Technic parts that can return to its original parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems found in modern vehicles. Using the concept of nested while loops with variables, I programmed the car to activate and begin moving when the touch sensor is pressed. While in motion, the car continuously checks for obstacles using the infrared sensor. Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot. This entire process repeats endlessly, creating a looped simulation of real-world automated vehicle behavior."
+    image: /elijah-phoon/robot4.png
   - title: "Project 5: Color Sensor Activated Tea Cup Ride"
     heading: "Color Sensor Activated Tea Cup Ride"
     description: "As someone who enjoys visiting amusement parks—especially the tea cup ride, I recreated a classic amusement park teacup ride using LEGO Technic parts. It incorporates two color sensors to make decisions about when and how to spin, based on both the color detected and the amount of reflected light. This adds a layer of safety and control that reflects how real-world rides use environment-sensitive automation."
-    image: /elly-wong/robot5.png
+    image: /elijah-phoon/robot5.png
   - title: "Project 6: Touch Activated Increasing & Decreasing Treadmill"
     heading: "Touch Activated Increasing & Decreasing Treadmill"
     description: "As someone who enjoys exercising on a treadmill, I decided to recreate an automated treadmill using LEGO Technic parts. This miniature version functions similarly to a real treadmill—its speed is controlled by user input. With the use of a touch sensor, and coding concepts such as variables and if-else statements, the treadmill increases speed with each press—just like speed adjustments on a real gym machine."
-    image: /elly-wong/robot6.png
+    image: /elijah-phoon/robot6.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -72,8 +72,8 @@ robotics_projects:
       </h2>
       <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
         <div class="accordion-body">
-          {% include python_leapyear.html %}
-          {% include python_sentencereverser.html %}
+          {% include python_currencybreakdown.html %}
+          {% include python_timebreakdown.html %}
         </div>
       </div>
   </div>
@@ -102,8 +102,7 @@ robotics_projects:
     <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
       <div class="accordion-body">
         {% include python_shoppingcart.html %}
-        {% include python_passwordstrength.html %}
-        {% include python_movieattendance.html %}
+        {% include python_initialsgenerator.html %}
       </div>
     </div>
   </div>
@@ -116,7 +115,8 @@ robotics_projects:
     </h2>
     <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
       <div class="accordion-body">
-        {% include python_atmsimulation.html %}
+        {% include python_numberguess.html %}
+        {% include python_rollingdice.html %}
       </div>
     </div>
   </div>

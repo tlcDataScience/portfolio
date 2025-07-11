@@ -50,6 +50,7 @@
         function updateLoader() {
           assetsLoaded++;
           let percent = Math.round((assetsLoaded / totalAssets) * 100);
+          if (percent > 100) percent = 100;
           loaderPercent.textContent = percent + '%';
 
           if (assetsLoaded >= totalAssets) {
@@ -72,13 +73,23 @@
           }
         }
 
-        // Listen for each iframe load/error
+        // Listen for each iframe load/error with a fallback, but prevent double-counting
         for (let iframe of iframes) {
-          iframe.addEventListener('load', updateLoader);
+          let counted = false;
 
-          // Fallback in case iframe never fires load
-          setTimeout(updateLoader, 5000); // Fallback after 5 sec
+          function markLoaded() {
+            if (!counted) {
+              counted = true;
+              updateLoader();
+            }
+          }
+
+          iframe.addEventListener('load', markLoaded);
+
+          // Fallback if it never loads after 5 sec
+          setTimeout(markLoaded, 5000);
         }
+
       });
     </script>
   </body>

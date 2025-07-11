@@ -12,10 +12,12 @@
 
     <!-- Loader overlay -->
     <div id="loader-overlay">
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div class="text-center">
+        <div class="spinner-border text-primary" role="status"></div>
+        <div id="loader-percentage" class="mt-3">0%</div>
       </div>
     </div>
+
 
     <div class="container py-5">
       {{ content }}
@@ -33,15 +35,49 @@
           });
         });
       });
-      // hide the loader when all content is loaded
-      window.addEventListener("load", function() {
-        const loader = document.getElementById('loader-overlay');
-        if (loader) {
-          loader.style.opacity = '0';
-          loader.style.transition = 'opacity 0.3s ease';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 300);
+      // Loader progress logic
+      window.addEventListener("DOMContentLoaded", function() {
+        const loaderOverlay = document.getElementById('loader-overlay');
+        const loaderPercent = document.getElementById('loader-percentage');
+
+        // Collect all images you control
+        const images = document.images;
+        const iframes = document.querySelectorAll('iframe');
+
+        let totalAssets = images.length + iframes.length;
+        let assetsLoaded = 0;
+
+        function updateLoader() {
+          assetsLoaded++;
+          let percent = Math.round((assetsLoaded / totalAssets) * 100);
+          loaderPercent.textContent = percent + '%';
+
+          if (assetsLoaded >= totalAssets) {
+            // All done
+            loaderOverlay.style.opacity = '0';
+            loaderOverlay.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+              loaderOverlay.style.display = 'none';
+            }, 500);
+          }
+        }
+
+        // Listen for each image load/error
+        for (let img of images) {
+          if (img.complete) {
+            updateLoader();
+          } else {
+            img.addEventListener('load', updateLoader);
+            img.addEventListener('error', updateLoader);
+          }
+        }
+
+        // Listen for each iframe load/error
+        for (let iframe of iframes) {
+          iframe.addEventListener('load', updateLoader);
+
+          // Fallback in case iframe never fires load
+          setTimeout(updateLoader, 5000); // Fallback after 5 sec
         }
       });
     </script>

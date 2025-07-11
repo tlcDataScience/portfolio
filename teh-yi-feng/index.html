@@ -2,7 +2,17 @@
 layout: student_portfolio
 title: Yi Feng's Portfolio
 student_name: Teh Yi Feng
+student_nickname: Yi Feng
 portrait_image: /teh-yi-feng/yifeng.jpeg
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Later, I wanted to learn something more advanced, so I began using Python.
+  Python showed me how to write my own programs and think in new ways.
+  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
+  I hope you enjoy seeing what I have built!
 
 robotics_projects:
   - title: "Project 1: Touch Sensor Table Tennis Racket"
@@ -23,7 +33,7 @@ robotics_projects:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

@@ -2,32 +2,63 @@
 layout: student_portfolio
 title: Josh's Portfolio
 student_name: Josh Ng
+student_nickname: Josh
 portrait_image: /josh-ng/josh.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Later, I wanted to learn something more advanced, so I began using Python.
+  Python showed me how to write my own programs and think in new ways.
+  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
+  I hope you enjoy seeing what I have built!
 
 robotics_projects:
   - title: "Project 1: Bumper Track Car"
     heading: Bumper Track Car
-    description: I learnt how to use the LEGO technic parts to create different designs. Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met. Among the many projects I have made, one of my favourites is a bumper car that reverses when the touch sensor in the front hits the wall.
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs.
+      Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met.
+      Among the many projects I have made, one of my favourites is a bumper car that reverses when the touch sensor in the front hits the wall.
     image: /josh-ng/robot1.jpg
   - title: "Project 2: Escalator with Motor Sensors"
     heading: Escalator with Motor Sensors
-    description: Using motor as a sensor, I created an escalator that moves when the motor reading is less than 0 and stops if the reading is more than 0. This is similar to an emergency-controlled lever.
+    description: >
+      Using motor as a sensor, I created an escalator that moves when the motor reading is less than 0 and stops if the reading is more than 0.
+      This is similar to an emergency-controlled lever.
     image: /josh-ng/robot2.png
   - title: "Project 3: Touch & Ultrasonic Sensor Geared Car"
     heading: Touch & Ultrasonic Sensor Geared Car
-    description: I wanted to create an automatic geared car similar to one on the racetracks. I decided to use the coding concepts of while loops and design skills to create a car that moves only when the touch sensor is activated. It will stop immediately when the ultrasonic sensor detects someone in front and this distance with a specific threshold is determined by me.
+    description: >
+      I wanted to create an automatic geared car similar to one on the racetracks.
+      I decided to use the coding concepts of while loops and design skills to create a car that moves only when the touch sensor is activated.
+      It will stop immediately when the ultrasonic sensor detects someone in front and this distance with a specific threshold is determined by me.
     image: /josh-ng/robot3.jpg
   - title: "Project 4: Geared Teacup Ride"
     heading: Geared Teacup Ride
-    description: I love going to the amusement park and taking the spinning top ride whose speed is usually human operated. I decided to recreate the ride using LEGO technic parts and coded it to move when it is activated by colour sensor 1. I could control the direction it spins using colour sensor 2 by determining the values.
+    description: >
+      I love going to the amusement park and taking the spinning top ride whose speed is usually human operated.
+      I decided to recreate the ride using LEGO technic parts and coded it to move when it is activated by colour sensor 1.
+      I could control the direction it spins using colour sensor 2 by determining the values.
     image: /josh-ng/robot4.jpg
   - title: "Project 5: Lego Chandelier"
     heading: Lego Chandelier
-    description: The chandelier in my house is stationary and works only as a light source. I decided to create one that could also move. Using the concepts of nested while loops and the and function, the chandelier will spin when the motor reading of the motor is less than zero. It will stop when 2 conditions are met. When ultrasonic sensor detects someone and colour sensor detects blue, the chandelier will stop. This acts like an emergency stop function. It is then activated to move again with the motor lever.
+    description: >
+      The chandelier in my house is stationary and works only as a light source.
+      I decided to create one that could also move.
+      Using the concepts of nested while loops and the and function, the chandelier will spin when the motor reading of the motor is less than zero.
+      It will stop when 2 conditions are met.
+      When ultrasonic sensor detects someone and colour sensor detects blue, the chandelier will stop.
+      This acts like an emergency stop function.
+      It is then activated to move again with the motor lever.
     image: /josh-ng/robot5.jpg
   - title: "Project 6: Geared Windmill"
     heading: Geared Windmill
-    description: I love to see windmills whenever I go overseas. I wanted to create a windmill whose speed could be controlled using the touch and colour sensor. With the coding concepts of variables and if else, the blades of the windmill increase speed if the colour sensor detects a value and decreases speed if the touch sensor is activated.
+    description: >
+      I love to see windmills whenever I go overseas.
+      I wanted to create a windmill whose speed could be controlled using the touch and colour sensor.
+      With the coding concepts of variables and if else, the blades of the windmill increase speed if the colour sensor detects a value and decreases speed if the touch sensor is activated.
     image: /josh-ng/robot6.jpg
 ---
 
@@ -35,7 +66,7 @@ robotics_projects:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

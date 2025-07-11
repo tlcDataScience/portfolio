@@ -2,33 +2,64 @@
 layout: student_portfolio
 title: Min Zhe's Portfolio
 student_name: Beh Min Zhe
+student_nickname: Min Zhe
 portrait_image: /beh-min-zhe/min-zhe.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Later, I wanted to learn something more advanced, so I began using Python.
+  Python showed me how to write my own programs and think in new ways.
+  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
+  I hope you enjoy seeing what I have built!
 
 robotics_projects:
   - title: "Project 1: Touch Activated Ping Pong Racket"
     heading: Touch Activated Ping Pong Racket
-    description: "I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I programmed my designs to perform specific actions based on real-time input. For example, I created a ping pong racket mechanism that swings to hit the ball when the touch sensor is activated—demonstrating how sensor-triggered automation is used in real-world systems  that respond to user input."
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures.
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors,
+      I programmed my designs to perform specific actions based on real-time input.
+      For example, I created a ping pong racket mechanism that swings to hit the ball when the touch sensor is activated,
+      demonstrating how sensor-triggered automation is used in real-world systems that respond to user input.
     image: /beh-min-zhe/robot1.png
   - title: "Project 2: Ultrasonic Sensor Activated Rack and Pinion door"
     heading: Ultrasonic Sensor activated Rack and Pinion door
-    description: "I applied coding concepts such as conditionals (if-else) and using an ultrasonic sensor, I built a rack and pinion door mechanism that automatically opens when it detects someone approaching. This project simulates real world automatic door systems commonly found in malls and offices."
+    description: >
+      I applied coding concepts such as conditionals (if-else) and using an ultrasonic sensor,
+      I built a rack and pinion door mechanism that automatically opens when it detects someone approaching.
+      This project simulates real world automatic door systems commonly found in malls and offices.
     image: /beh-min-zhe/robot2.png
   - title: "Project 3: 2 Sensor Coin Dispenser"
     heading: 2 Sensor Coin Dispenser
-    description: "Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. When both sensors are triggered in order, the mechanism opens to release coins. This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines."
+    description: >
+      Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser.
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold.
+      When both sensors are triggered in order, the mechanism opens to release coins.
+      This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines.
     image: /beh-min-zhe/robot3.png
+
 other_achievements:
   - title: "Minecraft Foundation"
-    description: "I participated in the Minecraft Foundation program, where I learned how to use Minecraft as a platform for coding and creativity. I explored various coding concepts while building and designing structures in the game, enhancing my problem-solving skills and understanding of programming logic."
+    description: >
+      I participated in the Minecraft Foundation program, where I learned how to use Minecraft as a platform for coding and creativity.
+      I explored various coding concepts while building and designing structures in the game, enhancing my problem-solving skills and understanding of programming logic.
     image: /beh-min-zhe/minecraft-foundation.png
   - title: "Minecraft Level 1"
-    description: "I completed the Minecraft Level 1 course, where I further developed my coding skills using Minecraft, building on the foundation I gained in the previous program. This course allowed me to apply coding concepts in a fun and interactive environment, creating complex structures and automations within the game."
+    description: >
+      I completed the Minecraft Level 1 course, where I further developed my coding skills using Minecraft, building on the foundation I gained in the previous program.
+      This course allowed me to apply coding concepts in a fun and interactive environment, creating complex structures and automations within the game.
     image: /beh-min-zhe/minecraft-level-1.png
   - title: "Minecraft Level 2"
-    description: "I advanced to the Minecraft Level 2 course, where I deepened my understanding of coding and automation within Minecraft. This level challenged me to create more intricate designs and systems, applying the coding skills I had learned in previous courses."
+    description: >
+      I advanced to the Minecraft Level 2 course, where I deepened my understanding of coding and automation within Minecraft.
+      This level challenged me to create more intricate designs and systems, applying the coding skills I had learned in previous courses.
     image: /beh-min-zhe/minecraft-level-2.png
   - title: "Minecraft Level 3"
-    description: "I completed the Minecraft Level 3 course, where I further enhanced my coding skills and explored advanced concepts in automation and design within Minecraft. This level pushed me to think creatively and implement more complex systems in my builds."
+    description: >
+      I completed the Minecraft Level 3 course, where I further enhanced my coding skills and explored advanced concepts in automation and design within Minecraft.
+      This level pushed me to think creatively and implement more complex systems in my builds.
     image: /beh-min-zhe/minecraft level 3 v2.png
 ---
 
@@ -36,11 +67,7 @@ other_achievements:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}! Learning robotics helped me solve real-world problems. I was eager to explore and go beyond block-based coding. This sparked my interest in learning Python, which is text-based coding. I wanted to write code that can help me solve my math problems without the use of pen and paper.
-  </p>
-  </br>
-  <p>
-    Beyond honing my Python fundamentals, I wanted to create games that would be beneficial to students. I learnt how to use Pygame and created different games where my friends and I can compete against one another. These games made learning feel like a fun experience instead of a boring task. It's exciting to see how coding can bring people together through play and make learning enjoyable. This experience not only improved my learning skills but also taught me how to think creatively about using technology to help others learn.
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

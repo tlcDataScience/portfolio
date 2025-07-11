@@ -4,8 +4,10 @@ title: Zimo's Portfolio
 student_name: Zimo Liu
 student_nickname: Zimo
 portrait_image: /zimo-liu/zimo.jpg
+
 intro: >
-  Hi, I'm [student_nickname]! I love exploring robotics and block‑based coding.
+  Hi, I'm [student_nickname]!
+  I love exploring robotics and block‑based coding.
   Solving problems by building creative projects that mix hardware and code brings me joy.
   My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
   Soon after, I moved on to learning Python, where I created games and solved math problems using code.
@@ -26,6 +28,7 @@ robotics_projects:
       Using an ultrasonic sensor, I re-created the door of a shopping center that opens automatically when someone stands within range.
       This project combined block‑based coding with robotics to solve real-world problems!
     image: /zimo-liu/robot2.png
+
 other_achievements:
   - title: "Coding Olympics 2024"
     description: I participated in the 2024 Coding Olympics by Science Centre Singapore from 30 July to 4 August 2024 and achieved a Top 20 finish in Category B. I met so many new friends and learnt a lot about coding!
@@ -145,9 +148,9 @@ other_achievements:
         {% if page.other_achievements %}
           {% for achievement in page.other_achievements %}
             {% include dynamic_achievements.html
-               title=achievement.title
-               description=achievement.description
-               image=achievement.image %}
+              title=achievement.title
+              description=achievement.description
+              image=achievement.image %}
           {% endfor %}
         {% else %}
           <p>No other achievements listed yet.</p>

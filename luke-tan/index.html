@@ -2,12 +2,26 @@
 layout: student_portfolio
 title: Luke's Portfolio
 student_name: Luke Tan
+student_nickname: Luke
 portrait_image: /luke-tan/luke.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I like learning new ways to solve problems by writing my own code.
+  I started with Python because I wanted to try text-based coding and do more than just block coding.
+  After learning the basics, I explored how to create simple games with Pygame.
+  Making games taught me how to plan my ideas and turn them into something fun for people to use.
+  I enjoy seeing how coding can bring people together and make learning more interesting.
+  I hope you like exploring my Python projects!
 
 other_achievements:
   - title: "Pei Hwa Hackathon 2025 "
-    description: "I participated in this year’s Pei Hwa Hackathon. The theme was “Innovative Solutions to Tomorrow’s Problems. Using Unihiker device, our team created a solution to connect the aged population living alone in Singapore with volunteers in the vicinity. Our app allows the elderly to request for the specific help they need, and the message will then be transmitted to volunteers in the vicinity.
-                  Our team received an award of commendation in this Hackathon."
+    description: >
+    I participated in this year’s Pei Hwa Hackathon.
+    The theme was “Innovative Solutions to Tomorrow’s Problems.
+    Using the Unihiker device, our team created a solution to connect the aged population living alone in Singapore with volunteers in the vicinity.
+    Our app allows the elderly to request for the specific help they need, and the message will then be transmitted to volunteers in the vicinity.
+    Our team received an award of commendation in this Hackathon.
     image: /luke-tan/pei hwa competition.png
 ---
  
@@ -15,11 +29,7 @@ other_achievements:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I am 12 years old this year. I started learning programming since Primary 3. I have learnt programming languages such as block programming and python which is a form of text-based coding. With Python, I can tell the computer what to do by writing instructions, solving my math problem sums without the use of the pen and paper. Python can help me by making tricky problems easier to solve with code. It will also teach me how to think carefully and solve problems step by step, which is useful for all kinds of learning.
-  </p>
-  </br>
-  <p>
-    Beyond honing my python fundamentals, I wanted to create games that was beneficial to students. I learned how to use Pygame, which is a library that lets you build interactive games easily. Using Pygame, I made different games designed for my friends to play and challenge each other to. These games allow my friends to compete against each other, making learning more enjoyable. This experience not only improved my programming skills but also taught me to think creatively about using technology to help others learn!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 
@@ -111,9 +121,9 @@ other_achievements:
         {% if page.other_achievements %}
           {% for achievement in page.other_achievements %}
             {% include dynamic_achievements.html
-               title=achievement.title
-               description=achievement.description
-               image=achievement.image %}
+              title=achievement.title
+              description=achievement.description
+              image=achievement.image %}
           {% endfor %}
         {% else %}
           <p>No other achievements listed yet.</p>

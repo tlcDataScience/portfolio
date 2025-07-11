@@ -2,14 +2,24 @@
 layout: student_portfolio
 title: Marshall's Portfolio
 student_name: Marshall Teo
+student_nickname: Marshall
 portrait_image: /marshall-teo/marshall.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I like learning new ways to solve problems by writing my own code.
+  I started with Python because I wanted to try text-based coding and do more than just block coding.
+  After learning the basics, I explored how to create simple games with Pygame.
+  Making games taught me how to plan my ideas and turn them into something fun for people to use.
+  I enjoy seeing how coding can bring people together and make learning more interesting.
+  I hope you like exploring my Python projects!
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring Python to solve problems and create cool projects. I enjoy using math, loops, and if-else decisions to make my programs work just right!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

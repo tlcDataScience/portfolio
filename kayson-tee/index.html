@@ -1,33 +1,60 @@
 ---
 layout: student_portfolio
 title: Kayson's Portfolio
-student_name: Kayson
+student_name: Kayson Tee
+student_nickname: Kayson
 portrait_image: /kayson-tee/kayson.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Later, I wanted to learn something more advanced, so I began using Python.
+  Python showed me how to write my own programs and think in new ways.
+  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
+  I hope you enjoy seeing what I have built!
 
 robotics_projects:
   - title: "Project 1: Flag Tower Spinner"
     heading: Flag Tower Spinner
-    description: I learnt how to use the LEGO technic parts to create different designs. Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met. Among many other projects, I created a flag on a tower that spins if the touch sensor is activated.
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs.
+      Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met.
+      Among many other projects, I created a flag on a tower that spins if the touch sensor is activated.
     image: /kayson-tee/project1.png
   - title: "Project 2: Cuckoo Clock"
     heading: Cuckoo Clock
-    description: Using an ultrasonic sensor, I re-created the cuckoo clock of my ancient clock that opens and moves in and out when someone is within the range.
+    description: >
+      Using an ultrasonic sensor, I re-created the cuckoo clock of my ancient clock that opens and moves in and out when someone is within the range.
     image: /kayson-tee/project2.png
   - title: "Project 3: Arcade Coin Dispenser"
     heading: Arcade Coin Dispenser
-    description: Having played at the arcade frequently, I decided to use the concepts and design skills to create a coin dispenser that is activated to open and close only when 2 conditions are met. I could then recreate the arcade machine that dispenses coins.
+    description: >
+      Having played at the arcade frequently, I decided to use the concepts and design skills to create a coin dispenser that is activated to open and close only when 2 conditions are met.
+      I could then recreate the arcade machine that dispenses coins.
     image: /kayson-tee/project3.png
   - title: "Project 4: Emergency Stop Power Generator"
     heading: Emergency Stop Power Generator
-    description: I went to several educational factory tours and saw human activated power generators. I decided to include a safety feature whereby the generator starts moving when the operator turns the knob and stops when it detects someone near it. This works as an emergency stop sensor.
+    description: >
+      I went to several educational factory tours and saw human activated power generators.
+      I decided to include a safety feature whereby the generator starts moving when the operator turns the knob and stops when it detects someone near it.
+      This works as an emergency stop sensor.
     image: /kayson-tee/project4.png
   - title: "Project 5: Sensor-Controlled Spinning Top"
     heading: Sensor-Controlled Spinning Top
-    description: Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is activated by a colour sensor. I could control the direction it spins using an ultrasonic sensor when it detects someone within different range. If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise.
+    description: >
+      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is activated by a colour sensor.
+      I could control the direction it spins using an ultrasonic sensor when it detects someone within different range.
+      If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise.
     image: /kayson-tee/project5.png
   - title: "Project 6: Variable Speed Lazy Susan"
     heading: Variable Speed Lazy Susan
-    description: My family love having guests over for meals. I love spinning the lazy susan but the rate at which it moves is too fixed and too slow for my liking. I decided to recreate a lazy susan that can increase speed with the touch of a sensor. I used the coding concept of variables and conditionals. The lazy susan will start moving slowly and increase in speed each time I press the touch sensor.
+    description: >
+      My family love having guests over for meals.
+      I love spinning the lazy susan but the rate at which it moves is too fixed and too slow for my liking.
+      I decided to recreate a lazy susan that can increase speed with the touch of a sensor.
+      I used the coding concept of variables and conditionals.
+      The lazy susan will start moving slowly and increase in speed each time I press the touch sensor.
     image: /kayson-tee/project6.png
 ---
 
@@ -35,7 +62,7 @@ robotics_projects:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

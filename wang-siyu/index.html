@@ -2,14 +2,24 @@
 layout: student_portfolio
 title: Siyu's Portfolio'
 student_name: Wang Siyu
+student_nickname: Siyu
 portrait_image: /template/student.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I wanted to learn how to use text-based coding to solve problems in different ways.
+  Learning Python helped me understand how to plan, write and test my own programs.
+  I enjoy finding new ways to use code to fix problems and make tasks easier.
+  Python has also helped me think step by step and improve my problem-solving skills.
+  I am excited to keep learning and build even more projects in the future.
+  I hope you enjoy looking through my work!
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring block‑based coding and Python. I enjoy solving problems with code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

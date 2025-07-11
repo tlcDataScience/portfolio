@@ -2,32 +2,48 @@
 layout: student_portfolio
 title: Jia Jun's Portfolio
 student_name: Wee Jia Jun
+student_nickname: Jia Jun
 portrait_image: /wee-jiajun/weejiajun.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Later, I wanted to learn something more advanced, so I began using Python.
+  Python showed me how to write my own programs and think in new ways.
+  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
+  I hope you enjoy seeing what I have built!
 
 robotics_projects:
   - title: "Project 1: Touch-Activated Catapult"
     heading: Touch-Activated Catapult
-    description: I built a catapult using LEGO Technic parts that launches bullets when a touch sensor is pressed. Working on this taught me that simple code can control real machines – it was super cool to see the catapult move exactly when I touched it!
+    description: >
+    I built a catapult using LEGO Technic parts that launches bullets when a touch sensor is pressed. Working on this taught me that simple code can control real machines – it was super cool to see the catapult move exactly when I touched it!
     image: /wee-jiajun/robot1.png
   - title: "Project 2: Ultrasonic Activated Bumper Car"
     heading: Ultrasonic Activated Bumper Car
-    description: I created a bumper car that stops as soon as it gets too close to an obstacle. Using an ultrasonic sensor, I set a distance threshold. This project made me feel like a real engineer by teaching me how sensors help robots react to their surroundings.
+    description: >
+    I created a bumper car that stops as soon as it gets too close to an obstacle. Using an ultrasonic sensor, I set a distance threshold. This project made me feel like a real engineer by teaching me how sensors help robots react to their surroundings.
     image: /wee-jiajun/robot2.png
   - title: "Project 3: Distance Activated Shooter"
     heading: Distance Activated Shooter
-    description: I built a shooter robot that only fires when two ultrasonic sensors detect a target at the same time. It was like creating my own mini arcade game, and it taught me how combining sensors can make robots more accurate.
+    description: >
+    I built a shooter robot that only fires when two ultrasonic sensors detect a target at the same time. It was like creating my own mini arcade game, and it taught me how combining sensors can make robots more accurate.
     image: /wee-jiajun/robot3.png
   - title: "Project 4: Arcade Gripper"
     heading: Arcade Gripper
-    description: Inspired by claw machines at arcades, I built a gripper that opens with one touch and closes with another. This project helped me understand how different sensors can control different actions, just like buttons on a game machine.
+    description: >
+    Inspired by claw machines at arcades, I built a gripper that opens with one touch and closes with another. This project helped me understand how different sensors can control different actions, just like buttons on a game machine.
     image: /wee-jiajun/robot4.png
   - title: "Project 5: Colour Activated Propellers"
     heading: Colour Activated Propellers
-    description: I built a model of airplane propellers using LEGO parts. When a colour sensor is triggered, the propellers spin—and a second sensor controls which way they spin. This project made me see how even small sensors can bring a model to life!
+    description: >
+    I built a model of airplane propellers using LEGO parts. When a colour sensor is triggered, the propellers spin—and a second sensor controls which way they spin. This project made me see how even small sensors can bring a model to life!
     image: /wee-jiajun/robot5.png
   - title: "Project 6: Automated Speed Increasing Lazy Susan"
     heading: Automated Speed Increasing Lazy Susan
-    description: I built an automated lazy susan that speeds up every time a colour sensor detects a change. This project taught me how variables in code can change the speed of a motor, and it was really fun to see the table spin faster with each change!
+    description: >
+    I built an automated lazy susan that speeds up every time a colour sensor detects a change. This project taught me how variables in code can change the speed of a motor, and it was really fun to see the table spin faster with each change!
     image: /wee-jiajun/robot6.png
 ---
 
@@ -35,7 +51,7 @@ robotics_projects:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

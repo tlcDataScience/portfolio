@@ -2,7 +2,12 @@
 layout: student_portfolio
 title: Zimo's Portfolio
 student_name: Zimo Liu
+student_nickname: Zimo
 portrait_image: /zimo-liu/zimo.jpg
+intro: >
+  Hi, I am [student_nickname], and I love exploring robotics and block‑based coding.
+  I enjoy solving problems by building creative projects that mix hardware and code.
+  My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
 
 robotics_projects:
   - title: "Project 1: LEGO Robotics Catapult"
@@ -24,7 +29,7 @@ other_achievements:
 
 <div class="intro">
   <p>
-    Hi, I am {{ page.student_name }}, and I love exploring robotics and block‑based coding. I enjoy solving problems by building creative projects that mix hardware and code. My projects range from designing robots using LEGO Technic parts to programming sensors with block‑based code!
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
   </p>
 </div>
 

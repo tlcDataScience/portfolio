@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
   <body>
+
+    <!-- Loader overlay -->
+    <div id="loader-overlay">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
     <div class="container py-5">
       {{ content }}
     </div>
@@ -24,6 +32,17 @@
             }
           });
         });
+      });
+      // hide the loader when all content is loaded
+      window.addEventListener("load", function() {
+        const loader = document.getElementById('loader-overlay');
+        if (loader) {
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 300);
+        }
       });
     </script>
   </body>

@@ -1,0 +1,162 @@
+---
+layout: student_portfolio
+title: Chua Howe Run's Portfolio
+student_name: Chua Howe Run
+student_nickname: Howe Run
+portrait_image: /Chua_Howe_Run/Chua_Howe_Run.png
+
+intro: >
+  Hi, I'm [student_nickname], and I'm 12 years old. I started learning robotics with Lego Mindstorms and block-based coding in Primary 2, building different robots to automate simple daily tasks.
+  Robotics taught me to think logically and creatively, which sparked my interest in learning Python. With Python, I can solve math problems, write programs, and create projects that make tricky tasks easier.
+  I also learned Pygame to design fun educational games for my friends, turning learning into a fun competition. Coding has helped me improve my problem-solving skills and think creatively about how technology can help others.
+  I’m excited to keep exploring robotics, coding, and STEM, and I hope you enjoy seeing what I’ve built!
+
+
+
+
+
+robotics_projects:
+  - title: "Project 1: Bumper Car"
+    heading: Lego Bumper Car 
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. 
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: /Chua_Howe_Run/robot1.png
+  - title: "Project 2: Ultrasonic activated Door"
+    heading: Ultrasonic activated Door
+    description: >
+      Using an ultrasonic sensor, I re-created the door of the shopping center that opens automatically when a person is standing within the range. 
+    image: /Chua_Howe_Run/robot2.png
+  - title: "Project 3: Touch activated gripper"
+    heading: Touch activated gripper
+    description: >
+      Having played at the arcade frequently, I decided to use the concepts and design skills to create a gripper that is activated to open and close only when touch sensor is activated. 
+      I could then recreate the arcade game of picking up and releasing anything at home
+    image: /donelle-quek/robot3.png
+  - title: "Project 4: Colour and ultrasonic automated car"
+    heading: Colour and ultrasonic automated car
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems found in modern vehicles.
+      Using the concept of nested while loops with variables, I programmed the car to activate and begin moving when the colour sensor detects a specific colour. While in motion, the car continuously checks for obstacles using the ultrasonic sensor. Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot.
+      This entire process repeats endlessly, creating a looped simulation of real-world automated vehicle behavior.
+    image: /Chua_Howe_Run/robot4.png
+  - title: "Project 5: Standard robot to follow the line"
+    heading: "Standard robot to follow the line"
+    description: >
+      Inspired by a line-following robot observed at the library—used to transport books from the return bin to the sorting section—I decided to design a similar robot for my home. 
+      My version is programmed to follow a black line on the floor, guiding it through areas that require cleaning.
+    image: /Chua_Howe_Run/robot5.png
+  - title: "Project 6: Colour and touch speed activated merry go round"
+    heading: "Colour and touch speed activated merry go round"
+    description: >
+      I love to travel so I decided to build a simple aircraft propeller model using LEGO and block-based coding.
+      It uses two touch sensors to control the speed of the spinning blades: Pressing touch sensor 1 increases the propeller speed and pressing touch sensor 2 decreases the speed.
+      Each press adjusts the motor power step-by-step, letting me simulate how real propeller speed is controlled during flight.
+      It's a fun and hands-on way to explore the basics of motor control and aerodynamics!
+    image: /Chua_Howe_Run/robot6.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
+  </p>
+</div>
+
+<div class="portrait">
+  <img src="{{ page.portrait_image | relative_url }}" alt="Portrait of {{ page.student_name }}" />
+</div>
+
+<div class="accordion" id="accordionProjects">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+        Robotics Projects
+      </button>
+    </h2>
+    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+      <div class="accordion-body">
+        {% if page.robotics_projects %}
+          {% for project in page.robotics_projects %}
+            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
+          {% endfor %}
+        {% else %}
+          <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+          Math Concepts
+        </button>
+      </h2>
+      <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_weightconverter.html %}
+          {% include python_armstrongchecker.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
+          If Else
+        </button>
+      </h2>
+      <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_loginsystem.html %}
+          {% include python_righttriangle.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+          For Loops
+        </button>
+      </h2>
+      <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_numberpyramid.html %}
+          {% include python_libraryinventory.html %}
+
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
+          While Loops
+        </button>
+      </h2>
+      <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_factorial.html %}
+          {% include python_numberguess.html %}
+          {% include python_multiplicationChecker.html %}
+        </div>
+      </div>
+  </div>
+
+</div><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+    accordionCollapseElements.forEach(function(collapseEl) {
+      collapseEl.addEventListener('shown.bs.collapse', function() {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>

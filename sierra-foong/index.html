@@ -14,6 +14,20 @@ intro: >
   I used Pygame to make different games designed for my friends to play and challenge each other to.
   It's exciting to see how coding brings people together while also making studying more enjoyable.
   It was a great, improving my progamming skills while learning how to use technology to help others learn.
+
+robotics_projects:
+  - title: "Project 1: Touch Activated Bumper Car"
+    heading: Touch Activated Bumper Car
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs.
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment.
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: /sierra-foong/robot1.png
+  - title: "Project 2: Colour Activated Sushi Belt"
+    heading: Colour Activated Sushi Belt
+    description: >
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I built a sushi conveyor belt system that automatically stops when a specific color is detected. This mimics the function of an emergency stop button, commonly found in industrial automation and manufacturing environments, where color or visual sensors are used to trigger safety protocols or halt operations in response to potential hazards
+    image: /sierra-foong/robot2.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -29,6 +43,25 @@ intro: >
 </div>
 
 <div class="accordion" id="accordionProjects">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+        Robotics Projects
+      </button>
+    </h2>
+    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+      <div class="accordion-body">
+        {% if page.robotics_projects %}
+          {% for project in page.robotics_projects %}
+            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
+          {% endfor %}
+        {% else %}
+          <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">

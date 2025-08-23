@@ -1,0 +1,96 @@
+---
+layout: student_portfolio
+title: Andraye's Portfolio
+student_name: Andraye Gwee
+student_nickname: Andraye
+portrait_image: /Andraye Gwee/andraye.png
+
+intro: >
+  My name is [student_nickname], and I am 12 years old. I started learning robotics in Primary 3 with LEGO Mindstorms and block-based coding, and I’ve enjoyed creating robots and structures to automate simple tasks ever since.
+  Robotics has made me a better problem solver by teaching me to think logically and creatively, stay focused, and work step by step through challenges. I’ve learned to break down problems, test solutions, and improve my designs.
+  It also builds important future skills like coding, teamwork, and critical thinking, while showing how technology can solve real-world problems. Most of all, robotics has made learning fun and inspiring for me.
+robotics_projects:
+  - title: "Project 1: Touch activated ping pong racket"
+    heading: Touch activated ping pong racket
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs. 
+      Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met. 
+      Among many other projects, I created a ping pong racket that hits the ball if the touch sensor is activated
+
+    image: /Andraye_Gwee/robot1.png
+  - title: "Project 2: Ultrasonic activated rack and pinion door"
+    heading: Ultrasonic activated rack and pinion door
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
+      I built a rack and pinion door. Using an ultrasonic sensor, I recreated an automatic sliding door like those commonly found in shopping centers. 
+      The door opens when a person is detected within a certain range, demonstrating how sensor technology is used in real life to improve accessibility, convenience, and energy efficiency in public buildings
+
+    image: /Andraye_Gwee/robot2.png
+
+  - title: "Project 3: Touch Activated Gripper"
+    heading: Touch Activated Gripper
+    description: >
+      Having played at the arcade frequently, I decided to use the concepts and design skills to create a gripper that is activated to open and close only when touch sensor is activated. 
+      I could then recreate the arcade game of picking up and releasing anything at home
+    image: /Andraye_Gwee/robot3.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var accordionCollapseElements = document.querySelectorAll(
+        ".accordion-collapse"
+      );
+      accordionCollapseElements.forEach(function (collapseEl) {
+        collapseEl.addEventListener("shown.bs.collapse", function () {
+          var header = this.previousElementSibling;
+          if (header) {
+            header.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    });
+  </script>
+</div>

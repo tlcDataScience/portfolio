@@ -1,0 +1,150 @@
+---
+layout: student_portfolio
+title: Wayne's Portfolio
+student_name: Wayne Tham
+student_nickname: Wayne
+portrait_image: /wayne-tham/wayne.png
+
+intro: >
+  Hi, My name is [student_nickname]!
+
+  Learning robotics has taught me how to think creatively and logically to solve real-world problems.
+  After robotics, I had sparked an interest in learning text-based coding in Python.
+  It was great to learn how to use Python to solve math problems and other more complex ones by issuing instructions.
+  I also wanted to learn beyond just regular Python programs and so I started picking up PyGame.
+  It lets me learn how to make different kinds of games for my friends and I to play.
+  It made me realise that making games to connect with friends can be both an enriching and fun experience.
+
+
+robotics_projects:
+  - title: "Project 1: Touch Activated Bumper Car"
+    heading: Touch Activated Bumper Car
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs.
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment.
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: /wayne-tham/robot1.png
+  - title: "Project 2: Colour Activated Sushi Belt"
+    heading: Colour Activated Sushi Belt
+    description: >
+      Using an ultrasonic sensor, I recreated a sushi belt that moves only if the colour sensor detects a specific colour!
+    image: /wayne-tham/robot2.png
+  - title: "Project 3: 2 Sensor Coin Dispenser"
+    heading: 2 Sensor Coin Dispenser
+    description: >
+      Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser.
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold.
+      When both sensors are triggered in order, the mechanism opens to release coins.
+      This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines.
+    image: /wayne-tham/robot3.png
+  - title: "Project 4: Colour and ultrasonic automated car"
+    heading: Colour and ultrasonic automated car
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems found in modern vehicles.
+      Using the concept of nested while loops with variables, I programmed the car to activate and begin moving when the colour sensor detects a specific colour. While in motion, the car continuously checks for obstacles using the ultrasonic sensor. Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot.
+      This entire process repeats endlessly, creating a looped simulation of real-world automated vehicle behavior.
+    image: /wayne-tham/robot4.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>
+    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
+  </p>
+</div>
+
+<div class="portrait">
+  <img src="{{ page.portrait_image | relative_url }}" alt="Portrait of {{ page.student_name }}" />
+</div>
+
+<div class="accordion" id="accordionProjects">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+        Robotics Projects
+      </button>
+    </h2>
+    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+      <div class="accordion-body">
+        {% if page.robotics_projects %}
+          {% for project in page.robotics_projects %}
+            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
+          {% endfor %}
+        {% else %}
+          <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
+          Math Concepts
+        </button>
+      </h2>
+      <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_weightconverter.html %}
+          {% include python_evenoddchecker.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
+          For Loops
+        </button>
+      </h2>
+      <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_numberpyramid.html %}
+          {% include python_storeinventory.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
+          If Else
+        </button>
+      </h2>
+      <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_primeguesser.html %}
+          {% include python_anagramchecker.html %}
+        </div>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
+          While Loops
+        </button>
+      </h2>
+      <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
+        <div class="accordion-body">
+          {% include python_countdowntimer.html %}
+          {% include python_numberguess.html %}
+        </div>
+      </div>
+  </div>
+
+</div><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
+    accordionCollapseElements.forEach(function(collapseEl) {
+      collapseEl.addEventListener('shown.bs.collapse', function() {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>

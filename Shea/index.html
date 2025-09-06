@@ -29,19 +29,3 @@ robotics_projects:
       This project demonstrated how motion and proximity sensors can be used to create interactive and responsive systems.
     image: /Shea/robot2.png
 ---
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
-    );
-    accordionCollapseElements.forEach(function (collapseEl) {
-      collapseEl.addEventListener("shown.bs.collapse", function () {
-        var header = this.previousElementSibling;
-        if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-    });
-  });
-</script>

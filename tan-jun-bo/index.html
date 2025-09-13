@@ -3,54 +3,59 @@ layout: student_portfolio
 title: Tan Jun Bo's Portfolio
 student_name: Tan Jun Bo
 student_nickname: Jun Bo
+age: 12
 portrait_image: /tan-jun-bo/tan.png
 
 intro: >
-  Hi, I'm [student_nickname]!
-  and I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 3, 
-  and since then I’ve enjoyed designing and building robots to automate simple tasks.
-  Robotics has taught me to solve problems logically and creatively, and has improved my focus, patience, and step-by-step thinking. 
-  It has also helped me develop future-ready skills like coding, teamwork, and critical thinking, while showing me how technology can solve real-world problems.
+  Hi, I'm {{ page.student_nickname }}!  
+  I am {{ page.age }} years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 3.  
+  Since then, I’ve enjoyed designing and building robots to automate simple tasks.  
+
+  Robotics has taught me to solve problems logically and creatively, and it has improved my focus, patience, and step-by-step thinking.  
+  It has also given me future-ready skills like coding, teamwork, and critical thinking, while showing how technology can solve real-world problems.  
   Most of all, robotics has made learning fun, exciting, and inspiring.
+
 robotics_projects:
-  - title: "Project 1: Touch activated car"
-    heading: Touch activated car
-    description: I learned how to use LEGO Technic parts to design and build functional mechanical systems. 
-    By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
-    I programmed my creations to respond dynamically to their environment. One example was a car that automatically reverses when its front touch sensor detects something, 
-    similar to a collision—mimicking real-world application of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
-    image: /tan-ju-bo/robot1.png
-  - title: "Project 2: Ultrasonic activated tractor"
-    heading: Ultrasonic activated tractor
-    description: I learned how to use LEGO Technic parts to design and build various mechanical structures. 
-    By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I built a tractor. Using the ultrasonic sensor,
-    The tractor moves when it detects the load on it. Such autonomous track-based vehicles are used to transport goods between different stations. 
-    Once the sensor detects the object, the vehicle automatically moves to deliver the item to the designated location. This automation reduces the need for human labor, increases efficiency, and ensures precise handling of materials.
-    image: /tan-ju-bo/robot2.png
+  - title: "Project 1: Touch Activated Car"
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems.  
+      By applying coding concepts such as conditionals (if-else) and integrating sensors, I programmed my creations to respond dynamically.  
+      One example was a car that automatically reverses when its front touch sensor detects something—similar to how real autonomous vehicles use obstacle detection for safety and navigation.
+    image: /tan-jun-bo/robot1.png
+
+  - title: "Project 2: Ultrasonic Activated Tractor"
+    description: >
+      I learned how to use LEGO Technic parts to design and build mechanical structures.  
+      By applying coding concepts such as conditionals (if-else) and incorporating sensors, I built a tractor.  
+      Using the ultrasonic sensor, the tractor moves when it detects a load on it.  
+      This mimics track-based vehicles used in logistics to transport goods automatically—reducing human labor, increasing efficiency, and ensuring precision.
+    image: /tan-jun-bo/robot2.png
 ---
 
-<h1>{{ page.student_name }}'s Coding Projects</h1>
+<h1 class="mb-4 text-center">{{ page.student_name }}'s Portfolio</h1>
 
-<div class="intro">
-  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
-</div>
-
-<div class="portrait">
-  <img
-    src="{{ page.portrait_image | relative_url }}"
-    alt="Portrait of {{ page.student_name }}"
-  />
+<div class="row align-items-center mb-5">
+  <div class="col-md-3 text-center">
+    <img
+      src="{{ page.portrait_image | relative_url }}"
+      alt="Portrait of {{ page.student_name }}"
+      class="img-fluid rounded-circle shadow"
+    />
+  </div>
+  <div class="col-md-9">
+    <p>{{ page.intro }}</p>
+  </div>
 </div>
 
 <div class="accordion" id="accordionProjects">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
-        class="accordion-button collapsed"
+        class="accordion-button"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseRobotics"
-        aria-expanded="false"
+        aria-expanded="true"
         aria-controls="collapseRobotics"
       >
         Robotics Projects
@@ -58,20 +63,36 @@ robotics_projects:
     </h2>
     <div
       id="collapseRobotics"
-      class="accordion-collapse collapse"
+      class="accordion-collapse collapse show"
       aria-labelledby="headingRobotics"
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
         {% if page.robotics_projects %} {% for project in page.robotics_projects
-        %} {% include dynamic_robotics_project.html project=project
-        index=forloop.index0 %} {% endfor %} {% else %}
+        %}
+        <div class="mb-4">
+          <h3>{{ project.title }}</h3>
+          <div class="row align-items-center">
+            <div class="col-md-7">
+              <p>{{ project.description }}</p>
+            </div>
+            <div class="col-md-5 text-center">
+              <img
+                src="{{ project.image | relative_url }}"
+                alt="{{ project.title }}"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+        {% endfor %} {% else %}
         <p>No robotics projects listed yet.</p>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(

@@ -1,0 +1,91 @@
+---
+layout: student_portfolio
+title: Du Shuo Xuan's Portfolio
+student_name: Du Shou Xuan
+student_nickname: Du Shou Xuan
+portrait_image: /du-shou-xuan/xuan.png
+
+intro: >
+  Hi, I'm [student_nickname]!
+  and I am 12 years old. I began learning robotics with Lego Mindstorms and block-based coding in Primary 2, building robots to automate daily tasks. 
+  This sparked my interest in solving real-world problems and exploring text-based coding with Python. 
+  I started by writing programs to solve math problems and later used Pygame to create educational games for my friends to enjoy. 
+  I have also documented my journey in robotics, coding, innovation, and STEM.
+robotics_projects:
+  - title: "Project 1: Touch activated car"
+    heading: Touch activated car
+    description:
+      I learnt how to use the LEGO technic parts to create different designs.
+      Using the coding concept of conditionals (if-else), together with different sensors,
+      I coded my designs to do certain actions only if a specific condition is met.
+      Among many other projects, I created a ping pong racket that hits the ball if the touch sensor is activated
+    image: /du-shou-xuan/robot1.png
+
+  - title: "Project 2: Ultrasonic activated rack and pinion door"
+    heading: Ultrasonic activated rack and pinion door
+    description:
+      I applied coding concepts such as conditionals (if-else) and using an ultrasonic sensor,
+      I built a rack and pinion door mechanism that automatically opens when it detects someone approaching.
+      This project simulates real world automatic door systems commonly found in malls and offices.
+    image: /du-shou-xuan/robot2.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse"
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

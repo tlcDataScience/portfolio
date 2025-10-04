@@ -206,54 +206,68 @@ robotics_projects:
       </div>
     </div>
   </div>
-  <div
-    id="collapseCertificates"
-    class="accordion-collapse collapse"
-    aria-labelledby="headingCertificates"
-    data-bs-parent="#accordionProjects"
-  >
-    <div class="accordion-body">
-      <div class="card mb-3">
-        <div class="card-header">Certificate: 2025 IDE Series</div>
-        <div class="card-body">
-          <h3>Description:</h3>
-          <p>
-            This certificate was awarded for participation in the
-            <strong>2025 IDE Series</strong>, recognizing Elijah’s skills in
-            robotic challenges.
-          </p>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingCertificates">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseCertificates"
+        aria-expanded="false"
+        aria-controls="collapseCertificates"
+      >
+        Certificates
+      </button>
+    </h2>
+    <div
+      id="collapseCertificates"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingCertificates"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        <div class="card mb-3">
+          <div class="card-header">Certificate: 2025 IDE Series</div>
+          <div class="card-body">
+            <h3>Description:</h3>
+            <p>
+              This certificate was awarded for participation in the
+              <strong>2025 IDE Series</strong>, recognizing Elijah’s skills in
+              robotic challenges.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="certificate-image mb-3">
-        <img
-          src="{{ '/elijah-phoon/elijah_cert.jpg' | relative_url }}"
-          alt="IDE SERIES CERTIFICATE OF PARTICIPATION"
-          style="
-            width: 100%;
-            max-width: 1000px;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-          "
-        />
+        <div class="certificate-image mb-3">
+          <img
+            src="{{ '/elijah-phoon/elijah_cert.jpg' | relative_url }}"
+            alt="IDE SERIES CERTIFICATE OF PARTICIPATION"
+            style="
+              width: 100%;
+              max-width: 1000px;
+              display: block;
+              margin: 0 auto;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+            "
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
-    );
-    accordionCollapseElements.forEach(function (collapseEl) {
-      collapseEl.addEventListener("shown.bs.collapse", function () {
-        var header = this.previousElementSibling;
-        if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var accordionCollapseElements = document.querySelectorAll(
+        ".accordion-collapse"
+      );
+      accordionCollapseElements.forEach(function (collapseEl) {
+        collapseEl.addEventListener("shown.bs.collapse", function () {
+          var header = this.previousElementSibling;
+          if (header) {
+            header.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+</div>

@@ -46,31 +46,41 @@ robotics_projects:
 <h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
-  <p>
-    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
-  </p>
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
 </div>
 
 <div class="portrait">
-  <img src="{{ page.portrait_image | relative_url }}" alt="Portrait of {{ page.student_name }}" />
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
 </div>
 
 <div class="accordion" id="accordionProjects">
-
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
         Robotics Projects
       </button>
     </h2>
-    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
       <div class="accordion-body">
-        {% if page.robotics_projects %}
-          {% for project in page.robotics_projects %}
-            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
-          {% endfor %}
-        {% else %}
-          <p>No robotics projects listed yet.</p>
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
         {% endif %}
       </div>
     </div>
@@ -78,64 +88,193 @@ robotics_projects:
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
-          Math Concepts
-        </button>
-      </h2>
-      <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_weightconverter.html %}
-        </div>
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_weightconverter.html %}
       </div>
+    </div>
   </div>
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingIfElse">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
-          If Else
-        </button>
-      </h2>
-      <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_temperaturesystem.html %}
-        </div>
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_temperaturesystem.html %}
       </div>
+    </div>
   </div>
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingForLoops">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
-          For Loops
-        </button>
-      </h2>
-      <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_vowelcount.html %}
-        </div>
-      </div>
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">{% include python_vowelcount.html %}</div>
+    </div>
   </div>
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingWhile">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhile" aria-expanded="false" aria-controls="collapseWhile">
-          While Loops
-        </button>
-      </h2>
-      <div id="collapseWhile" class="accordion-collapse collapse" aria-labelledby="headingWhile" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_countdowntimer.html %}
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">{% include python_countdowntimer.html %}</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingCertificates">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseCertificates"
+        aria-expanded="false"
+        aria-controls="collapseCertificates"
+      >
+        Certificates
+      </button>
+    </h2>
+    <div
+      id="collapseCertificates"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingCertificates"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        <div class="card mb-3">
+          <div class="card-header">CERTIFICATE OF ACHIEVEMENT (BRONZE)</div>
+          <div class="card-body">
+            <h3>Description:</h3>
+            <p>
+              This certificate was awarded in recognition for the Antons’s
+              outstanding performance in the
+              <strong>World Robot Olympiad Singapore Nationals</strong>,
+              recognizing his skills in robotic challenges.
+            </p>
+          </div>
+        </div>
+
+        <div class="certificate-image mb-3">
+          <img
+            src="{{ '/anton-seow/anton_cert1.jpg' | relative_url }}"
+            alt="WRO Bronze"
+            style="
+              width: 100%;
+              max-width: 1000px;
+              display: block;
+              margin: 0 auto;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+            "
+          />
         </div>
       </div>
-  </div>
+      <div class="accordion-body">
+        <div class="card mb-3">
+          <div class="card-header">SQ1 + SQ2 TOP SCORE</div>
+          <div class="card-body">
+            <h3>Description:</h3>
+            <p>
+              Elijah achieved the Top Score across SQ1 and SQ2 in the
+              <strong>World Robot Olympiad Singapore Nationals</strong>. These
+              creative challenges tested teams on innovation, storytelling,
+              teamwork, and design thinking — from presenting their identity as
+              a robotics team to creating a professional attire concept for the
+              upcoming WRO International Final Singapore 2025. Anton’s team
+              stood out for their originality, strong communication, and ability
+              to connect creativity with the spirit of WRO
+            </p>
+          </div>
+        </div>
 
-</div><script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
-    accordionCollapseElements.forEach(function(collapseEl) {
-      collapseEl.addEventListener('shown.bs.collapse', function() {
+        <div class="certificate-image mb-3">
+          <img
+            src="{{ '/anton-seow/anton_cert2.jpg' | relative_url }}"
+            alt="WRO SQ1 & SQ2 Top Scores"
+            style="
+              width: 100%;
+              max-width: 1000px;
+              display: block;
+              margin: 0 auto;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse"
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
         if (header) {
-          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
     });

@@ -1,0 +1,216 @@
+---
+layout: student_portfolio
+title: "Luca Rusconi's Portfolio"
+student_name: "Luca Rusconi"
+student_nickname: "Luca"
+portrait_image: "/luca-rusconi/luca.png"
+
+intro: >
+  Hi, I'm [student_nickname] and I am 12 years old. 
+  I began learning robotics and block-based coding with Lego Mindstorms in Primary 2. 
+  I enjoy designing and building robots to automate simple daily tasks.
+  Learning robotics sparked my interest in Python, as I wanted to go beyond block coding and solve math problems using code. 
+  Later, I explored Pygame to create fun, educational games for my friends to play and compete.
+  I have documented my journey in robotics, coding, innovation, and STEM.
+
+robotics_projects:
+  - title: "Project 1: Ferris Wheel"
+    heading: "Ferris Wheel"
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. 
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
+      I programmed my creations to respond dynamically to their environment. 
+      One example was a ferris wheel that moves only when the touch sensor is activated. 
+      This simulates the real world when it is operator driven to ensure safety.
+    image: "/luca-rusconi/robot1.png"
+
+  - title: "Project 2: Motor controlled escalator"
+    heading: "Motor controlled escalator"
+    description: >
+      I built a LEGO escalator controlled by the angle readings of a separate motor. 
+      The system uses the rotation of the first motor to dynamically regulate the movement of the escalator, 
+      enabling synchronized motion between the two components. This mirrors real-world motion control systems such escalators or moving walkways 
+      which can be synchronized with sensors or mechanical systems that respond to human movement or operational demand.
+    image: "/luca-rusconi/robot2.png"
+
+  - title: "Project 3: Jack in the box"
+    heading: "Jack in the box"
+    description: >
+      I love to prank my siblings, so I built a fun and interactive jack in the box using Lego technic parts. 
+      The surprise character only jumps out when both motors reach a specific threshold that I have secretly set. 
+      The exact condition stays known only to me, giving me full control over when the prank is trigged. My siblings never see it coming, 
+      they would think its random but I’m the one behind the surprise every time.
+    image: "/luca-rusconi/robot3.png"
+
+  - title: "Project 4: Spinning rabbit head"
+    heading: "Spinning rabbit head"
+    description: >
+      My younger siblings loved playing with their toy rabbit head that spins when the wind hits it. 
+      They had to spin and stop them manually. I decided to create an automated toy that starts moving when the program starts. 
+      It will stop when ultrasonic sensor detects someone and return to the original position.
+    image: "/luca-rusconi/robot4.png"
+
+  - title: "Project 5: 2 Colour Sensors Controlled Tea Cup Ride"
+    heading: "2 Colour Sensors Controlled Tea Cup Ride"
+    description: >
+      My family loves going to the amusement park to take the tea cup ride, so I decided to recreate an automatic one with lego parts. 
+      When the touch sensor is pressed, the tea cup ride begins to spin. The direction of the spin—clockwise or counterclockwise—is determined by the reading from an ultrasonic sensor. 
+      Depending on how close our hand is to the sensor, the ride will rotate in one direction or the other. 
+      This demonstrates a basic form of sensor-driven logic, similar to how gesture-based or proximity-based interfaces work in interactive exhibits, robotics, or even smart home devices.
+    image: "/luca-rusconi/robot5.png"
+
+  - title: "Project 6: Geared king kong hands that increase speed"
+    heading: "Geared king kong hands that increase speed"
+    description: >
+      I built a LEGO model of King Kong with geared hands that move faster when the infrared sensor detects my presence. 
+      Using LEGO Technic gears, I designed a mechanism that increases the hand speed based on proximity readings. 
+      Variables in the program adjust the motor power dynamically depending on how close I am to the sensor — 
+      the closer I get, the faster the hands move. This system mimics how automated machines adjust behavior based on human presence, a concept used in fields like animatronics, 
+      motion-activated robotics, and safety systems in manufacturing.
+    image: "/luca-rusconi/robot6.png"
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_currencybreakdown.html %} {% include
+        python_timebreakdown.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_whoisolder %} {% include python_pricedifference %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_shoppingcart %} {% include python_initialsgenerator %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_numberguess %} {% include python_rollingdice %}
+      </div>
+    </div>
+  </div>
+</div>

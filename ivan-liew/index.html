@@ -1,0 +1,100 @@
+---
+layout: student_portfolio
+title: "Ivan Liew's Portfolio"
+student_name: "Ivan Liew"
+student_nickname: "Ivan Liew"
+portrait_image: "/ivan-liew/ivan.png"
+
+intro: >
+  My name is Ivan, and I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 4. I enjoy designing and building robots and structures that automate routine tasks in my daily life.
+  Learning robotics taught me to solve real-world problems and inspired me to explore beyond block-based coding. This sparked my interest in Python, where I began writing programs to solve math problems without using pen and paper.
+  As I strengthened my Python skills, I also learned Pygame and created educational games that my friends could play and compete in.
+  I have documented my journey in robotics, coding, innovation, and STEM.
+
+robotics_projects:
+  - title: "Project 1: Ferris Wheel"
+    heading: "Ferris Wheel"
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. 
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
+      I programmed my creations to respond dynamically to their environment. 
+      One example was a ferris wheel that moves only when the touch sensor is activated. 
+      This simulates real-world operator-driven control to ensure safety.
+    image: "/ivan-liew/robot1.png"
+
+  - title: "Project 2: Ultrasonic Activated Tractor"
+    heading: "Ultrasonic Activated Tractor"
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
+      I built a tractor. Using the ultrasonic sensor, the tractor moves when it detects a load on it.
+    image: "/ivan-liew/robot2.png"
+
+  - title: "Project 3: 2 Touch Activated Gripper"
+    heading: "2 Touch Activated Gripper"
+    description: >
+      I created a robotic gripper that opens and closes only when a touch sensor is activated.
+    image: "/ivan-liew/robot3.png"
+
+  - title: "Project 4: Touch Activated Automated Rabbit Head"
+    heading: "Touch Activated Automated Rabbit Head"
+    description: >
+      My younger siblings loved a toy rabbit head that spins in the wind, so I created an automated version...
+    image: "/ivan-liew/robot4.png"
+
+  - title: "Project 5: Colour and Infrared Activated Spinning Top"
+    heading: "Colour and Infrared Activated Spinning Top"
+    description: >
+      This is a sensor-controlled spinning top...
+    image: "/ivan-liew/robot5.png"
+
+  - title: "Project 6: Touch Activated Treadmill"
+    heading: "Touch Activated Treadmill"
+    description: >
+      I designed a treadmill-like system where speed increases with each touch...
+    image: "/ivan-liew/robot6.png"
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

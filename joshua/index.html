@@ -1,12 +1,12 @@
 ---
 layout: student_portfolio
-title: "Jordan Zachery's Portfolio"
-student_name: "Jordan Zachery"
-student_nickname: "Jordan Zachery"
-portrait_image: "/jordan-zachery/jordan.png"
+title: "Joshua Tung's Portfolio"
+student_name: "Joshua Tung"
+student_nickname: "Joshua Tung"
+portrait_image: "/joshua/joshua.png"
 
 intro: >
-  My name is Jordan and I am 12 years old this year. I started learning robotics with the Lego Mindstorms together with block-based coding when I was in Primary 4.  
+  My name is Joshua and I am 12 years old this year. I started learning robotics with the Lego Mindstorms together with block-based coding when I was in Primary 4.  
   I enjoy working on different structures and robots, designing and building them to automate routine daily tasks in my life.
   Learning robotics helped me to solve real world problems. I was eager to explore beyond block-based coding. 
   This spark my interest in learning python, text-based coding. 
@@ -14,35 +14,38 @@ intro: >
   I leant how to use Pygame and created different games that my friends could compete and challenge one another. 
   I have documented my journey in robotics, coding, Innovation and STEM.
 robotics_projects:
-  - title: "Project 1: Catapult"
-    heading: "Catapult"
+  - title: "Project 1: Bumper Car"
+    heading: "Bumper Car"
     description: >
-      I learned how to use LEGO Technic parts to design and build various mechanical structures.
-      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
-      I programmed my designs to perform specific actions based on real-time input. For example, 
-      I created a catapult mechanism that swings to hit the target when the touch sensor is activated—demonstrating 
-      how sensor-triggered automation is used in real-world systems that respond to user
-    image: "/jordan-zachery/robot1.png"
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. 
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
+      I programmed my creations to respond dynamically to their environment. 
+      One example was a bumper car that automatically reverses when its front touch sensor detects a 
+      collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: "/joshua/robot1.png"
 
-  - title: "Project 2: Ultrasonic Activated Tractor"
-    heading: "Ultrasonic Activated Tractor"
+  - title: "Project 2: Rack and Pinion Door"
+    heading: "Rack and Pinion Door"
     description: >
       I learned how to use LEGO Technic parts to design and build various mechanical structures. 
       By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
-      I built a tractor. Using the ultrasonic sensor, the tractor moves when it detects a load on it.
-    image: "/jordan-zachery/robot2.png"
+      I built a rack and pinion door. Using an ultrasonic sensor, 
+      I recreated an automatic sliding door like those commonly found in shopping centers. 
+      The door opens when a person is detected within a certain range, demonstrating how sensor technology is used in real life to improve accessibility, 
+      convenience, and energy efficiency in public buildings
 
-  - title: "Project 3: 2 Touch Activated Gripper"
-    heading: "2 Touch Activated Gripper"
+    image: "/joshua/robot2.png"
+
+  - title: "Project 3: Motor Controlled Jack In The Box"
+    heading: "Motor Controlled Jack In The Box"
     description: >
-      Having played at the arcade frequently, I decided to apply the same concepts and design principles to create a 
-      robotic gripper that opens and closes only when a touch sensor is activated. This mechanism allows for precise control, 
-      mimicking the arcade claw machine’s motion. Beyond recreation, this design has real-world applications — 
-      such as in assistive robotics, where touch-sensitive grippers can help individuals with limited mobility pick up and release objects safely, 
-      or in industrial automation, where the system can handle delicate components without causing damage. 
-      By integrating touch-based activation, the gripper combines fun design inspiration with practical functionality for real-world use.
-
-    image: "/jordan-zachery/robot3.png"
+      Wanting to create a fun toy to prank my siblings, 
+      I applied the design principles and coding skills I learned to build a build a Jack-in-the-Box mechanism. 
+      It’s controlled by a handheld motor that activates the opening and closing of the box. 
+      By spinning the motor in a specific sequence of directions, the Jack springs out, 
+      demonstrating how programmed mechanical sequences can create interactive and 
+      entertaining devices—similar to automated toys and novelty mechanisms used in entertainment and consumer products.
+    image: "/joshua/robot3.png"
 
   - title: "Project 4: Touch Activated Automated Rabbit Head"
     heading: "Touch Activated Automated Rabbit Head"
@@ -53,31 +56,7 @@ robotics_projects:
       In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. 
       When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, 
       and the toy returns to its original position.
-
-    image: "/jordan-zachery/robot4.png"
-
-  - title: "Project 5: Colour and Infrared Activated Spinning Top"
-    heading: "Colour and Infrared Activated Spinning Top"
-    description: >
-      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using 
-      LEGO technic parts and coded it to move when it is activated by a colour sensor. 
-      I could control the direction it spins using an infrared sensor when it detects someone within different range. 
-      If the infrared sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise. 
-      This setup mirrors real-life smart devices that respond to environmental cues. The system responds intuitively to human presence, 
-      creating an interactive and dynamic user experience.
-
-    image: "/jordan-zachery/robot5.png"
-
-  - title: "Project 6: Touch Activated Treadmill"
-    heading: "Touch Activated Treadmill"
-    description: >
-      As someone who enjoys exercising on a treadmill, 
-      I decided to recreate an automated treadmill using LEGO Technic parts. 
-      This miniature version functions similarly to a real treadmill—its speed is controlled by user input. 
-      With the use of a touch sensor, and coding concepts such as variables and if-else statements, 
-      the treadmill increases speed with each press—just like speed adjustments on a real gym machine.
-
-    image: "/jordan-zachery/robot6.png"
+    image: "/joshua/robot4.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -192,7 +171,9 @@ robotics_projects:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% include python_wordmatrix.html %} {% include python_pascal.html %}
+        {% include python_vowelcount.html %} {% include
+        python_numberpyramid.html %}{% include python_wordmatrix.html %} {%
+        include python_pascal.html %}
       </div>
     </div>
   </div>

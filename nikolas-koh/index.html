@@ -1,0 +1,240 @@
+---
+layout: student_portfolio
+title: Nikolas Koh's Portfolio
+student_name: Nikolas Koh
+student_nickname: Nikolas Koh
+portrait_image: /nikolas-koh/nikolas.png
+
+intro: >
+  My name is Le Xi, and I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 4, 
+  where I enjoyed designing and building robots to automate daily tasks.
+  Robotics inspired me to solve real-world problems and explore beyond block-based coding, which led me to learn Python. 
+  Using Python, I wrote programs to solve math problems without pen and paper. 
+  I also learned Pygame to create educational games where my friends could compete and challenge one another.
+  I have documented my journey in robotics, coding, innovation, and STEM.
+
+robotics_projects:
+  - title: "Project 1: Ping Pong Racket "
+    heading: Ping Pong Racket
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
+      I built a tractor. Using the ultrasonic sensor, the tractor moves when it detects the load on it. 
+      Such autonomous track-based vehicles are used to transport goods between different stations. 
+      Once the sensor detects the object, the vehicle automatically moves to deliver the item to the designated location. 
+      This automation reduces the need for human labor, increases efficiency, and ensures precise handling of materials.
+    image: /Nikolas-koh/robot1.png
+
+  - title: "Project 2: Ultrasonic Activated Tractor "
+    heading: Sushi Belt
+    description: >
+      I enjoy going to the restaurant for sushi and decided to recreate an automated one. 
+      Using the lego technic parts and a colour sensor, 
+      I created a sushi belt that is activated to move only when it detects the colour green. 
+      This reduces unnecessary motion and saves energy.
+    image: /Nikolas-koh/robot2.png
+
+  - title: "Project 3: Distance Sensor Coin Dispenser"
+    heading: Distance Sensor Coin Dispenser
+    description: >
+      Inspired by arcade coin dispensers, 
+      I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. 
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. 
+      When both sensors are triggered in order, the mechanism opens to release coins. 
+      This project demonstrates how sensor integration and conditional logic can create automated systems, 
+      similar to those used in vending machines .
+    image: /Nikolas-koh/robot3.png
+
+  - title: "Project 4: Touch Activated Automated Rabbit Head"
+    heading: Touch Activated Automated Rabbit Head
+    description: >
+      My younger siblings loved playing with their toy rabbit head, which spins when the wind hits it. 
+      They used to manually spin and stop it, which was fun but limited. To make it more interactive and engaging, 
+      I decided to create an automated version of the toy.
+      In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. 
+      When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position.
+    image: /Nikolas-koh/robot4.png
+
+  - title: "Project 5: Follow The Line"
+    heading: Follow The Line
+    description: >
+      Inspired by a line-following robot I observed at the library—used to transport books 
+      from the return bin to the sorting section—I decided to design a similar robot for home use. 
+      My version is programmed to follow a black line on the floor, 
+      allowing it to navigate efficiently through designated areas that require cleaning.
+    image: /Nikolas-koh/robot5.png
+
+  - title: "Project 6: Touch & Colour Activated Merry Go Round "
+    heading: Touch & Colour Activated Merry Go Round
+    description: >
+      As someone who enjoys exercising on a treadmill, 
+      I decided to recreate an automated treadmill using LEGO Technic parts. 
+      This miniature version functions similarly to a real treadmill—its speed is controlled by user input. 
+      With the use of a touch sensor, and coding concepts such as variables and if-else statements, 
+      the treadmill increases speed with each press—just like speed adjustments on a real gym machine.
+    image: /Nikolas-koh/robot6.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_primeguesser.html %} {% include python_factorial.html
+        %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_vowelcount.html %} {% include
+        python_numberpyramid.html %} {% include python_wordmatrix.html %} {%
+        include python_pascal.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evensum.html %} {% include python_countdowntimer.html
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse"
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

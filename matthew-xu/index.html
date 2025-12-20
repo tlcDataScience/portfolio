@@ -1,0 +1,126 @@
+---
+layout: student_portfolio
+title: "Matthew Xu's Portfolio"
+student_name: "Matthew Xu"
+student_nickname: "Matthew"
+portrait_image: "/matthew-xu/matthew.png"
+
+intro: >
+  My name is Matthew, and I am 12 years old. I began learning robotics with LEGO Mindstorms and block-based coding when I was in Primary 4.
+  I enjoy designing and building different structures and robots, especially those that help automate simple daily tasks.
+  Learning robotics taught me how to solve real-world problems and sparked my curiosity to explore beyond block-based coding.
+  That was when I became interested in Python, a text-based programming language. I wanted to create programs that could help me solve math problems without using pen and paper.
+  I also learned how to use Pygame, where I developed various games for my friends to play and challenge one another.
+  Throughout this journey, I have been documenting my experiences in robotics, coding, innovation, and STEM.
+
+robotics_projects:
+  - title: "Project 1: Bumper Car"
+    heading: "Bumper Car"
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems.
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors,
+      I programmed my creations to respond dynamically to their environment.
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—
+      mimicking real-world applications of obstacle detection in autonomous vehicles and robotic systems.
+    image: "/matthew-xu/robot1.png"
+
+  - title: "Project 2: Ultrasonic Activated Tractor"
+    heading: "Ultrasonic Activated Tractor"
+    description: >
+      I used LEGO Technic parts to build a tractor with an ultrasonic sensor.
+      When the tractor detects a load placed on it, it automatically starts moving.
+      This is similar to autonomous track-based vehicles used to transport goods in warehouses.
+      Once the sensor detects an object, the vehicle moves to deliver the item to a designated location,
+      helping increase efficiency and reduce the need for manual labor.
+    image: "/matthew-xu/robot2.png"
+
+  - title: "Project 3: Distance Sensor Coin Dispenser"
+    heading: "Distance Sensor Coin Dispenser"
+    description: >
+      Inspired by arcade coin dispensers, 
+      I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. 
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. 
+      When both sensors are triggered in order, the mechanism opens to release coins. 
+      This project demonstrates how sensor integration and conditional logic can create automated systems, 
+      similar to those used in vending machines .
+
+    image: "/matthew-xu/robot3.png"
+
+  - title: "Project 4: Ultrasonic Activated Automated Car"
+    heading: "Ultrasonic Activated Automated Car"
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original 
+      parking position after detecting an obstacle. This project simulates the logic behind autonomous parking 
+      systems found in modern vehicles.
+      Using the concept of nested while loops with variables, 
+      I programmed the car to activate and begin moving when the touch sensor is activated. 
+      While in motion, the car continuously checks for obstacles using the ultrasonic sensor. 
+      Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking 
+      a vehicle returning to its parking spot.
+    image: "/matthew-xu/robot4.png"
+
+  - title: "Project 5: Colour & Ultrasonic Activated Spinning Top"
+    heading: "Colour & Ultrasonic Activated Spinning Top"
+    description: >
+      Playing the top is my childhood game and 
+      I decided to recreate a sensor-controlled spinning top using LEGO technic parts 
+      and coded it to move when it is activated by a colour sensor. 
+      I could control the direction it spins using an ultrasonic sensor when it detects someone within different range. 
+      If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise. 
+      This setup mirrors real-life smart devices that respond to environmental cues. 
+      The system responds intuitively to human presence, creating an interactive and dynamic user experience.
+    image: "/matthew-xu/robot5.png"
+
+  - title: "Project 6: Touch Activated Treadmill"
+    heading: "Touch Activated Treadmill"
+    description: >
+      As someone who enjoys exercising, I recreated a treadmill using LEGO Technic parts.
+      This miniature version works similarly to a real treadmill—its speed changes based on user input.
+      Using a touch sensor and coding concepts like variables and if-else statements,
+      the treadmill increases speed with each press, just like an actual gym machine.
+    image: "/jude-ethan/robot6.png"
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

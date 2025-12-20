@@ -1,0 +1,124 @@
+---
+layout: student_portfolio
+title: "Jude Lee's Portfolio"
+student_name: "Jude Lee"
+student_nickname: "Jude"
+portrait_image: "/jude-lee/jude.png"
+
+intro: >
+  My name is Jude, and I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 4, 
+  where I enjoyed designing and building robots to automate daily tasks.
+  Robotics inspired me to solve real-world problems and explore beyond block-based coding, which led me to learn Python. 
+  Using Python, I wrote programs to solve math problems without pen and paper.
+  I also learned Pygame to create educational games where my friends could compete and challenge one another.
+  I have documented my journey in robotics, coding, innovation, and STEM.
+robotics_projects:
+  - title: "Project 1: Catapult"
+    heading: "Ping Pong Racket"
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
+      I programmed my designs to perform specific actions based on real-time input. 
+      For example, I created a catapult  mechanism that swings to hit the target when the touch sensor 
+      is activated—demonstrating how sensor-triggered automation is used in real-world systems  that respond to user
+    image: "/jude-lee/robot1.png"
+
+  - title: "Project 2: Rack and Pinion Door"
+    heading: "Rack and Pinion Door"
+    description: >
+      I built various mechanical structures using LEGO Technic parts and applied conditional logic (if-else) with different sensors.
+      For this project, I created a rack and pinion automatic door using an ultrasonic sensor.
+      The door opens when a person is detected within a certain distance, just like the automatic sliding doors commonly found in shopping centers.
+      This project demonstrates how sensor technology improves accessibility, convenience, and energy efficiency in real-life buildings.
+    image: "/jude-lee/robot2.png"
+
+  - title: "Project 3: Distance Sensor Coin Dispenser"
+    heading: "Distance Sensor Coin Dispenser"
+    description: >
+      Inspired by arcade coin dispensers, 
+      I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. 
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. 
+      When both sensors are triggered in order, the mechanism opens to release coins. 
+      This project demonstrates how sensor integration and conditional logic can create automated systems, 
+      to those used in vending machines .
+
+    image: "/jude-lee/robot3.png"
+
+  - title: "Project 4: Automated Car"
+    heading: "Automated Car"
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original 
+      parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems 
+      found in modern vehicles.
+      the concept of nested while loops with variables, 
+      I programmed the car to activate and begin moving when the touch sensor is activated. While in motion, 
+      the car continuously checks for obstacles using the ultrasonic sensor. 
+      Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot.
+
+    image: "/jude-lee/robot4.png"
+
+  - title: "Project 5: Follow The Line"
+    heading: "Follow The Line"
+    description: >
+      Inspired by a line-following robot I observed at the library—used to transport books from the return bin to the 
+      sorting section—I decided to design a similar robot for home use. 
+      My version is programmed to follow a black line on the floor, allowing it to navigate efficiently 
+      through designated areas that require cleaning.
+
+    image: "/jude-lee/robot4.png"
+
+  - title: "Project 6: Touch Activated Treadmill "
+    heading: "Touch Activated Treadmill"
+    description: >
+      As someone who enjoys exercising on a treadmill, 
+      I decided to recreate an automated treadmill using LEGO Technic parts. 
+      This miniature version functions similarly to a real treadmill—its speed is controlled by user input. 
+      With the use of a touch sensor, and coding concepts such as variables and if-else statements, 
+      the treadmill increases speed with each press—just like speed adjustments on a real gym machine.
+
+    image: "/jude-lee/robot4.png"
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

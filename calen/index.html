@@ -36,31 +36,6 @@ other_achievements:
   />
 </div>
 
-<div class="accordion" id="accordionProjects">
-  <!-- Pygame Projects -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingPygame">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsePygame"
-        aria-expanded="false"
-        aria-controls="collapsePygame"
-      >
-        Pygame Projects
-      </button>
-    </h2>
-    <div
-      id="collapsePygame"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingPygame"
-      data-bs-parent="#accordionProjects"
-    >
-      <div class="accordion-body">{% include pygame_speedmath.html %}</div>
-    </div>
-  </div>
-
   <!-- Math Concepts -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
@@ -164,37 +139,6 @@ other_achievements:
       <div class="accordion-body">
         {% include python_passwordstrength.html %} {% include
         python_fibonacci.html %}
-      </div>
-    </div>
-  </div>
-
-  <!-- Other Achievements -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingAchievements">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseAchievements"
-        aria-expanded="false"
-        aria-controls="collapseAchievements"
-      >
-        Other Achievements
-      </button>
-    </h2>
-    <div
-      id="collapseAchievements"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingAchievements"
-      data-bs-parent="#accordionProjects"
-    >
-      <div class="accordion-body">
-        {% if page.other_achievements %} {% for achievement in
-        page.other_achievements %} {% include dynamic_achievements.html
-        title=achievement.title description=achievement.description
-        image=achievement.image %} {% endfor %} {% else %}
-        <p>No other achievements listed yet.</p>
-        {% endif %}
       </div>
     </div>
   </div>

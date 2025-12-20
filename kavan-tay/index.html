@@ -120,7 +120,7 @@ robotics_projects:
     </div>
   </div>
 
-  <div class="accordion-item">
+  <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
       <button
         class="accordion-button collapsed"
@@ -224,19 +224,20 @@ robotics_projects:
       </div>
     </div>
   </div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
-    );
-    accordionCollapseElements.forEach(function (collapseEl) {
-      collapseEl.addEventListener("shown.bs.collapse", function () {
-        var header = this.previousElementSibling;
-        if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+</div> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var accordionCollapseElements = document.querySelectorAll(
+        ".accordion-collapse"
+      );
+      accordionCollapseElements.forEach(function (collapseEl) {
+        collapseEl.addEventListener("shown.bs.collapse", function () {
+          var header = this.previousElementSibling;
+          if (header) {
+            header.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+</div>

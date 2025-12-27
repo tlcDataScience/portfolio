@@ -195,7 +195,7 @@ robotics_projects:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        <!-- Certificate 1 -->
+        <!-- Certificate 1: NJIO -->
         <div class="card mb-3 mt-4">
           <div class="card-header">
             National Junior Informatics Olympiad 2025
@@ -224,7 +224,7 @@ robotics_projects:
           "
         />
 
-        <!-- Certificate 2 -->
+        <!-- Certificate 2: WRO -->
         <div class="card mb-3 mt-4">
           <div class="card-header">
             World Robot Olympiad Singapore Nationals 2025
@@ -239,11 +239,47 @@ robotics_projects:
             </p>
           </div>
         </div>
-        <img src="{{ '/teh-yi-feng/cert1.jpg' | relative_url }}" />
-        <img src="{{ '/teh-yi-feng/cert2.jpg' | relative_url }}" />
-        <img src="{{ '/teh-yi-feng/cert5.jpg' | relative_url }}" />
 
-        <!-- Certificate 3 -->
+        <img
+          src="{{ '/teh-yi-feng/cert1.jpg' | relative_url }}"
+          alt="WRO 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
+
+        <img
+          src="{{ '/teh-yi-feng/cert2.jpg' | relative_url }}"
+          alt="WRO 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
+
+        <img
+          src="{{ '/teh-yi-feng/cert5.jpg' | relative_url }}"
+          alt="WRO 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
+
+        <!-- Certificate 3: IJIO -->
         <div class="card mb-3 mt-4">
           <div class="card-header">
             International Junior Informatics Olympiad 2025
@@ -259,24 +295,48 @@ robotics_projects:
             </p>
           </div>
         </div>
-        <img src="{{ '/teh-yi-feng/cert3.png' | relative_url }}" />
-        <img src="{{ '/teh-yi-feng/cert6.png' | relative_url }}" />
+
+        <img
+          src="{{ '/teh-yi-feng/cert3.png' | relative_url }}"
+          alt="IJIO 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
+
+        <img
+          src="{{ '/teh-yi-feng/cert6.png' | relative_url }}"
+          alt="IJIO 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
       </div>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var accordionCollapseElements = document.querySelectorAll(
-          ".accordion-collapse"
-        );
-        accordionCollapseElements.forEach(function (collapseEl) {
-          collapseEl.addEventListener("shown.bs.collapse", function () {
-            var header = this.previousElementSibling;
-            if (header) {
-              header.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var accordionCollapseElements = document.querySelectorAll(
+            ".accordion-collapse"
+          );
+          accordionCollapseElements.forEach(function (collapseEl) {
+            collapseEl.addEventListener("shown.bs.collapse", function () {
+              var header = this.previousElementSibling;
+              if (header) {
+                header.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            });
           });
         });
-      });
-    </script>
+      </script>
+    </div>
   </div>
 </div>

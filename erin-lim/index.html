@@ -1,0 +1,219 @@
+---
+layout: student_portfolio
+title: "Erin Lim's Portfolio"
+student_name: "Erin Lim"
+student_nickname: "Erin"
+portrait_image: "/erin-lim/erin.png"
+
+intro: >
+  My name is Erin and I am 12 years old this year. I started learning robotics with the Lego Mindstorms together with block-based coding when I was in Primary 4.  
+  I enjoy working on different structures and robots, designing and building them to automate routine daily tasks in my life.
+  Learning robotics helped me to solve real world problems. I was eager to explore beyond block-based coding. This spark my interest in learning python, text-based coding. 
+  I wanted to write codes to help me solve my math problem sums without the use of the pen and paper.
+  Beyond honing my python fundamentals, I wanted to create games that was beneficial to students. I leant how to use Pygame and created different games that my friends could compete and challenge one another. 
+  I have documented my journey in robotics, coding, Innovation and STEM.
+robotics_projects:
+  - title: "Project 1: Bumper Car"
+    heading: "Bumper Car"
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. 
+      By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
+      I programmed my creations to respond dynamically to their environment. 
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: "/erin-lim/robot1.png"
+
+  - title: "Project 2: Rack and Pinion Door"
+    heading: "Rack and Pinion Door "
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, 
+      I built a rack and pinion door. Using an ultrasonic sensor, 
+      I recreated an automatic sliding door like those commonly found in shopping centers. 
+      The door opens when a person is detected within a certain range, demonstrating how sensor technology is used in real life to improve accessibility, convenience, and energy efficiency in public buildings
+    image: "/erin-lim/robot2.png"
+
+  - title: "Project 3: Motor Controlled Jack In The Box"
+    heading: "Motor Controlled Jack In The Box"
+    description: >
+      Wanting to create a fun toy to prank my siblings, 
+      I applied the design principles and coding skills I learned to build a build a Jack-in-the-Box mechanism. 
+      It’s controlled by a handheld motor that activates the opening and closing of the box. 
+      By spinning the motor in a specific sequence of directions, 
+      the Jack springs out, demonstrating how programmed mechanical sequences can create interactive and entertaining devices—similar to automated toys and novelty mechanisms used in entertainment and consumer products.
+    image: "/erin-lim/robot3.png"
+
+  - title: "Project 4: Ultrasonic Activated Automated Car"
+    heading: "Ultrasonic Activated Automated Car"
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original 
+      parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems found in modern vehicles.
+      Using the concept of nested while loops with variables, 
+      I programmed the car to activate and begin moving when the touch sensor is activated. While in motion, the car continuously checks for obstacles using the ultrasonic sensor. Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot.
+    image: "/erin-lim/robot4.png"
+
+  - title: "Project 5: 2 Colour Activated Tea Cup Ride "
+    heading: "2 Colour Activated Tea Cup Ride "
+    description: >
+      As someone who enjoys visiting amusement parks—especially the tea cup ride, 
+      I recreated a classic amusement park teacup ride using LEGO Technic parts. 
+      It incorporates two color sensors to make decisions about when and how to spin, 
+      based on both the color detected and the amount of reflected light. 
+      This adds a layer of safety and control that reflects how real-world rides use environment-sensitive automation.
+    image: "/erin-lim/robot5.png"
+
+  - title: "Project 6: Touch And Colour Activated Merry Go Round "
+    heading: "Touch And Colour Activated Merry Go Round  "
+    description: >
+      My younger brother enjoys riding a merry-go-round, 
+      so I decided to build an automated LEGO Technic version for his imaginary friend. 
+      The ride’s speed is controlled using both a touch sensor and a color sensor, 
+      creating an interactive and responsive amusement experience. 
+      Using core programming concepts such as variables and if-else logic, 
+      I programmed the system to decrease the ride’s speed when the color sensor detects a specific value and to 
+      increase the speed when the touch sensor is activated. This combination of hardware and software control allows for smooth, 
+      adaptive motion that mirrors the operation of real amusement rides.
+    image: "/erin-lim/robot6.png"
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_primeguesser.html %} {% include python_factorial.html
+        %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_wordmatrix.html %} {% include python_pascal.html %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evensum.html %} {% include python_countdowntimer.html
+        %}
+      </div>
+    </div>
+  </div>
+</div>

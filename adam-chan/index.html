@@ -1,0 +1,168 @@
+---
+layout: student_portfolio
+title: Adam's Portfolio
+student_name: Adam Chan
+student_nickname: Adam
+portrait_image: /adam-chan/adam.png
+
+intro: >
+  My name is [student_nickname], and I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 2, and I enjoy designing robots to automate daily tasks.
+  Robotics sparked my interest in Python, where I began writing code to solve math problems and explore text-based programming. I also learned Pygame and created fun, educational games for my friends to play and challenge each other.
+  I have documented my journey in robotics, coding, innovation, and STEM.
+robotics_projects:
+  - title: "Project 1: Touch activated Bumper Car"
+    heading: Touch activated Bumper Car
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs. 
+      Using the coding concept of conditionals (if-else), 
+      together with different sensors, I coded my designs to do certain actions only if a specific condition is met. 
+      Among many other projects, 
+      I created a bumper car that reverses if the touch sensor is activated when hitting the wall.
+    image: /adam-chan/robot1.png
+
+  - title: "Project 2: Ultrasonic activated sliding door"
+    heading: Ultrasonic activated sliding door
+    description: >
+      Using an ultrasonic sensor, 
+      I created a sliding door that opens and closes once it detects someone in front of it. 
+      I determined the threshold value that corresponds to what I determine is too close or still far.
+
+    image: /adam-chan/robot2.png
+
+  - title: "Project 3: Touch activated gripper"
+    heading: Touch Activated Gripper
+    description: >
+      Having played at the arcade frequently,
+      I decided to use the concepts and design skills to create a gripper that is activated to open and close only when touch sensor is activated. 
+      I could then recreate the arcade game of picking up and releasing anything at home
+
+    image: /adam-chan/robot3.png
+
+  - title: "Project 4: Touch activated pinwheel"
+    heading: Touch activated pinwheel
+    description: >
+      My younger siblings loved spinning the pinwheel. I decided to create an automated one that starts moving when the program starts. 
+      It will stop when the touch sensor is activated and return to the original position.
+    image: /adam-chan/robot4.png
+
+  - title: "Project 5: Colour and ultrasonic sensor activated top"
+    heading: Colour and ultrasonic sensor activated top
+    description: >
+      My friends and I love playing with tops. 
+      I decided to recreate an automated spinning top. 
+      I coded it to move when it is activated by a colour sensor. 
+      I could control the direction it spins using an ultrasonic sensor. 
+      Depending on the distance someone is from the top, it would spin clockwise or anti-clockwise.
+    image: /adam-chan/robot5.png
+  - title: "Project 6: Touch activated increasing power generator "
+    heading: Touch activated increasing power generator
+    description: >
+      When I was on a holiday, 
+      I saw a manually operated power generator where the operator had to manually spin the lever for the generator to increase speed. 
+      I decided to recreate an automated one the LEGO technic parts. 
+      In my project, using the concept of variables, the generator increases speed each time the touch sensor is activated.
+    image: /adam-chan/robot6.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">{% include python_mathdivision.html %}</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">{% include python_factorychecker.html %}</div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse"
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

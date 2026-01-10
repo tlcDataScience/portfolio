@@ -1,0 +1,240 @@
+---
+layout: student_portfolio
+title: Zachary's Portfolio
+student_name: Zachary Sng
+student_nickname: Zachary
+portrait_image: /zachary/zach.jpg
+
+intro: >
+  Hi, I'm [student_nickname] and I am 12 years old this year. I started learning robotics with the Lego Mindstorms together with block-based coding when I was in Primary 4.  I enjoy working on different structures and robots, 
+  designing and building them to automate routine daily tasks in my life
+  Beyond honing my python fundamentals, 
+  I wanted to create games that was beneficial to students. I leant how to use Pygame and created different games that my friends could compete and challenge one another. 
+  I have documented my journey in robotics, coding, 
+  Innovation and STEM.
+
+robotics_projects:
+  - title: "Project 1: Ping Pong Racket"
+    heading: Ping Pong Racket
+    description: >
+      I learned how to use LEGO Technic parts to design and build various 
+      mechanical structures. 
+      By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I programmed my designs to perform specific actions based on real-time input. 
+      For example, I created a ping pong racket mechanism that swings to hit the ball when the touch sensor is activated—demonstrating how sensor-triggered automation is used in real-world systems  that respond to user input.
+    image: /zachary/robot1.png
+
+  - title: "Project 2: Distance sensor Coin dispenser"
+    heading: Distance sensor Coin dispenser
+    description: >
+      Inspired by arcade coin dispensers, 
+      I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. 
+      The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. When both sensors are triggered in order, 
+      the mechanism opens to release coins. This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines .
+    image: /zachary/robot2.png
+
+  - title: "Project 3: Ultrasonic Activated Automated car"
+    heading: Ultrasonic Activated Automated car
+    description: >
+      I decided to create an automated car using LEGO Technic parts that can return to its original parking position after detecting an obstacle. This project simulates the logic behind autonomous parking systems found in modern vehicles.
+      Using the concept of nested while loops with variables, I programmed the car to activate and begin moving when the touch sensor is activated. While in motion, the car continuously checks for obstacles using the ultrasonic sensor. Once an obstacle is detected, the car automatically stops and reverses back to its starting point—mimicking a vehicle returning to its parking spot.
+
+    image: /zachary/robot3.png
+  - title: "Project 4: Colour & Ultrasonic Activated Spinning Top"
+    heading: Ultrasonic Activated Automated car
+    description: >
+      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is activated by a colour sensor. I could control the direction it spins using an ultrasonic sensor when it detects someone within different range. If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise. This setup mirrors real-life smart devices that respond to environmental cues. The system responds intuitively to human presence, creating an interactive and dynamic user experience.
+    image: /zachary/robot4.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_primeguesser.html %} {% include
+        python_factorychecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_vowelcount.html %} {% include
+        python_numberpyramid.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evensum.html %} {% include python_countdowntimer.html
+        %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAchievements">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseAchievements"
+        aria-expanded="false"
+        aria-controls="collapseAchievements"
+      >
+        Other Achievements
+      </button>
+    </h2>
+    <div
+      id="collapseAchievements"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingAchievements"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.other_achievements %} {% for achievement in
+        page.other_achievements %} {% include dynamic_achievements.html
+        title=achievement.title description=achievement.description
+        image=achievement.image %} {% endfor %} {% else %}
+        <p>No other achievements listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse"
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

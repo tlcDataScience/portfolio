@@ -43,6 +43,19 @@ robotics_projects:
       In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. 
       When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position.
     image: /Ethan-zhang/robot4.png
+  - title: "Project 5: Colour and ultrasonic sensor activated top"
+    heading: Colour and ultrasonic sensor activated top
+    description: >
+      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is 
+      activated by a colour sensor. The direction it moves is controlled by the reading of the ultrasonic sensor. It is designed to enhance user engagement and ensures consistent gameplay with minimal effort needed for monitoring or control.
+
+    image: /Ethan-zhang/robot5.png
+  - title: "Project 6: 2 Touch activated speed increasing speed decreasing blades"
+    heading: 2 Touch activated speed increasing speed decreasing blades
+    description: >
+      I built a lego model of a blades that is fully automated to replicate how real fan blades would respond to inputs from sensors. Touch sensor 1 is used to increase the rotation speed while the touch sensor 2 slows it down to enhance user experience and safety.
+
+    image: /Ethan-zhang/robot6.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -218,7 +231,7 @@ robotics_projects:
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
+      ".accordion-collapse",
     );
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {

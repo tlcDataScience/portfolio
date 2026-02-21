@@ -21,6 +21,14 @@ Coding_projects:
       When adding a contact, the program prompts the user to enter a name and the associated phone number. When deleting a contact, the user is asked to enter either the name or phone number of the contact they wish to remove. When searching, the user can input a name or phone number to find a specific contact. The “Show All” feature displays all saved contacts in the list.
     image: /myra/pic1.png
     trinket_embed: "https://trinket.io/embed/python3/ee7ff19b6dd8"
+    concepts:
+      - title: "Dictionary"
+        explanation: >
+          They provide a mutable collection of key-value pairs that lets you efficiently access and mutate values through their corresponding keys
+          A dictionary is a collection which is ordered, changeable and do not allow duplicates.
+      - title: "Functions"
+        explanation: >
+          Python Functions are a block of statements that does a specific task. The idea is to put some commonly or repeatedly done task together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.
 
   - heading: "Project 2: Prime number detection"
     description: >
@@ -61,6 +69,15 @@ Coding_projects:
     description: >
       Encryption is a process in which an input message is converted into an encoded form to protect its meaning. In this program, I used ord() to convert characters into their numeric (ASCII) values, and chr() to convert those numeric values back into characters, creating the encrypted message.
     image: /myra/pic8.png
+    concepts:
+      - title: "Ord Library"
+        explanation: >
+          The built-in ord() function returns the Unicode code point for a given character. It takes a single character as an argument and returns its integer representation in the Unicode table
+          Each letter is associated to a number such as “A” is associated to “65”
+      - title: "Character library"
+        explanation: >
+          The built-in chr() function returns the character whose Unicode code point is the integer provided as an argument
+          It converts numbers to letters
 
   - heading: "Project 8: Tic-Tac-Toe"
     description: >
@@ -78,6 +95,17 @@ Coding_projects:
       to let the player decide whether to keep rolling or start a new round.
     image: /myra/pic10.png
     trinket_embed: "https://trinket.io/embed/python3/ae343229a07b"
+    concepts:
+      - title: "Control Flow"
+        explanation: >
+          Nested Loops: The program uses a nested loop structure; the outer loop manages multiple games, while the inner loop manages individual rolls within a single game.
+          Boolean Flags: Variables like keep_rolling = True and play_again = True as "switches" to control when a game should continue or stop based on user input.
+          Conditional Logic: Uses if/else statements to compare numbers, check for "doubles," and determine if a new high score has been achieved.
+
+      - title: "Comparison and Arithmetic Operators"
+        explanation: >
+          Arithmetic Operators: += (addition assignment) quickly update scores and + to sum the two dice rolls.
+          Comparison Operators: Uses  > (greater than) to check for high scores and == (equal to) to detect when both dice show the same number.
 
   - heading: "Project 10: Translator"
     description: >
@@ -87,6 +115,17 @@ Coding_projects:
       The program uses a while True loop to allow for multiple translations in one session.
     image: /myra/pic11.png
     trinket_embed: "https://trinket.io/embed/python3/109a116c1fcc"
+    concepts:
+      - title: "Class"
+        explanation: >
+          I have created a Python program that uses Object-Oriented Programming to translate digits (0-9) into words across three different languages: English, French, and Chinese. 
+          Inheritance: The project uses a "Parent" class (EnglishDigit) that handles the basic setup, while "Child" classes (FrenchDigit, ChineseDigit) inherit those features.
+          Method Overriding: The child classes "override" the input prompts so that the program asks for numbers in the specific language selected by the user.
+      - title: "Dictionary"
+        explanation: >
+          The Key-Value Map: Each language class contains a internal dictionary that maps a numeric string (the "key") to its written word equivalent (the "value").
+          Data Retrieval: When a user enters a number, the program looks it up in the dictionary to instantly find the translation without needing complex math.
+          Customization: Each language has its own unique dictionary; for example, the Chinese dictionary maps "7" to "七" while the French one maps it to "sept".
 
   - heading: "Project 11: Roamer and Hunter"
     description: >
@@ -96,6 +135,14 @@ Coding_projects:
       Field Initialization: A 10x20 grid populated with flowers (🌼) acting as open paths and sunflowers (🌻) acting as "dead end" obstacles that Roamers cannot pass through.
     image: /myra/pic12.png
     trinket_embed: "https://trinket.io/embed/pygame/3a972cc13d29"
+    concepts:
+      - title: "Inheritance"
+        explanation: >
+          Inheritance: The Roamer class inherits from Field, allowing it to access the game board's properties directly.
+          Object-Oriented Programming (OOP): The game is built using classes (Field, Roamer, Hunter) to organize data. Each class has its own attributes  or methods.
+      - title: "Static Methods"
+        explanation: >
+          The main() function is defined as a @staticmethod, allowing the game to be launched directly from the Field class without needing to set up complex instances first.
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -155,6 +202,17 @@ Coding_projects:
           style="border-radius: 12px; border: 1px solid #ddd"
         >
         </iframe>
+        {% endif %} {% if project.concepts %}
+        <h5 style="margin-top: 20px">Python Concepts Used:</h5>
+        <ul>
+          {% for concept in project.concepts %} {% if concept.title %}
+          <li>
+            <strong>{{ concept.title }}:</strong> {{ concept.explanation }}
+          </li>
+          {% else %}
+          <li>{{ concept }}</li>
+          {% endif %} {% endfor %}
+        </ul>
         {% endif %}
       </div>
     </div>

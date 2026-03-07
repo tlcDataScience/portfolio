@@ -143,6 +143,20 @@ Coding_projects:
       - title: "Static Methods"
         explanation: >
           The main() function is defined as a @staticmethod, allowing the game to be launched directly from the Field class without needing to set up complex instances first.
+robotics_projects:
+  - title: "Project 1: Tractor with Ultrasonic Sensor"
+    heading: Tractor with Ultrasonic Sensor
+    description: I built a semi autonomous tractor equipped with ultrasonic sensor to detect and avoid obstacles, helping farms operate machinery safely and efficiently in varied terrain.
+    image: /myra/robot1.jpg
+
+  - title: "Project 2: Touch activated Ferris Wheel"
+    heading: Touch activated Ferris Wheel
+    description: >
+      I learnt how to use the LEGO technic parts to create different designs. 
+      Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met. 
+      Among many other projects, I created a ferris wheel that spins only if the touch sensor is activated
+
+    image: /myra/robot2.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -160,6 +174,34 @@ Coding_projects:
 </div>
 
 <div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
   {% for project in page.Coding_projects %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading{{ forloop.index }}">

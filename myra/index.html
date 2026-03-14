@@ -15,7 +15,135 @@ intro: >
   In the future, I aspire to become a neurologist, and I value friendship, good social skills, and strong character development.
 
 Coding_projects:
-  # (All your coding projects here, unchanged)
+  - heading: "Project 1: Contact List"
+    description: >
+      Contact List is a program that stores contacts along with their phone numbers. It allows users to add, delete, search, and display all saved contacts.
+      When adding a contact, the program prompts the user to enter a name and the associated phone number. When deleting a contact, the user is asked to enter either the name or phone number of the contact they wish to remove. When searching, the user can input a name or phone number to find a specific contact. The “Show All” feature displays all saved contacts in the list.
+    image: /myra/pic1.png
+    trinket_embed: "https://trinket.io/embed/python3/ee7ff19b6dd8"
+    concepts:
+      - title: "Dictionary"
+        explanation: >
+          They provide a mutable collection of key-value pairs that lets you efficiently access and mutate values through their corresponding keys
+          A dictionary is a collection which is ordered, changeable and do not allow duplicates.
+      - title: "Functions"
+        explanation: >
+          Python Functions are a block of statements that does a specific task. The idea is to put some commonly or repeatedly done task together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.
+
+  - heading: "Project 2: Prime number detection"
+    description: >
+      Prime Number Detector is a program that determines whether an input number is prime or not. It uses an if-else statement to check if the number can be divided evenly by any number other than 1 and itself.
+      If the number can be divided by another number, the program prints “Not Prime.” If it cannot be divided evenly by any other number, the program prints “Prime.”
+    image: /myra/pic2.png
+    trinket_embed: "https://trinket.io/embed/python3/deb088dbd8bf"
+
+  - heading: "Project 3: Memory Flash"
+    description: >
+      Memory Flash is a memory game designed to help users improve their concentration and memory skills. At the start of the game, all cards are placed face down. The player opens any two cards and places a color sensor on top of each opened card. The system then checks whether the two cards match and provides feedback through the screen and sound. A smiley face with a positive sound indicates a correct match, while a sad face with a “dun-dun-dun” sound indicates an incorrect match. When a matching pair is found, the player must remember the positions of those cards and avoid opening them again. The goal of the game is to successfully find all three matching pairs without reopening any completed pair.
+    images:
+      - /myra/pic3.png
+      - /myra/pic4.png
+
+  - heading: "Project 4: Science Quiz Project"
+    description: >
+      My project is a Science quiz based on the classification of animals. 
+      I used different coding concepts such as random number generators, 
+      variables, and lists. The quiz includes buttons assigned to various animals, 
+      such as bats and snakes. The robot asks the user questions, 
+      for example identifying which animal is an amphibian. If the user chooses the wrong answer, the question is repeated until the correct answer is selected, after which the quiz moves on to the next question.
+    image: /myra/pic5.png
+
+  - heading: "Project 5: Math Quiz"
+    description: >
+      This program is built using block-based visual coding and runs on an event-driven model. It responds to user actions such as button clicks and screen events to control how the app behaves. The code uses variables to store information and track the current state of the application. Conditional logic (if–else statements) is used to make decisions based on user input or stored values. Reusable procedures help organize the logic and avoid repeating the same steps.
+      Based on these conditions, the program dynamically updates the user interface. Overall, it creates an interactive experience that changes in real time as the user interacts with it.
+    image: /myra/pic6.png
+
+  - heading: "Project 6: Rolling Dice"
+    description: >
+      This program simulates a dice roll using a button input. 
+      It continuously displays instructions prompting the user to press a button to roll the dice. When the button is pressed and released, a random number between 1 and 6 is generated. On the first roll, it displays that there is no previous value. On subsequent rolls, it shows both the current dice value and the previous roll. A counter keeps track of how many times the dice has been rolled. After each roll, the current value is saved as the previous value for the next round.
+    image: /myra/pic7.png
+
+  - heading: "Project 7: Encryption"
+    description: >
+      Encryption is a process in which an input message is converted into an encoded form to protect its meaning. In this program, I used ord() to convert characters into their numeric (ASCII) values, and chr() to convert those numeric values back into characters, creating the encrypted message.
+    image: /myra/pic8.png
+    concepts:
+      - title: "Ord Library"
+        explanation: >
+          The built-in ord() function returns the Unicode code point for a given character. It takes a single character as an argument and returns its integer representation in the Unicode table
+          Each letter is associated to a number such as “A” is associated to “65”
+      - title: "Character library"
+        explanation: >
+          The built-in chr() function returns the character whose Unicode code point is the integer provided as an argument
+          It converts numbers to letters
+
+  - heading: "Project 8: Tic-Tac-Toe"
+    description: >
+      Tic-Tac-Toe is a game I designed using Python’s Turtle module, 
+      which allows graphics and drawings to be created using a virtual “turtle” 
+      that moves around the screen. The program draws nine circles to represent the game grid and prompts Player 1 to choose a number from 1 to 9. After a move is made, Player 2 is prompted to select a number, and the program draws either a star or a heart in the chosen circle. If a player selects a number that has already been used, the same player is asked to choose again. The program continuously checks for three symbols in a row to determine a winner and displays whether Player 1 or Player 2 has won. If no player achieves three in a row, the game ends in a tie.
+    image: /myra/pic9.png
+    trinket_embed: "https://trinket.io/embed/pygame/180e6b270812"
+
+  - heading: "Project 9: Random Rolls"
+    description: >
+      I have created a Python game named random_rolls.py 
+      that generates two random numbers between 1–6 and adds them to a running total. 
+      The program tracks high scores across multiple games and uses interactive prompts 
+      to let the player decide whether to keep rolling or start a new round.
+    image: /myra/pic10.png
+    trinket_embed: "https://trinket.io/embed/python3/ae343229a07b"
+    concepts:
+      - title: "Control Flow"
+        explanation: >
+          Nested Loops: The program uses a nested loop structure; the outer loop manages multiple games, while the inner loop manages individual rolls within a single game.
+          Boolean Flags: Variables like keep_rolling = True and play_again = True as "switches" to control when a game should continue or stop based on user input.
+          Conditional Logic: Uses if/else statements to compare numbers, check for "doubles," and determine if a new high score has been achieved.
+
+      - title: "Comparison and Arithmetic Operators"
+        explanation: >
+          Arithmetic Operators: += (addition assignment) quickly update scores and + to sum the two dice rolls.
+          Comparison Operators: Uses  > (greater than) to check for high scores and == (equal to) to detect when both dice show the same number.
+
+  - heading: "Project 10: Translator"
+    description: >
+      The program uses Object-Oriented Programming (OOP) to act as a multilingual translator.
+      The user picks a language, which triggers the creation of a specific class object.
+      A key-value map instantly translates the numeric input (e.g., "2") into a word (e.g., "二").
+      The program uses a while True loop to allow for multiple translations in one session.
+    image: /myra/pic11.png
+    trinket_embed: "https://trinket.io/embed/python3/109a116c1fcc"
+    concepts:
+      - title: "Class"
+        explanation: >
+          I have created a Python program that uses Object-Oriented Programming to translate digits (0-9) into words across three different languages: English, French, and Chinese. 
+          Inheritance: The project uses a "Parent" class (EnglishDigit) that handles the basic setup, while "Child" classes (FrenchDigit, ChineseDigit) inherit those features.
+          Method Overriding: The child classes "override" the input prompts so that the program asks for numbers in the specific language selected by the user.
+      - title: "Dictionary"
+        explanation: >
+          The Key-Value Map: Each language class contains a internal dictionary that maps a numeric string (the "key") to its written word equivalent (the "value").  
+          Data Retrieval: When a user enters a number, the program looks it up in the dictionary to instantly find the translation without needing complex math.  
+          Customization: Each language has its own unique dictionary; for example, the Chinese dictionary maps "7" to "七" while the French one maps it to "sept".
+
+  - heading: "Project 11: Roamer and Hunter"
+    description: >
+      I have created a Python game that simulates a high-stakes 
+      "cat and mouse" chase on a 2D grid. The game features multiple "Roamers" 
+      trying to evade a single "Hunter" while navigating a field filled with obstacles.
+      Field Initialization: A 10x20 grid populated with flowers (🌼) acting as open paths and sunflowers (🌻) acting as "dead end" obstacles that Roamers cannot pass through.
+    image: /myra/pic12.png
+    trinket_embed: "https://trinket.io/embed/pygame/3a972cc13d29"
+    concepts:
+      - title: "Inheritance"
+        explanation: >
+          Inheritance: The Roamer class inherits from Field, allowing it to access the game board's properties directly.
+          Object-Oriented Programming (OOP): The game is built using classes (Field, Roamer, Hunter) to organize data. Each class has its own attributes  or methods.
+      - title: "Static Methods"
+        explanation: >
+          The main() function is defined as a @staticmethod, allowing the game to be launched directly from the Field class without needing to set up complex instances first.
+
 robotics_projects:
   - title: "Project 1: Tractor with Ultrasonic Sensor"
     heading: Tractor with Ultrasonic Sensor
@@ -47,7 +175,7 @@ certifications:
   - /myra/certificate_JUNIOR_TERM_4_1770815071668.pdf
 ---
 
-<h1>{{ page.student_name }}'s Portfolio</h1>
+<h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
   <p>{{ page.intro }}</p>
@@ -62,7 +190,7 @@ certifications:
 </div>
 
 <div class="accordion" id="accordionProjects">
-  <!-- Robotics Projects Accordion -->
+    <!-- Robotics Projects -
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -92,7 +220,7 @@ certifications:
     </div>
   </div>
 
-  <!-- Certificates Accordion -->
+    <!-- Certificates -
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingCerts">
       <button
@@ -128,7 +256,7 @@ certifications:
     </div>
   </div>
 
-  <!-- Coding Projects Accordions -->
+    <!-- Coding Projects -
   {% for project in page.Coding_projects %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading{{ forloop.index }}">

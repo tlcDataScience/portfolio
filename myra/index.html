@@ -157,6 +157,26 @@ robotics_projects:
       Among many other projects, I created a ferris wheel that spins only if the touch sensor is activated
 
     image: /myra/robot2.png
+
+
+
+myra/certificate_CODER_BASIC_1770814879694.pdf myra/certificate_CODER_BASIC_1770815069659.pdf myra/certificate_CODER_INTERMEDIATE_1770814879660.pdf myra/certificate_CODER_PYTHON_ADVANCED_1770815061269.pdf myra/certificate_CODER_PYTHON_ESSENTIALS_1770815058576.pdf myra/certificate_CODER_PYTHON_INTRODUCTORY_1770814904870.pdf myra/certificate_CODER_PYTHON_ESSENTIALS_1770815066305.pdf myra/certificate_CODER_PYTHON_INTRODUCTORY_1770815067266.pdf myra/certificate_JUNIOR_TERM_1_1770815061139.pdf myra/certificate_JUNIOR_TERM_1_1770815075212.pdf myra/certificate_JUNIOR_TERM_2_1770815061414.pdf myra/certificate_JUNIOR_TERM_2_1770815073936.pdf myra/certificate_JUNIOR_TERM_3_1770815072941.pdf myra/certificate_JUNIOR_TERM_4_1770815071668.pdf
+
+  certifications:
+  - /myra/certificate_CODER_BASIC_1770814879694.pdf
+  - /myra/certificate_CODER_BASIC_1770815069659.pdf
+  - /myra/certificate_CODER_INTERMEDIATE_1770814879660.pdf
+  - /myra/certificate_CODER_PYTHON_ADVANCED_1770815061269.pdf
+  - /myra/certificate_CODER_PYTHON_ESSENTIALS_1770815058576.pdf
+  - /myra/certificate_CODER_PYTHON_INTRODUCTORY_1770814904870.pdf
+  - /myra/certificate_CODER_PYTHON_ESSENTIALS_1770815066305.pdf
+  - /myra/certificate_CODER_PYTHON_INTRODUCTORY_1770815067266.pdf
+  - /myra/certificate_JUNIOR_TERM_1_1770815061139.pdf
+  - /myra/certificate_JUNIOR_TERM_1_1770815075212.pdf
+  - /myra/certificate_JUNIOR_TERM_2_1770815061414.pdf
+  - /myra/certificate_JUNIOR_TERM_2_1770815073936.pdf
+  - /myra/certificate_JUNIOR_TERM_3_1770815072941.pdf
+  - /myra/certificate_JUNIOR_TERM_4_1770815071668.pdf
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -256,6 +276,43 @@ robotics_projects:
           {% endif %} {% endfor %}
         </ul>
         {% endif %}
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCerts">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseCerts"
+        >
+          Certificates
+        </button>
+      </h2>
+
+      <div
+        id="collapseCerts"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionProjects"
+      >
+        <div class="accordion-body">
+          {% if page.certifications %} {% for cert in page.certifications %}
+
+          <iframe
+            src="{{ cert | relative_url }}"
+            width="100%"
+            height="600"
+            style="
+              border: 1px solid #ddd;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          ></iframe>
+
+          {% endfor %} {% else %}
+          <p>No certificates added yet.</p>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>

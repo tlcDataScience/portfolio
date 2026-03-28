@@ -1,0 +1,64 @@
+---
+layout: student_portfolio
+title: Mathieu's Innovation Videos
+student_name: Mathieu
+student_nickname: Mathieu
+portrait_image: /mathieu-videos/mathieu.png
+
+intro: >
+  Hello! I am [student_nickname] and these are my videos for the Tan Kah Kee Innovation Competition. 
+  These videos document my ideas, prototypes, sketches, and storyboarding process, showing how I developed my projects step by step and implemented creative solutions.
+
+competition_videos:
+  - title: "1st 3D Prototype - Part 1"
+    filename: /mathieu_videos/Mathieu_1st%203D%20Prototype_TimeLapse_Part%201.mp4
+
+  - title: "1st 3D Prototype - Part 2"
+    filename: /mathieu_videos/Mathieu_1st%203D%20Prototype_TimeLapse_Part%202.mp4
+
+  - title: "Combined Ideas"
+    filename: /mathieu_videos/Mathieu_Combined%20Ideas_TimeLapse.mp4
+
+  - title: "Prototype 1 - Initial Sketch Drawing"
+    filename: /mathieu_videos/Mathieu_Prototype%201%20-%20Initial%20Sketch%20Drawing%20(Video)_TimeLapse.mp4
+
+  - title: "Prototype 1 - Invention (Versions 1 & 2)"
+    filename: /mathieu_videos/Mathieu_Prototype%201%20-%20Invention%20made%20of%20readily%20available%20materials%20(Versions%201%20&%202%20Video)_TimeLapse.mp4
+
+  - title: "Prototype 2 - Preparation"
+    filename: /mathieu_videos/Mathieu_Prototype%202%20-%201st%203D%20printed%20invention%20(Preparation%20Video)_TimeLapse.mp4
+
+  - title: "Storyboard Drawing"
+    filename: /mathieu_videos/Mathieu_Storyboard%20Drawing_TimeLapse.mp4
+---
+
+<h1>{{ page.student_name }}'s Innovation Videos</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="video-section">
+  {% if page.competition_videos %}
+  <ul>
+    {% for video in page.competition_videos %}
+    <li>
+      <h3>{{ video.title }}</h3>
+      <video width="640" height="360" controls>
+        <source src="{{ video.filename | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos uploaded yet.</p>
+  {% endif %}
+</div>

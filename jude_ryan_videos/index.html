@@ -1,0 +1,49 @@
+---
+layout: student_portfolio
+title: Jude and Ryan's Innovation Videos
+student_name: Jude and Ryan
+student_nickname: Jude and Ryan
+portrait_image: /jude_ryan_videos/jude_ryan.png
+
+intro: >
+  Hello! We are [student_nickname] and these are our videos for the Tan Kah Kee Innovation Competition. 
+  These videos document our ideas, prototypes, sketches, and storyboarding process, showing we developed our projects step by step and implemented creative solutions.
+
+competition_videos:
+  - title: "Storyboard Video"
+    filename: /jude_ryan_videos/jude%20and%20ryan%20storyboard%20video.mp4
+
+  - title: "Prototype 1 Process"
+    filename: /jude_ryan_videos/jude%20and%20ryan%20prototype%201%20video%20process.mp4
+---
+
+<h1>{{ page.student_name }}'s Innovation Videos</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="video-section">
+  {% if page.competition_videos %}
+  <ul>
+    {% for video in page.competition_videos %}
+    <li>
+      <h3>{{ video.title }}</h3>
+      <video width="640" height="360" controls>
+        <source src="{{ video.filename | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos uploaded yet.</p>
+  {% endif %}
+</div>

@@ -28,7 +28,14 @@ competition_videos:
 <div class="intro">
   <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
 </div>
-
+{% if page.portrait_image %}
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+{% endif %}
 <div class="video-section">
   {% if page.competition_videos %}
   <ul>

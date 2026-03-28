@@ -1,0 +1,62 @@
+---
+layout: student_portfolio
+title: Janessa's Innovation Videos
+student_name: Janessa
+student_nickname: Janessa
+portrait_image: /janessa-videos/janessa.png
+
+intro: >
+  Hello! I am [student_nickname] and these are my videos for the Tan Kah Kee Innovation Competition. 
+  These videos document my ideas, prototypes, sketches, and storyboarding process, showing how I developed my projects step by step and implemented creative solutions.
+
+competition_videos:
+  - title: "Combined Ideas"
+    filename: /janessa-videos/Janessa_Combined Ideas_TimeLapse.mp4
+  - title: "Idea Generation"
+    filename: /janessa-videos/Janessa_Idea Generation_TimeLapse.mp4
+  - title: "Initial Sketch"
+    filename: /janessa-videos/Janessa_Initial Sketch_TimeLapse.mp4
+  - title: "Prototype 1 - Version 1"
+    filename: /janessa-videos/Janessa_Prototype 1 - Invention made of readily available materials (Version 1 Video @ 00.16 second)_TimeLapse.mp4
+  - title: "Prototype 1 - Version 2"
+    filename: /janessa-videos/Janessa_Prototype 1 - Invention made of readily available materials (Version 2 Video Part 1 & 2)_TimeLaspe.mp4
+  - title: "Prototype 2 - Preparation Video Version 1"
+    filename: /janessa-videos/Janessa_Prototype 2 - 1st 3D printed invention (Preparation Video Version 1)_TimeLapse.mp4
+  - title: "Prototype 2 - Preparation Video Version 2"
+    filename: /janessa-videos/Janessa_Prototype 2 - 1st 3D printed invention (Preparation Video Version 2)_TimeLapse.mp4
+  - title: "Prototype 2 - Final Video"
+    filename: /janessa-videos/Janessa_Prototype 2 - 1st 3D printed invention (Video)_Timelapse.mp4
+  - title: "Storyboard Drawing"
+    filename: /janessa-videos/Janessa_Storyboard Drawing_TimeLapse.mp4
+---
+
+<h1>{{ page.student_name }}'s Innovation Videos</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="video-section">
+  {% if page.competition_videos %}
+  <ul>
+    {% for video in page.competition_videos %}
+    <li>
+      <h3>{{ video.title }}</h3>
+      <video width="640" height="360" controls>
+        <source src="{{ video.filename | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos uploaded yet.</p>
+  {% endif %}
+</div>

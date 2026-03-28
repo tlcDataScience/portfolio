@@ -1,0 +1,46 @@
+---
+layout: student_portfolio
+title: Nathanael's Innovation Videos
+student_name: Nathanael
+student_nickname: Nathanael
+portrait_image: /nathanael-tan/Nathanael.jpeg
+
+intro: >
+  Hello! I am [student_nickname] and these are my videos for the Tan Kah Kee Innovation Competition. 
+  These videos document my ideas, prototypes, sketches, and storyboarding process, showing how I developed my projects step by step and implemented creative solutions.
+
+competition_videos:
+  - title: "Prototype First Video"
+    filename: /mathieu_videos/proto1.mp4
+---
+
+<h1>{{ page.student_name }}'s Innovation Videos</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="video-section">
+  {% if page.competition_videos %}
+  <ul>
+    {% for video in page.competition_videos %}
+    <li>
+      <h3>{{ video.title }}</h3>
+      <video width="640" height="360" controls>
+        <source src="{{ video.filename | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos uploaded yet.</p>
+  {% endif %}
+</div>

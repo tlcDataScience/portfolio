@@ -1,0 +1,64 @@
+---
+layout: student_portfolio
+title: Lucas's Innovation Videos
+student_name: Lucas
+student_nickname: Lucas
+portrait_image: /lucas-videos/lucas.png
+
+intro: >
+  Hello! I am [student_nickname] and these are my videos for the Tan Kah Kee Innovation Competition. 
+  These videos document my ideas, prototypes, sketches, and storyboarding process, showing how I developed my projects step by step and implemented creative solutions.
+
+competition_videos:
+  - title: "Combined Ideas"
+    filename: /lucas_videos/Lucas_Combined%20Ideas_TimeLapse.mp4
+
+  - title: "Idea Generation"
+    filename: /lucas_videos/Lucas_Ideal%20Generation_TimeLapse.mp4
+
+  - title: "Initial Sketch"
+    filename: /lucas_videos/Lucas_Initial%20Sketch_TimeLapse.mp4
+
+  - title: "Prototype 1 - Version 1"
+    filename: /lucas_videos/Lucas_Prototype%201%20-%20Invention%20made%20of%20readily%20available%20materials%20(Version%201%20Video)_Timelaspe.mp4
+
+  - title: "Prototype 1 - Version 2"
+    filename: /lucas_videos/Lucas_Prototype%201%20-%20Invention%20made%20of%20readily%20available%20materials%20(Version%202%20Video)_Timelaspe.mp4
+
+  - title: "Detailed Sketch Drawing"
+    filename: /lucas_videos/Lucas_Prototype%201%20-%20More%20Detailed%20Sketch%20Drawing%20(Video)_Timelaspe.mp4
+
+  - title: "Storyboard Drawing"
+    filename: /lucas_videos/Lucas_Storyboard%20Drawing_TimeLapse.mp4
+---
+
+<h1>{{ page.student_name }}'s Innovation Videos</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="video-section">
+  {% if page.competition_videos %}
+  <ul>
+    {% for video in page.competition_videos %}
+    <li>
+      <h3>{{ video.title }}</h3>
+      <video width="640" height="360" controls>
+        <source src="{{ video.filename | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos uploaded yet.</p>
+  {% endif %}
+</div>

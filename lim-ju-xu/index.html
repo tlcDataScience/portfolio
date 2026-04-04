@@ -1,0 +1,265 @@
+---
+layout: student_portfolio
+title: Lim Ju Xu's Portfolio
+student_name: Lim Ju Xu
+student_nickname: Ju Xu
+portrait_image: /lim-ju-xu/juxu.png
+
+intro: >
+  Hi, I'm [student_nickname] and I am 12 years old this year. I started learning robotics with the Lego Mindstorms together with block-based coding when I was in Primary 4.  I enjoy working on different structures and robots, 
+  designing and building them to automate routine daily tasks in my life
+  Beyond honing my python fundamentals, 
+  I wanted to create games that was beneficial to students. I leant how to use Pygame and created different games that my friends could compete and challenge one another. 
+  I have documented my journey in robotics, coding, 
+  Innovation and STEM.
+
+robotics_projects:
+  - title: "Project 1: Bumper Car"
+    heading: Bumper Car
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+    image: /lim-ju-xu/robot1.png
+
+  - title: "Project 2: 2 touch activated gripper"
+    heading: 2 touch activated gripper
+    description: >
+      Having played at the arcade frequently, I decided to apply the same concepts and design principles to create a robotic gripper that opens and closes only when a touch sensor is activated. This mechanism allows for precise control, mimicking the arcade claw machine’s motion. Beyond recreation, this design has real-world applications — such as in assistive robotics, where touch-sensitive grippers can help individuals with limited mobility pick up and release objects safely, or in industrial automation, where the system can handle delicate components without causing damage. By integrating touch-based activation, the gripper combines fun design inspiration with practical functionality for real-world use.
+    image: /lim-ju-xu/robot2.png
+
+  - title: "Project 3: Colour And Distance Sensor Activated Windmill"
+    heading: Colour And Distance Sensor Activated Windmill
+    description: >
+      I developed a motorized, sensor-activated windmill designed to minimize the need for manual operation. The system automatically activates when a person approaches, ensuring smooth and efficient startup. It features a color-sensing mechanism that halts operation only when two specific colors are detected—an intentional safeguard managed by an authorized operator to prevent unauthorized interference or tampering.
+
+    image: /lim-ju-xu/robot3.png
+  - title: "Project 4: Follow The Line"
+    heading: Follow The Line
+    description: >
+      Inspired by a line-following robot I observed at the library—used to transport books from the return bin to the sorting section—I decided to design a similar robot for home use. My version is programmed to follow a black line on the floor, allowing it to navigate efficiently through designated areas that require cleaning.
+
+    image: /lim-ju-xu/robot4.png
+  - title: "Project 5: Touch Activated Treadmill "
+    heading: Touch Activated Treadmill
+    description: >
+      As someone who enjoys exercising on a treadmill, I decided to recreate an automated treadmill using LEGO Technic parts. This miniature version functions similarly to a real treadmill—its speed is controlled by user input. With the use of a touch sensor, and coding concepts such as variables and if-else statements, the treadmill increases speed with each press—just like speed adjustments on a real gym machine.
+
+    image: /lim-ju-xu/robot5.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_primeguesser.html %} {% include
+        python_factorychecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_vowelcount.html %} {% include
+        python_numberpyramid.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForNestedLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForNestedLoops"
+        aria-expanded="false"
+        aria-controls="collapseForNestedLoops"
+      >
+        Nested For Loops
+      </button>
+    </h2>
+    <div
+      id="collapseForNestedLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForNestedLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_wordmatrix.html %} {% include python_pascal.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhile">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhile"
+        aria-expanded="false"
+        aria-controls="collapseWhile"
+      >
+        While Loops
+      </button>
+    </h2>
+    <div
+      id="collapseWhile"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhile"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evensum.html %} {% include python_countdowntimer.html
+        %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAchievements">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseAchievements"
+        aria-expanded="false"
+        aria-controls="collapseAchievements"
+      >
+        Other Achievements
+      </button>
+    </h2>
+    <div
+      id="collapseAchievements"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingAchievements"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.other_achievements %} {% for achievement in
+        page.other_achievements %} {% include dynamic_achievements.html
+        title=achievement.title description=achievement.description
+        image=achievement.image %} {% endfor %} {% else %}
+        <p>No other achievements listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse",
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

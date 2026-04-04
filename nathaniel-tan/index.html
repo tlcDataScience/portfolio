@@ -1,44 +1,32 @@
 ---
 layout: student_portfolio
-title: Nathaniel's Portfolio
+title: Nathaniel Tan's Portfolio
 student_name: Nathaniel Tan
 student_nickname: Nathaniel
 portrait_image: /nathaniel-tan/nathaniel.png
 
 intro: >
-  Hi, I'm [student_nickname]!
-  I enjoy building robots and using coding to solve real-world problems.
-  Starting with block-based coding helped me understand how to control my robots and test new ideas.
-  Later, I wanted to learn something more advanced, so I began using Python.
-  Python showed me how to write my own programs and think in new ways.
-  Combining robotics and Python makes me excited to create projects that can help others and make learning fun.
-  I hope you enjoy seeing what I have built!
+  Hello, I am Nathaniel! I enjoy building robots and using coding to solve real-world problems. Starting with block-based coding helped me understand how to control my robots and test new ideas. Learning robotics has strengthened my problem-solving and critical-thinking skills, because I have to break big challenges into smaller steps and troubleshoot when things don’t work as expected. It has also taught me patience and creativity, since designing, building, and programming robots often requires multiple experiments and improvements. Through robotics, I’m learning how software and hardware work together, which helps me better understand technology and how it can be used to make everyday tasks easier and more efficient.
 
 robotics_projects:
-  - title: "Project 1: Ping Pong Racket"
-    heading: Ping Pong Racket
-    description: I learnt how to use the LEGO technic parts to create different designs. Using the coding concept of conditionals (if-else), together with different sensors, I coded my designs to do certain actions only if a specific condition is met. Among many other projects, I created a ping pong racket that hits the ball if the touch sensor is activated.
+  - title: "Project 1: Bumper Car "
+    heading: Bumper Car
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
+
     image: /nathaniel-tan/robot1.png
-  - title: "Project 2: Automated Shopping Center Door"
-    heading: Automated Shopping Center Door
-    description: Using an ultrasonic sensor, I re-created the door of the shopping center that opens automatically when a person is standing within the range.
+  - title: "Project 2: Ultrasonic Activated Tractor "
+    heading: Ultrasonic Activated Tractor
+    description: >
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I built a tractor. Using the ultrasonic sensor, the tractor moves when it detects the load on it. Such autonomous track-based vehicles are used to transport goods between different stations. Once the sensor detects the object, the vehicle automatically moves to deliver the item to the designated location. This automation reduces the need for human labor, increases efficiency, and ensures precise handling of materials.
+
     image: /nathaniel-tan/robot2.png
-  - title: "Project 3: Arcade Gripper"
-    heading: Arcade Gripper
-    description: Having played at the arcade frequently, I decided to use the concepts and design skills to create a gripper that is activated to open and close only when touch sensor is activated. I could then recreate the arcade game of picking up and releasing anything at home.
+  - title: "Project 3: Distance sensor Coin dispenser"
+    heading: Distance sensor Coin dispenser
+    description: >
+      Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser. The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold. When both sensors are triggered in order, the mechanism opens to release coins. This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines .
+
     image: /nathaniel-tan/robot3.png
-  - title: "Project 4: Spinning Rabbit Head"
-    heading: Spinning Rabbit Head
-    description: My younger siblings loved playing with their toy rabbit head that spins when the wind hits it. They had to spin and stop them manually. I decided to create an automated toy that starts moving when the program starts. It will stop when touch sensor is activated and return to the original position.
-    image: /nathaniel-tan/robot4.png
-  - title: "Project 5: Sensor-Controlled Spinning Top"
-    heading: Sensor-Controlled Spinning Top
-    description: Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is activated by a colour sensor. I could control the direction it spins using an ultrasonic sensor when it detects someone within different range. If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise.
-    image: /nathaniel-tan/robot5.png
-  - title: "Project 6: Airplane Propeller Ride"
-    heading: Airplane Propeller Ride
-    description: I love taking the planes and watching the propellers spin and increasing speed as the power turns up. To recreate that, I used the coding concept of variables and conditionals. The ride will start moving slowly and increase in speed each time I press the touch sensor.
-    image: /nathaniel-tan/robot6.png
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -83,129 +71,12 @@ robotics_projects:
       </div>
     </div>
   </div>
-
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingMath">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseMath"
-        aria-expanded="false"
-        aria-controls="collapseMath"
-      >
-        Math Concepts
-      </button>
-    </h2>
-    <div
-      id="collapseMath"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingMath"
-      data-bs-parent="#accordionProjects"
-    >
-      <div class="accordion-body">
-        {% include python_mathdivision.html %} {% include
-        python_factorychecker.html %}
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingCertificates">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseCertificates"
-        aria-expanded="false"
-        aria-controls="collapseCertificates"
-      >
-        Certificates
-      </button>
-    </h2>
-    <div
-      id="collapseCertificates"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingCertificates"
-      data-bs-parent="#accordionProjects"
-    >
-      <div class="accordion-body">
-        <div class="card mb-3">
-          <div class="card-header">Certificate: Coding Olympics 2025</div>
-          <div class="card-body">
-            <h3>Description:</h3>
-            <p>
-              This certificate was awarded for outstanding performance in the
-              <strong>Coding Olympics 2025</strong>, recognizing Nathaniel’s
-              skills in coding challenges.
-            </p>
-          </div>
-        </div>
-
-        <div class="certificate-image mb-3">
-          <img
-            src="{{ '/nathaniel-tan/nathaniel_cert1.jpg' | relative_url }}"
-            alt="Coding Olympics 2025 Certificate"
-            style="
-              width: 100%;
-              max-width: 1000px;
-              display: block;
-              margin: 0 auto;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-            "
-          />
-        </div>
-      </div>
-      <div class="accordion-body">
-        <div class="card mb-3">
-          <div class="card-header">
-            World Robot Olympiad Singapore Nationals 2025
-          </div>
-          <div class="card-body">
-            <h3>Description:</h3>
-            <p>
-              These certificates were awarded in recognition for the Nathaniel’s
-              outstanding performance in the
-              <strong>World Robot Olympiad Singapore Nationals</strong>,
-              recognizing his skills in robotic challenges.
-            </p>
-          </div>
-        </div>
-
-        <div class="certificate-image mb-3">
-          <img
-            src="{{ '/nathaniel-tan/nathaniel_cert2.jpg' | relative_url }}"
-            alt="Coding Olympics 2025 Certificate"
-            style="
-              width: 100%;
-              max-width: 1000px;
-              display: block;
-              margin: 0 auto;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-            "
-          />
-          <img
-            src="{{ '/nathaniel-tan/nathaniel_cert3.jpg' | relative_url }}"
-            alt="Coding Olympics 2025 Certificate"
-            style="
-              width: 100%;
-              max-width: 1000px;
-              display: block;
-              margin: 0 auto;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-            "
-          />
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
+      ".accordion-collapse",
     );
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {

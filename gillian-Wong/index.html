@@ -1,0 +1,106 @@
+---
+layout: student_portfolio
+title: Gillian's Portfolio
+student_name: Gillian
+student_nickname: Gillian
+portrait_image: /gillian-Wong/gillian.png
+
+intro: >
+  Hello, I am Gillian! I enjoy building robots and using coding to solve real-world problems. 
+  Starting with block-based coding helped me understand how to control my
+  robots and test new ideas. Learning robotics has strengthened 
+  my problem-solving and critical-thinking skills, because I have to break big challenges into smaller steps and troubleshoot when things don’t work as expected. It has also taught me patience and creativity, since designing, building, and programming robots often requires multiple experiments and improvements. Through robotics, I’m learning how software and hardware work together, which helps me better understand technology and how it can be used to make everyday tasks easier and more efficient.
+
+robotics_projects:
+  - title: "Project 1: Bumper Car "
+    heading: Bumper Car
+    description: >
+      I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a bumper car that automatically reverses when its front touch sensor detects a collision—mimicking real-world applications of obstacle detection used in autonomous
+      vehicles and robotic systems to enhance safety and navigation.
+    image: /gillian-Wong/robot1.png
+  - title: "Project 2: Sushi Belt "
+    heading: Sushi Belt
+    description: >
+      I enjoy going to the restaurant for sushi and decided to recreate an automated one. Using the lego technic parts and a colour sensor, I created a sushi belt that is activated to move only when it detects the colour green. This reduces unnecessary motion and saves energy.
+    image: /gillian-Wong/robot2.png
+
+  - title: "Project 3: Motor controlled jack in the box"
+    heading: Motor controlled jack in the box
+    description: >
+      Wanting to create a fun toy to prank my siblings, I applied the design principles and coding skills I learned to build a build a Jack-in-the-Box mechanism. It’s controlled by a handheld motor that activates the opening and closing of the box. By spinning the motor in a specific sequence of directions, the Jack springs out, demonstrating how programmed mechanical sequences can create interactive and entertaining devices—similar to automated toys and novelty mechanisms used in entertainment and consumer products.
+
+    image: /gillian-Wong/robot3.png
+  - title: "Project 4: Automated Rabbit Head"
+    heading: Automated Rabbit Head
+    description: >
+      My younger siblings loved playing with their toy rabbit head, which spins when the wind hits it. They used to manually spin and stop it, which was fun but limited. To make it more interactive and engaging, I decided to create an automated version of the toy.
+      In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position.
+
+    image: /gillian-Wong/robot4.png
+  - title: "Project 5: Touch Activated Lazy Susan "
+    heading: Touch Activated Lazy Susan
+    description: >
+      Inspired by everyday rotating trays, I built a touch-activated Lazy Susan that changes direction using an ultrasonic sensor. When someone touches the sensor, the system checks the distance of nearby objects and decides which way to turn. This project uses a microcontroller, sensors, and a motor to create a simple automated system that responds to its surroundings.
+
+    image: /gillian-Wong/robot5.png
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="portrait">
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
+        Robotics Projects
+      </button>
+    </h2>
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse",
+    );
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+        if (header) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
+</script>

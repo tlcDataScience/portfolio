@@ -1,27 +1,37 @@
 ---
 layout: student_portfolio
-title:Justin's Portfolio
-student_name: Justin
-student_nickname: Justin
+title: "Justin's Portfolio"
+student_name: "Justin"
+student_nickname: "Justin"
 portrait_image: /justin-tee/justin.png
 
 intro: >
-  Hello, I am Justin! I enjoy building robots and using coding to solve real-world problems. 
-  Starting with block-based coding helped me understand how to control my
-  robots and test new ideas. Learning robotics has strengthened 
-  my problem-solving and critical-thinking skills, because I have to break big challenges into smaller steps and troubleshoot when things don’t work as expected. It has also taught me patience and creativity, since designing, building, and programming robots often requires multiple experiments and improvements. Through robotics, I’m learning how software and hardware work together, which helps me better understand technology and how it can be used to make everyday tasks easier and more efficient.
+  Hello, I am Justin! I enjoy building robots and using coding to solve real-world problems.
+  Starting with block-based coding helped me understand how to control my robots and test new ideas.
+  Learning robotics has strengthened my problem-solving and critical-thinking skills because I have to
+  break big challenges into smaller steps and troubleshoot when things do not work as expected.
+  It has also taught me patience and creativity, since designing, building, and programming robots
+  often requires multiple experiments and improvements. Through robotics, I am learning how software
+  and hardware work together, which helps me better understand technology and how it can be used to
+  make everyday tasks easier and more efficient.
 
 robotics_projects:
-  - title: "Project 1 :Catapult "
+  - title: "Project 1: Catapult"
     heading: Catapult
     description: >
-      I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a ferris wheel that moves only when the touch sensor is activated. This simulates the real world when it is operator driven to ensure safety.
+      I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I programmed my designs to perform specific actions based on real-time input. For example, I created a catapult  mechanism that swings to hit the target when the touch sensor is activated—demonstrating how sensor-triggered automation is used in real-world systems  that respond to user
 
     image: /justin-tee/robot1.png
-  - title: "Project 2: Rack & Pinion Door  "
+
+  - title: "Project 2: Rack & Pinion Door"
     heading: Rack & Pinion Door
     description: >
-      I learned how to use LEGO Technic parts to design and build various mechanical structures. By applying coding concepts such as conditionals (if-else) and incorporating different sensors, I built a rack and pinion door. Using an ultrasonic sensor, I recreated an automatic sliding door like those commonly found in shopping centers. The door opens when a person is detected within a certain range, demonstrating how sensor technology is used in real life to improve accessibility, convenience, and energy efficiency in public buildings
+      I learned how to use LEGO Technic parts to design and build various mechanical structures.
+      By applying coding concepts such as conditionals and incorporating different sensors,
+      I built a rack and pinion door. Using an ultrasonic sensor, I recreated an automatic sliding door
+      like those commonly found in shopping centres. The door opens when a person is detected within
+      a certain range, demonstrating how sensor technology is used in real life to improve accessibility,
+      convenience, and energy efficiency in public buildings.
 
     image: /justin-tee/robot2.png
 ---
@@ -53,6 +63,7 @@ robotics_projects:
         Robotics Projects
       </button>
     </h2>
+
     <div
       id="collapseRobotics"
       class="accordion-collapse collapse"
@@ -75,11 +86,16 @@ robotics_projects:
     var accordionCollapseElements = document.querySelectorAll(
       ".accordion-collapse",
     );
+
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
+
         if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       });
     });

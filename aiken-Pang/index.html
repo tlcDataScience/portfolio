@@ -68,32 +68,55 @@ robotics_projects:
   />
 </div>
 
-<div class="accordion" id="accordionProjects">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingRobotics">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseRobotics"
-        aria-expanded="false"
-        aria-controls="collapseRobotics"
-      >
-        Robotics Projects
-      </button>
-    </h2>
-    <div
-      id="collapseRobotics"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingRobotics"
-      data-bs-parent="#accordionProjects"
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingAchievements">
+    <button
+      class="accordion-button collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseAchievements"
+      aria-expanded="false"
+      aria-controls="collapseAchievements"
     >
-      <div class="accordion-body">
-        {% if page.robotics_projects %} {% for project in page.robotics_projects
-        %} {% include dynamic_robotics_project.html project=project
-        index=forloop.index0 %} {% endfor %} {% else %}
-        <p>No robotics projects listed yet.</p>
-        {% endif %}
+      Achievements
+    </button>
+  </h2>
+
+  <div
+    id="collapseAchievements"
+    class="accordion-collapse collapse"
+    aria-labelledby="headingAchievements"
+    data-bs-parent="#accordionProjects"
+  >
+    <div class="accordion-body">
+      <div class="card mb-3">
+        <div class="card-header">Coding Olympics 2025</div>
+        <div class="card-body">
+          <h3>Description:</h3>
+          <p>
+            This certificate was awarded to Aiken in recognition of his
+            participation in the
+            <strong>Coding Olympics 2025</strong>, organised by the
+            <strong>Science Centre Singapore</strong>. Through the programme, he
+            developed his computational thinking, problem-solving and coding
+            skills while tackling a variety of programming challenges.
+          </p>
+        </div>
+      </div>
+
+      <div class="certificate-image mb-3">
+        <img
+          src="{{ '/aiken-Pang/cert1.png' | relative_url }}"
+          alt="Coding Olympics 2025 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
       </div>
     </div>
   </div>

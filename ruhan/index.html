@@ -1,0 +1,166 @@
+---
+layout: student_portfolio
+title: "Ruhan Vishal Doshi's Portfolio"
+student_name: "Ruhan Vishal Doshi"
+student_nickname: "Ruhan"
+
+intro: >
+  Hi, I'm [student_nickname]!
+  I enjoy using Python to solve mathematical problems and create programs
+  based on real-world situations. Through my Python projects, I have learned
+  how to use mathematical operators, conditional statements, and for loops.
+  I have also learned how to break a problem into smaller steps before
+  turning the solution into Python code.
+  I hope you enjoy seeing the projects I have created!
+---
+
+<h1>{{ page.student_name }}'s Coding Projects</h1>
+
+<div class="intro">
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
+</div>
+
+<div class="accordion" id="accordionProjects">
+  <!-- =====================================================
+       MATH CONCEPTS
+       ===================================================== -->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       FOR LOOPS
+       ===================================================== -->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_calculatorfactory.html %} {% include
+        python_flowergarden.html %}
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       CERTIFICATES
+       ===================================================== -->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingCertificates">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseCertificates"
+        aria-expanded="false"
+        aria-controls="collapseCertificates"
+      >
+        Certificates
+      </button>
+    </h2>
+
+    <div
+      id="collapseCertificates"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingCertificates"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        <!-- IDE Series 2026 -->
+
+        <div class="card mb-3 mt-4">
+          <div class="card-header">IDE Series Singapore 2026</div>
+
+          <div class="card-body">
+            <h3>Description:</h3>
+
+            <p>
+              This certificate was awarded to Ruhan Vishal Doshi for
+              participating in the
+              <strong>IDE Sprint – Primary</strong>
+              category of the
+              <strong>IDE Series Singapore 2026</strong>, representing The Logic
+              Coders.
+            </p>
+          </div>
+        </div>
+
+        <img
+          src="{{ '/ruhan-doshi/cert1.png' | relative_url }}"
+          alt="IDE Series Singapore 2026 Certificate"
+          style="
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+          "
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse",
+    );
+
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
+        var header = this.previousElementSibling;
+
+        if (header) {
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  });
+</script>

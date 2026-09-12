@@ -19,26 +19,26 @@ robotics_projects:
       By applying coding concepts such as conditionals (if-else) and integrating various sensors, 
       I programmed my creations to respond dynamically to their environment. One example was a track car that automatically reverses when its front touch sensor detects a 
       collision—mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems to enhance safety and navigation.
-
     image: /andy_tran/robot1.png
-  - title: "Project 2: Ultrasonic activated Tractor"
-    heading: Ultrasonic activated Tractor
+
+  - title: "Project 2: Ultrasonic Activated Tractor"
+    heading: Ultrasonic Activated Tractor
     description: >
       I applied coding concepts such as conditionals (if-else) and using an ultrasonic sensor, 
       I built a rack and pinion door mechanism that automatically opens when it detects someone approaching. 
       This project simulates real world automatic door systems commonly found in malls and offices.
-
     image: /andy_tran/robot2.png
-  - title: "Project 3: 2 Colour activated shooter"
-    heading: 2 Colour activated shooter
+
+  - title: "Project 3: 2 Colour Activated Shooter"
+    heading: 2 Colour Activated Shooter
     description: >
       Having played at the arcade frequently, I decided to use the concepts of conditional statements, colour detection and output 
       controls to create a secure and precise shooter that fires a shot when the colour sensor detects 2 specific colours in the coded order. 
       This project demonstrates how sensor integration and conditional logic can be used to develop automated systems, with potential applications in intelligent defense technologies.
-
     image: /andy_tran/robot3.png
-  - title: "Project 4: Automated standard robot"
-    heading: Automated standard robot
+
+  - title: "Project 4: Automated Standard Robot"
+    heading: Automated Standard Robot
     description: >
       I decided to create an automated car using LEGO Technic parts that can return to its original parking position after detecting an obstacle. 
       This project simulates the logic behind autonomous parking systems found in modern vehicles.
@@ -47,23 +47,21 @@ robotics_projects:
       This entire process repeats endlessly, creating a looped simulation of real-world automated vehicle behavior.
     image: /andy_tran/robot4.png
 
-  - title: "Project 5: Colour and infrared activated spinning top"
-    heading: Colour and infrared activated spinning top
+  - title: "Project 5: Colour and Infrared Activated Spinning Top"
+    heading: Colour and Infrared Activated Spinning Top
     description: >
-      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO technic parts and coded it to move when it is activated by a colour sensor. 
+      Playing the top is my childhood game and I decided to recreate a sensor-controlled spinning top using LEGO Technic parts and coded it to move when it is activated by a colour sensor. 
       I could control the direction it spins using an infrared sensor when it detects someone within different range. 
       If the ultrasonic sensor detects someone near it, it will spin clockwise, else, it spins anti-clockwise. This setup mirrors real-life smart devices that respond to environmental cues. 
       The system responds intuitively to human presence, creating an interactive and dynamic user experience.
-
     image: /andy_tran/robot5.png
 
-  - title: "Project 6: Touch activated increasing treadmill"
-    heading: Touch activated increasing treadmill
+  - title: "Project 6: Touch Activated Increasing Treadmill"
+    heading: Touch Activated Increasing Treadmill
     description: >
-      I love going on the treadmill therefore I have recreated one using Lego that simulates automation. 
-      Each time the touch sensor is pressed, the treadmill’s speed increase, mimicking how modern exercise machines can 
-      adjust settings based on user input or programmed responses. This provides hands on experience with incremental speed adjustment.
-
+      I love going on the treadmill therefore I have recreated one using LEGO that simulates automation. 
+      Each time the touch sensor is pressed, the treadmill’s speed increases, mimicking how modern exercise machines can 
+      adjust settings based on user input or programmed responses. This provides hands-on experience with incremental speed adjustment.
     image: /andy_tran/robot6.png
 ---
 
@@ -81,6 +79,7 @@ robotics_projects:
 </div>
 
 <div class="accordion" id="accordionProjects">
+  <!-- ROBOTICS PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -94,6 +93,7 @@ robotics_projects:
         Robotics Projects
       </button>
     </h2>
+
     <div
       id="collapseRobotics"
       class="accordion-collapse collapse"
@@ -104,11 +104,15 @@ robotics_projects:
         {% if page.robotics_projects %} {% for project in page.robotics_projects
         %} {% include dynamic_robotics_project.html project=project
         index=forloop.index0 %} {% endfor %} {% else %}
+
         <p>No robotics projects listed yet.</p>
+
         {% endif %}
       </div>
     </div>
   </div>
+
+  <!-- MATH CONCEPTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
       <button
@@ -122,6 +126,7 @@ robotics_projects:
         Math Concepts
       </button>
     </h2>
+
     <div
       id="collapseMath"
       class="accordion-collapse collapse"
@@ -134,6 +139,36 @@ robotics_projects:
       </div>
     </div>
   </div>
+
+  <!-- IF ELSE -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingIfElse">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evenoddguesser.html %} {% include
+        python_movieticketing.html %}
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR LOOPS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingForLoops">
       <button
@@ -147,6 +182,7 @@ robotics_projects:
         For Loops
       </button>
     </h2>
+
     <div
       id="collapseForLoops"
       class="accordion-collapse collapse"
@@ -160,16 +196,22 @@ robotics_projects:
     </div>
   </div>
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
+      ".accordion-collapse",
     );
+
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
+
         if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       });
     });

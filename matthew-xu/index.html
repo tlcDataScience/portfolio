@@ -20,7 +20,7 @@ robotics_projects:
       I learned how to use LEGO Technic parts to design and build functional mechanical systems.
       By applying coding concepts such as conditionals (if-else) and integrating various sensors,
       I programmed my creations to respond dynamically to their environment.
-      One example was a bumper car that automatically reverses when its front touch sensor detects a collision—
+      One example was a bumper car that automatically reverses when its front touch sensor detects a collision,
       mimicking real-world applications of obstacle detection used in autonomous vehicles and robotic systems
       to enhance safety and navigation.
     image: "/matthew-xu/robot1.png"
@@ -58,7 +58,7 @@ robotics_projects:
       Using the concept of nested while loops with variables,
       I programmed the car to activate and begin moving when the touch sensor is activated.
       While in motion, the car continuously checks for obstacles using the ultrasonic sensor.
-      Once an obstacle is detected, the car automatically stops and reverses back to its starting point—
+      Once an obstacle is detected, the car automatically stops and reverses back to its starting point,
       mimicking a vehicle returning to its parking spot.
     image: "/matthew-xu/robot4.png"
 
@@ -105,7 +105,7 @@ other_achievements:
 </div>
 
 <div class="accordion" id="accordionProjects">
-  <!-- ROBOTICS PROJECTS -->
+  <!-- ROBOTICS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -203,13 +203,13 @@ other_achievements:
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var accordionCollapseElements = document.querySelectorAll(
+    const accordionCollapseElements = document.querySelectorAll(
       ".accordion-collapse",
     );
 
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
-        var header = this.previousElementSibling;
+        const header = this.previousElementSibling;
 
         if (header) {
           header.scrollIntoView({

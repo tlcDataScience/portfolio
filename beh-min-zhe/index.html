@@ -24,41 +24,54 @@ robotics_projects:
       For example, I created a ping pong racket mechanism that swings to hit the ball when the touch sensor is activated,
       demonstrating how sensor-triggered automation is used in real-world systems that respond to user input.
     image: /beh-min-zhe/robot1.png
-  - title: "Project 2: Ultrasonic Sensor Activated Rack and Pinion door"
-    heading: Ultrasonic Sensor activated Rack and Pinion door
+
+  - title: "Project 2: Ultrasonic Sensor Activated Rack and Pinion Door"
+    heading: Ultrasonic Sensor Activated Rack and Pinion Door
     description: >
       I applied coding concepts such as conditionals (if-else) and using an ultrasonic sensor,
       I built a rack and pinion door mechanism that automatically opens when it detects someone approaching.
-      This project simulates real world automatic door systems commonly found in malls and offices.
+      This project simulates real-world automatic door systems commonly found in malls and offices.
     image: /beh-min-zhe/robot2.png
+
   - title: "Project 3: 2 Sensor Coin Dispenser"
     heading: 2 Sensor Coin Dispenser
     description: >
-      Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned to build a distance-activated coin dispenser.
+      Inspired by arcade coin dispensers, I applied the design principles and coding skills I learned
+      to build a distance-activated coin dispenser.
       The dispenser uses two ultrasonic sensors that detect my hand in a specific sequence within a defined distance threshold.
       When both sensors are triggered in order, the mechanism opens to release coins.
-      This project demonstrates how sensor integration and conditional logic can create automated systems, similar to those used in vending machines.
+      This project demonstrates how sensor integration and conditional logic can create automated systems,
+      similar to those used in vending machines.
     image: /beh-min-zhe/robot3.png
 
 other_achievements:
   - title: "Minecraft Foundation"
     description: >
-      I participated in the Minecraft Foundation program, where I learned how to use Minecraft as a platform for coding and creativity.
-      I explored various coding concepts while building and designing structures in the game, enhancing my problem-solving skills and understanding of programming logic.
+      I participated in the Minecraft Foundation program, where I learned how to use Minecraft
+      as a platform for coding and creativity.
+      I explored various coding concepts while building and designing structures in the game,
+      enhancing my problem-solving skills and understanding of programming logic.
     image: /beh-min-zhe/minecraft-foundation.png
+
   - title: "Minecraft Level 1"
     description: >
-      I completed the Minecraft Level 1 course, where I further developed my coding skills using Minecraft, building on the foundation I gained in the previous program.
-      This course allowed me to apply coding concepts in a fun and interactive environment, creating complex structures and automations within the game.
+      I completed the Minecraft Level 1 course, where I further developed my coding skills using Minecraft,
+      building on the foundation I gained in the previous program.
+      This course allowed me to apply coding concepts in a fun and interactive environment,
+      creating complex structures and automations within the game.
     image: /beh-min-zhe/minecraft-level-1.png
+
   - title: "Minecraft Level 2"
     description: >
       I advanced to the Minecraft Level 2 course, where I deepened my understanding of coding and automation within Minecraft.
-      This level challenged me to create more intricate designs and systems, applying the coding skills I had learned in previous courses.
+      This level challenged me to create more intricate designs and systems,
+      applying the coding skills I had learned in previous courses.
     image: /beh-min-zhe/minecraft-level-2.png
+
   - title: "Minecraft Level 3"
     description: >
-      I completed the Minecraft Level 3 course, where I further enhanced my coding skills and explored advanced concepts in automation and design within Minecraft.
+      I completed the Minecraft Level 3 course, where I further enhanced my coding skills
+      and explored advanced concepts in automation and design within Minecraft.
       This level pushed me to think creatively and implement more complex systems in my builds.
     image: /beh-min-zhe/minecraft level 3 v2.png
 ---
@@ -66,122 +79,264 @@ other_achievements:
 <h1>{{ page.student_name }}'s Coding Projects</h1>
 
 <div class="intro">
-  <p>
-    {{ page.intro | replace: '[student_nickname]', page.student_nickname }}
-  </p>
+  <p>{{ page.intro | replace: '[student_nickname]', page.student_nickname }}</p>
 </div>
 
 <div class="portrait">
-  <img src="{{ page.portrait_image | relative_url }}" alt="Portrait of {{ page.student_name }}" />
+  <img
+    src="{{ page.portrait_image | relative_url }}"
+    alt="Portrait of {{ page.student_name }}"
+  />
 </div>
 
 <div class="accordion" id="accordionProjects">
-
+  <!-- ROBOTICS PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false" aria-controls="collapseRobotics">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseRobotics"
+        aria-expanded="false"
+        aria-controls="collapseRobotics"
+      >
         Robotics Projects
       </button>
     </h2>
-    <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics" data-bs-parent="#accordionProjects">
+
+    <div
+      id="collapseRobotics"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingRobotics"
+      data-bs-parent="#accordionProjects"
+    >
       <div class="accordion-body">
-        {% if page.robotics_projects %}
-          {% for project in page.robotics_projects %}
-            {% include dynamic_robotics_project.html project=project index=forloop.index0 %}
-          {% endfor %}
-        {% else %}
-          <p>No robotics projects listed yet.</p>
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+
+        <p>No robotics projects listed yet.</p>
+
         {% endif %}
       </div>
     </div>
   </div>
 
+  <!-- PYGAME PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingPygame">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePygame" aria-expanded="false" aria-controls="collapsePygame">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsePygame"
+        aria-expanded="false"
+        aria-controls="collapsePygame"
+      >
         Pygame Projects
       </button>
     </h2>
-    <div id="collapsePygame" class="accordion-collapse collapse" aria-labelledby="headingPygame" data-bs-parent="#accordionProjects">
+
+    <div
+      id="collapsePygame"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingPygame"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">{% include pygame_speedmath.html %}</div>
+    </div>
+  </div>
+
+  <!-- MATH CONCEPTS -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
       <div class="accordion-body">
-        {% include pygame_speedmath.html %}
+        {% include python_mathdivision.html %} {% include
+        python_divisibilitytester.html %}
       </div>
     </div>
   </div>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingMath">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
-          Math Concepts
-        </button>
-      </h2>
-      <div id="collapseMath" class="accordion-collapse collapse" aria-labelledby="headingMath" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_mathdivision.html %}
-          {% include python_divisibilitytester.html %}
-
-        </div>
-      </div>
-  </div>
-
+  <!-- IF ELSE -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingIfElse">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIfElse" aria-expanded="false" aria-controls="collapseIfElse">
-          If Else
-        </button>
-      </h2>
-      <div id="collapseIfElse" class="accordion-collapse collapse" aria-labelledby="headingIfElse" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_evenoddchecker.html %}
-          {% include python_movieticketing.html %}
-        </div>
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseIfElse"
+        aria-expanded="false"
+        aria-controls="collapseIfElse"
+      >
+        If Else
+      </button>
+    </h2>
+
+    <div
+      id="collapseIfElse"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingIfElse"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_evenoddchecker.html %} {% include
+        python_movieticketing.html %}
       </div>
+    </div>
   </div>
 
+  <!-- FOR LOOPS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingForLoops">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoops" aria-expanded="false" aria-controls="collapseForLoops">
-          For Loops
-        </button>
-      </h2>
-      <div id="collapseForLoops" class="accordion-collapse collapse" aria-labelledby="headingForLoops" data-bs-parent="#accordionProjects">
-        <div class="accordion-body">
-          {% include python_fruitstand.html %}
-          {% include python_coffeeshop.html %}
-        </div>
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseForLoops"
+        aria-expanded="false"
+        aria-controls="collapseForLoops"
+      >
+        For Loops
+      </button>
+    </h2>
+
+    <div
+      id="collapseForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_fruitstand.html %} {% include python_coffeeshop.html
+        %}
       </div>
+    </div>
   </div>
 
+  <!-- WHILE LOOPS -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingWhileLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWhileLoops"
+        aria-expanded="false"
+        aria-controls="collapseWhileLoops"
+      >
+        While Loops
+      </button>
+    </h2>
+
+    <div
+      id="collapseWhileLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingWhileLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_countdowntimer.html %} {% include python_evensum.html
+        %}
+      </div>
+    </div>
+  </div>
+
+  <!-- NESTED FOR LOOPS -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNestedForLoops">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseNestedForLoops"
+        aria-expanded="false"
+        aria-controls="collapseNestedForLoops"
+      >
+        Nested For Loops
+      </button>
+    </h2>
+
+    <div
+      id="collapseNestedForLoops"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingNestedForLoops"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include python_wordmatrix.html %} {% include python_pascal.html %}
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER ACHIEVEMENTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingAchievements">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAchievements" aria-expanded="false" aria-controls="collapseAchievements">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseAchievements"
+        aria-expanded="false"
+        aria-controls="collapseAchievements"
+      >
         Other Achievements
       </button>
     </h2>
-    <div id="collapseAchievements" class="accordion-collapse collapse" aria-labelledby="headingAchievements" data-bs-parent="#accordionProjects">
+
+    <div
+      id="collapseAchievements"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingAchievements"
+      data-bs-parent="#accordionProjects"
+    >
       <div class="accordion-body">
-        {% if page.other_achievements %}
-          {% for achievement in page.other_achievements %}
-            {% include dynamic_achievements.html
-               title=achievement.title
-               description=achievement.description
-               image=achievement.image %}
-          {% endfor %}
-        {% else %}
-          <p>No other achievements listed yet.</p>
+        {% if page.other_achievements %} {% for achievement in
+        page.other_achievements %} {% include dynamic_achievements.html
+        title=achievement.title description=achievement.description
+        image=achievement.image %} {% endfor %} {% else %}
+
+        <p>No other achievements listed yet.</p>
+
         {% endif %}
       </div>
     </div>
   </div>
+</div>
 
-</div><script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var accordionCollapseElements = document.querySelectorAll('.accordion-collapse');
-    accordionCollapseElements.forEach(function(collapseEl) {
-      collapseEl.addEventListener('shown.bs.collapse', function() {
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse",
+    );
+
+    accordionCollapseElements.forEach(function (collapseEl) {
+      collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
+
         if (header) {
-          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       });
     });

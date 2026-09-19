@@ -10,20 +10,19 @@ intro: >
 
 robotics_projects:
   - title: "Project 1: Ferris Wheel"
-    heading: "Ferris Wheel  "
+    heading: "Ferris Wheel"
     description: >
       I learned how to use LEGO Technic parts to design and build functional mechanical systems. By applying coding concepts such as conditionals (if-else) and integrating various sensors, I programmed my creations to respond dynamically to their environment. One example was a ferris wheel that moves only when the touch sensor is activated. This simulates the real world when it is operator driven to ensure safety.
-
     image: "/Yee-Jeoi-Lam-Raelyn/robot.png"
 
-  - title: "Project 2: Rack and Pinion Cuckoo Clock "
-    heading: "Rack and Pinion Cuckoo Clock "
+  - title: "Project 2: Rack and Pinion Cuckoo Clock"
+    heading: "Rack and Pinion Cuckoo Clock"
     description: >
       I learned how to use LEGO Technic parts to design and build mechanical systems using a rack and pinion mechanism. By applying coding concepts such as conditionals (if-else) and incorporating an ultrasonic sensor, I built an interactive rack and pinion cuckoo clock. When the ultrasonic sensor detects an object or person within a certain range, the rack and pinion mechanism moves the cuckoo bird forward and backward while playing a cuckoo sound. This project demonstrates how mechanical movement, sensors, and programming can be combined to create an automated interactive system, similar to how sensors are used in real-life devices to trigger actions based on their surroundings.
-
     image: "/Yee-Jeoi-Lam-Raelyn/robot2.png"
-  - title: "Project 3: Touch activated gripper"
-    heading: " Touch activated gripper"
+
+  - title: "Project 3: Touch Activated Gripper"
+    heading: "Touch Activated Gripper"
     description: >
       Having played at the arcade frequently, I decided to apply the same concepts and design principles to create a robotic gripper that opens and closes only when a touch sensor is activated. This mechanism allows for precise control, mimicking the arcade claw machine’s motion. Beyond recreation, this design has real-world applications — such as in assistive robotics, where touch-sensitive grippers can help individuals with limited mobility pick up and release objects safely, or in industrial automation, where the system can handle delicate components without causing damage. By integrating touch-based activation, the gripper combines fun design inspiration with practical functionality for real-world use.
     image: "/Yee-Jeoi-Lam-Raelyn/robot3.png"
@@ -31,21 +30,19 @@ robotics_projects:
   - title: "Project 4: Automated Rabbit Head"
     heading: "Automated Rabbit Head"
     description: >
-      My younger siblings loved playing with their toy rabbit head, which spins when the wind hits it. They used to manually spin and stop it, which was fun but limited. To make it more interactive and engaging, I decided to create an automated version of the toy.
-      In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position.
-
+      My younger siblings loved playing with their toy rabbit head, which spins when the wind hits it. They used to manually spin and stop it, which was fun but limited. To make it more interactive and engaging, I decided to create an automated version of the toy. In this upgraded version, the rabbit head starts spinning automatically as soon as the program runs. When the ultrasonic sensor detects someone nearby—such as a child approaching—the spinning stops, and the toy returns to its original position.
     image: "/Yee-Jeoi-Lam-Raelyn/robot4.png"
-  - title: "Project 5 : Touch Activated Lazy Susan "
-    heading: "Touch Activated Lazy Susan "
+
+  - title: "Project 5: Touch Activated Lazy Susan"
+    heading: "Touch Activated Lazy Susan"
     description: >
       I developed a touch-activated lazy Susan designed to provide intuitive and automated rotational control. The system begins rotating when the touch sensor is activated, offering simple and convenient hands-free operation. It incorporates an ultrasonic sensor that detects the position or proximity of nearby objects and automatically changes the direction of rotation based on the sensor's readings. This feature enhances usability, improves interaction, and helps prevent unnecessary contact with surrounding objects during operation.
-
     image: "/Yee-Jeoi-Lam-Raelyn/robot5.png"
-  - title: "Project 6 : Touch activated Treadmill "
-    heading: "Touch activated Treadmill"
+
+  - title: "Project 6: Touch Activated Treadmill"
+    heading: "Touch Activated Treadmill"
     description: >
       As someone who enjoys exercising on a treadmill, I decided to recreate an automated treadmill using LEGO Technic parts. This miniature version functions similarly to a real treadmill—its speed is controlled by user input. With the use of a touch sensor, and coding concepts such as variables and if-else statements, the treadmill increases speed with each press—just like speed adjustments on a real gym machine.
-
     image: "/Yee-Jeoi-Lam-Raelyn/robot6.png"
 ---
 
@@ -63,6 +60,10 @@ robotics_projects:
 </div>
 
 <div class="accordion" id="accordionProjects">
+  <!-- ========================================== -->
+  <!-- ROBOTICS PROJECTS -->
+  <!-- ========================================== -->
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -76,6 +77,7 @@ robotics_projects:
         Robotics Projects
       </button>
     </h2>
+
     <div
       id="collapseRobotics"
       class="accordion-collapse collapse"
@@ -86,8 +88,58 @@ robotics_projects:
         {% if page.robotics_projects %} {% for project in page.robotics_projects
         %} {% include dynamic_robotics_project.html project=project
         index=forloop.index0 %} {% endfor %} {% else %}
+
         <p>No robotics projects listed yet.</p>
+
         {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- OTHER ACHIEVEMENTS -->
+  <!-- ========================================== -->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAchievements">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseAchievements"
+        aria-expanded="false"
+        aria-controls="collapseAchievements"
+      >
+        Other Achievements
+      </button>
+    </h2>
+
+    <div
+      id="collapseAchievements"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingAchievements"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        <div class="card mb-4">
+          <div class="card-header">IDE Sprint - Primary</div>
+
+          <div class="card-body">
+            <h3>Certificate of Participation</h3>
+
+            <p>
+              I received a Certificate of Participation for taking part in IDE
+              Sprint - Primary at IDE Series 2026 Singapore.
+            </p>
+
+            <iframe
+              src="{{ '/Yee-Jeoi-Lam-Raelyn/cert1.pdf' | relative_url }}"
+              width="100%"
+              height="650px"
+              style="border: none"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>

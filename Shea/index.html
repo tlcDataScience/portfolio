@@ -6,25 +6,25 @@ student_nickname: Shea
 portrait_image: /Shea/shea.png
 
 intro: >
-  Hi, my name is [student_nickname]! I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 2, 
-  and I enjoy designing robots to automate daily tasks. Robotics inspired me to explore Python, 
-  where I began writing code to solve math problems and learn text-based programming. Later, I discovered Pygame and created fun, educational games that my friends 
+  Hi, my name is [student_nickname]! I am 12 years old. I started learning robotics with LEGO Mindstorms and block-based coding in Primary 2,
+  and I enjoy designing robots to automate daily tasks. Robotics inspired me to explore Python,
+  where I began writing code to solve math problems and learn text-based programming. Later, I discovered Pygame and created fun, educational games that my friends
   could play and compete with each other. I have documented my journey in robotics, coding, innovation, and STEM.
 
 robotics_projects:
   - title: "Project 1: Touch activated Ferris Wheel"
     heading: Touch activated Ferris Wheel
     description: >
-      I explored the fundamentals of mechanical engineering and programming by building various functional designs using LEGO Technic parts. 
-      By incorporating sensors and coding with conditional logic (if-else statements), I was able to make my creations respond to real-world inputs. 
-      I designed and built a Ferris wheel that only spins when the touch sensor is activated—simulating how user input or safety checks are used in real amusement park rides. 
+      I explored the fundamentals of mechanical engineering and programming by building various functional designs using LEGO Technic parts.
+      By incorporating sensors and coding with conditional logic (if-else statements), I was able to make my creations respond to real-world inputs.
+      I designed and built a Ferris wheel that only spins when the touch sensor is activated—simulating how user input or safety checks are used in real amusement park rides.
       This project demonstrated how automation and sensor-based control systems are used in real-world engineering, such as in elevators, smart appliances, and industrial machines.
     image: /Shea/robot1.png
 
   - title: "Project 2: Ultrasonic activated cuckoo clock"
     heading: Ultrasonic activated cuckoo clock
     description: >
-      I designed a model of a cuckoo clock that uses an ultrasonic sensor to detect when someone is nearby. When a person comes within a certain range, 
+      I designed a model of a cuckoo clock that uses an ultrasonic sensor to detect when someone is nearby. When a person comes within a certain range,
       the "cuckoo" mechanism is triggered to pop out, simulating how traditional cuckoo clocks react at set times or based on movement.
       This project demonstrated how motion and proximity sensors can be used to create interactive and responsive systems.
     image: /Shea/robot2.png
@@ -44,6 +44,7 @@ robotics_projects:
 </div>
 
 <div class="accordion" id="accordionProjects">
+  <!-- ROBOTICS PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -57,6 +58,7 @@ robotics_projects:
         Robotics Projects
       </button>
     </h2>
+
     <div
       id="collapseRobotics"
       class="accordion-collapse collapse"
@@ -67,8 +69,38 @@ robotics_projects:
         {% if page.robotics_projects %} {% for project in page.robotics_projects
         %} {% include dynamic_robotics_project.html project=project
         index=forloop.index0 %} {% endfor %} {% else %}
+
         <p>No robotics projects listed yet.</p>
+
         {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- MATH CONCEPTS -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMath">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMath"
+        aria-expanded="false"
+        aria-controls="collapseMath"
+      >
+        Math Concepts
+      </button>
+    </h2>
+
+    <div
+      id="collapseMath"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingMath"
+      data-bs-parent="#accordionProjects"
+    >
+      <div class="accordion-body">
+        {% include project_math_division.html %} {% include
+        python_evenoddchecker.html %}
       </div>
     </div>
   </div>
@@ -77,13 +109,18 @@ robotics_projects:
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
+      ".accordion-collapse",
     );
+
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
+
         if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       });
     });

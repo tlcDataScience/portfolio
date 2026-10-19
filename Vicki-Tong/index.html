@@ -93,6 +93,14 @@ certificates:
       This competition gave me the opportunity to gain experience in problem-solving,
       logical thinking, and teamwork.
     file: /Vicki-Tong/cert1.pdf
+  - title: "World Robot Olympiad Singapore Nationals 2026 - Bronze Award"
+    description: >
+      I was awarded Bronze at the World Robot Olympiad (WRO)
+      Singapore Nationals 2026 in the ROBOMISSION - Elementary
+      (National Preliminary) category, representing Team SPEC BUILDERS.
+      This achievement recognises my skills in robotics,
+      programming, problem-solving, and teamwork.
+    file: /Vicki-Tong/cert2.pdf
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -109,7 +117,6 @@ certificates:
 </div>
 
 <div class="accordion" id="accordionProjects">
-
   <!-- ROBOTICS PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
@@ -132,14 +139,10 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% if page.robotics_projects %}
-          {% for project in page.robotics_projects %}
-            {% include dynamic_robotics_project.html
-               project=project
-               index=forloop.index0 %}
-          {% endfor %}
-        {% else %}
-          <p>No robotics projects listed yet.</p>
+        {% if page.robotics_projects %} {% for project in page.robotics_projects
+        %} {% include dynamic_robotics_project.html project=project
+        index=forloop.index0 %} {% endfor %} {% else %}
+        <p>No robotics projects listed yet.</p>
         {% endif %}
       </div>
     </div>
@@ -167,8 +170,8 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% include python_mathdivision.html %}
-        {% include python_evenoddchecker.html %}
+        {% include python_mathdivision.html %} {% include
+        python_evenoddchecker.html %}
       </div>
     </div>
   </div>
@@ -195,8 +198,8 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% include python_primeguesser.html %}
-        {% include python_factorial.html %}
+        {% include python_primeguesser.html %} {% include python_factorial.html
+        %}
       </div>
     </div>
   </div>
@@ -223,10 +226,9 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% include python_vowelcount.html %}
-        {% include python_numberpyramid.html %}
-        {% include python_wordmatrix.html %}
-        {% include python_pascal.html %}
+        {% include python_vowelcount.html %} {% include
+        python_numberpyramid.html %} {% include python_wordmatrix.html %} {%
+        include python_pascal.html %}
       </div>
     </div>
   </div>
@@ -253,8 +255,8 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        {% include python_evensum.html %}
-        {% include python_countdowntimer.html %}
+        {% include python_evensum.html %} {% include python_countdowntimer.html
+        %}
       </div>
     </div>
   </div>
@@ -281,61 +283,55 @@ certificates:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
+        {% if page.certificates %} {% for certificate in page.certificates %}
 
-        {% if page.certificates %}
-          {% for certificate in page.certificates %}
+        <div class="card mb-4">
+          <div class="card-header">{{ certificate.title }}</div>
 
-            <div class="card mb-4">
-              <div class="card-header">
-                {{ certificate.title }}
-              </div>
+          <div class="card-body">
+            <h3>Description:</h3>
+            <p>{{ certificate.description }}</p>
 
-              <div class="card-body">
-                <h3>Description:</h3>
-                <p>{{ certificate.description }}</p>
+            <!-- DISPLAY PDF -->
+            <iframe
+              src="{{ certificate.file | relative_url }}"
+              title="{{ certificate.title }}"
+              width="100%"
+              height="800px"
+              style="
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                margin-bottom: 20px;
+              "
+            ></iframe>
 
-                <!-- DISPLAY PDF -->
-                <iframe
-                  src="{{ certificate.file | relative_url }}"
-                  title="{{ certificate.title }}"
-                  width="100%"
-                  height="800px"
-                  style="
-                    border: 1px solid #ccc;
-                    border-radius: 8px;
-                    margin-bottom: 20px;
-                  "
-                ></iframe>
-
-                <!-- OPEN CERTIFICATE BUTTON -->
-                <div style="text-align: center; margin-bottom: 20px;">
-                  <a
-                    href="{{ certificate.file | relative_url }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-primary"
-                  >
-                    Open Certificate
-                  </a>
-                </div>
-              </div>
+            <!-- OPEN CERTIFICATE BUTTON -->
+            <div style="text-align: center; margin-bottom: 20px">
+              <a
+                href="{{ certificate.file | relative_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Open Certificate
+              </a>
             </div>
+          </div>
+        </div>
 
-          {% endfor %}
-        {% else %}
-          <p>No certificates listed yet.</p>
+        {% endfor %} {% else %}
+        <p>No certificates listed yet.</p>
         {% endif %}
-
       </div>
     </div>
   </div>
-
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var accordionCollapseElements =
-      document.querySelectorAll(".accordion-collapse");
+    var accordionCollapseElements = document.querySelectorAll(
+      ".accordion-collapse",
+    );
 
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
@@ -344,7 +340,7 @@ certificates:
         if (header) {
           header.scrollIntoView({
             behavior: "smooth",
-            block: "start"
+            block: "start",
           });
         }
       });

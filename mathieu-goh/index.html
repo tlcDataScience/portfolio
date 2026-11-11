@@ -17,28 +17,85 @@ intro: >
 robotics_projects:
   - title: "Project 1: Bumper Track Car"
     heading: Bumper Track Car
-    description: Using the coding concept of conditional statements (if-else) and touch sensor, I coded my bumper car to reverses when the touch sensor at the front of the car hits the wall.
+    description: >
+      Using the coding concept of conditional statements (if-else) and a touch sensor,
+      I coded my bumper car to reverse when the touch sensor at the front of the car
+      hits a wall.
     image: /mathieu-goh/robot1.jpg
+
   - title: "Project 2: Tractor with Ultrasonic Sensor"
     heading: Tractor with Ultrasonic Sensor
-    description: I built a semi autonomous tractor equipped with ultrasonic sensor to detect and avoid obstacles, helping farms operate machinery safely and efficiently in varied terrain.
+    description: >
+      I built a semi-autonomous tractor equipped with an ultrasonic sensor to detect
+      and avoid obstacles, helping farms operate machinery safely and efficiently
+      in varied terrain.
     image: /mathieu-goh/robot2.jpg
+
   - title: "Project 3: Ultrasonic & Infrared Activated Coin Dispenser"
     heading: Ultrasonic & Infrared Activated Coin Dispenser
-    description: Having played at the arcade frequently, I designed a coin dispensing mechanism that releases coins only when 2 sensors are triggered simultaneously. This ensures that the mechanism releases coins only when both conditions are met, preventing accidental dispensing.
+    description: >
+      Having played at the arcade frequently, I designed a coin dispensing
+      mechanism that releases coins only when two sensors are triggered
+      simultaneously. This ensures that the mechanism releases coins only
+      when both conditions are met, preventing accidental dispensing.
     image: /mathieu-goh/robot3.jpg
+
   - title: "Project 4: Smart Driving Vehicle with Touch and Ultrasonic Sensors"
     heading: Smart Driving Vehicle with Touch and Ultrasonic Sensors
-    description: I designed a smart geared car equipped with sensors to model an autonomous driving vehicle. When the touch sensor is triggered, the car moves, mimicking the “start” command in autonomous vehicles. It stops when the ultrasonic sensor detects obstacles, like the radar system in real autonomous cars and reverses to its original starting position, all without any human guidance beyond the initial touch.
+    description: >
+      I designed a smart geared car equipped with sensors to model an autonomous
+      driving vehicle. When the touch sensor is triggered, the car moves,
+      mimicking the start command in autonomous vehicles.
+
+      It stops when the ultrasonic sensor detects obstacles, like the radar
+      system in real autonomous cars, and reverses to its original starting
+      position, all without any human guidance beyond the initial touch.
     image: /mathieu-goh/robot4.jpg
+
   - title: "Project 5: Autonomous Motion Robot"
     heading: Autonomous Motion Robot
-    description: I designed a autonomous motion robot that follows a predefined black line path. This is used to navigate library floors. Using 2 color sensors, it allows for better, accurate detection of the line position, makes smoother turns and responds faster to changes in path direction.
+    description: >
+      I designed an autonomous motion robot that follows a predefined black
+      line path. This is used to navigate library floors.
+
+      Using two colour sensors allows for more accurate detection of the
+      line position, smoother turns, and faster responses to changes in
+      path direction.
     image: /mathieu-goh/robot5.jpg
+
   - title: "Project 6: Speed Adjustable Treadmill"
     heading: Speed Adjustable Treadmill
-    description: I love going on the treadmill therefore I have recreated one using Lego that simulates automation. Each time the touch sensor is pressed, the treadmill’s speed increase, mimicking how modern exercise machines can adjust settings based on user input or programmed responses. This provides hands on experience with incremental speed adjustment.
+    description: >
+      I love going on the treadmill, so I recreated one using LEGO
+      that simulates automation.
+
+      Each time the touch sensor is pressed, the treadmill's speed increases,
+      mimicking how modern exercise machines can adjust settings based on
+      user input or programmed responses.
+
+      This provides hands-on experience with incremental speed adjustment.
     image: /mathieu-goh/robot6.jpg
+
+certificates:
+  - title: "World Robot Olympiad Singapore Nationals 2025"
+    description: >
+      These certificates were awarded in recognition of Mathieu's
+      outstanding performance in the World Robot Olympiad Singapore
+      Nationals 2025, recognising his skills in robotics challenges.
+    images:
+      - /mathieu-goh/cert1.jpg
+      - /mathieu-goh/cert2.jpg
+
+  - title: "Tan Kah Kee Young Inventors' Award 2026 - Certificate of Participation"
+    description: >
+      I participated in the Tan Kah Kee Young Inventors' Award 2026,
+      where I received a Certificate of Participation in recognition
+      of my good effort.
+
+      This experience encouraged me to continue exploring innovation,
+      creativity, and problem-solving through science and technology.
+    images:
+      - /mathieu-goh/cert3.jpg
 ---
 
 <h1>{{ page.student_name }}'s Coding Projects</h1>
@@ -55,6 +112,7 @@ robotics_projects:
 </div>
 
 <div class="accordion" id="accordionProjects">
+  <!-- ROBOTICS PROJECTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingRobotics">
       <button
@@ -68,6 +126,7 @@ robotics_projects:
         Robotics Projects
       </button>
     </h2>
+
     <div
       id="collapseRobotics"
       class="accordion-collapse collapse"
@@ -84,6 +143,7 @@ robotics_projects:
     </div>
   </div>
 
+  <!-- MATH CONCEPTS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingMath">
       <button
@@ -97,6 +157,7 @@ robotics_projects:
         Math Concepts
       </button>
     </h2>
+
     <div
       id="collapseMath"
       class="accordion-collapse collapse"
@@ -107,6 +168,7 @@ robotics_projects:
     </div>
   </div>
 
+  <!-- FOR LOOPS -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingForLoops">
       <button
@@ -120,6 +182,7 @@ robotics_projects:
         For Loops
       </button>
     </h2>
+
     <div
       id="collapseForLoops"
       class="accordion-collapse collapse"
@@ -129,6 +192,8 @@ robotics_projects:
       <div class="accordion-body">{% include python_factorychecker.html %}</div>
     </div>
   </div>
+
+  <!-- CERTIFICATES -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingCertificates">
       <button
@@ -142,6 +207,7 @@ robotics_projects:
         Certificates
       </button>
     </h2>
+
     <div
       id="collapseCertificates"
       class="accordion-collapse collapse"
@@ -149,61 +215,73 @@ robotics_projects:
       data-bs-parent="#accordionProjects"
     >
       <div class="accordion-body">
-        <div class="card mb-3">
-          <div class="card-header">
-            World Robot Olympiad Singapore Nationals 2025
-          </div>
+        {% if page.certificates %} {% for certificate in page.certificates %}
+
+        <div class="card mb-4">
+          <div class="card-header">{{ certificate.title }}</div>
+
           <div class="card-body">
             <h3>Description:</h3>
-            <p>
-              These certificates were awarded in recognition for Mathieu’s
-              outstanding performance in the
-              <strong>World Robot Olympiad Singapore Nationals</strong>,
-              recognizing his skills in robotic challenges.
-            </p>
+
+            <p>{{ certificate.description }}</p>
+
+            <!-- CERTIFICATE IMAGES -->
+            {% for image in certificate.images %}
+
+            <div class="certificate-image mb-3">
+              <img
+                src="{{ image | relative_url }}"
+                alt="{{ certificate.title }}"
+                style="
+                  width: 100%;
+                  max-width: 1000px;
+                  display: block;
+                  margin: 0 auto;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                "
+              />
+            </div>
+
+            <!-- OPEN CERTIFICATE BUTTON -->
+            <div style="text-align: center; margin-bottom: 30px">
+              <a
+                href="{{ image | relative_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Open Certificate
+              </a>
+            </div>
+
+            {% endfor %}
           </div>
         </div>
 
-        <div class="certificate-image mb-3">
-          <img
-            src="{{ '/mathieu-goh/cert1.jpg' | relative_url }}"
-            alt="Coding Olympics 2025 Certificate"
-            style="
-              width: 100%;
-              max-width: 1000px;
-              display: block;
-              margin: 0 auto;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-            "
-          />
-          <img
-            src="{{ '/mathieu-goh/cert2.jpg' | relative_url }}"
-            alt="Coding Olympics 2025 Certificate"
-            style="
-              width: 100%;
-              max-width: 1000px;
-              display: block;
-              margin: 0 auto;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-            "
-          />
-        </div>
+        {% endfor %} {% else %}
+        <p>No certificates listed yet.</p>
+        {% endif %}
       </div>
     </div>
   </div>
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var accordionCollapseElements = document.querySelectorAll(
-      ".accordion-collapse"
+      ".accordion-collapse",
     );
+
     accordionCollapseElements.forEach(function (collapseEl) {
       collapseEl.addEventListener("shown.bs.collapse", function () {
         var header = this.previousElementSibling;
+
         if (header) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
+          header.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       });
     });
